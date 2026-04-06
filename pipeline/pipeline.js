@@ -10,8 +10,9 @@ async function pipeline() {
     });
 
     if (values.should_scrape) {
+        console.log("Scraping jobs...");
         const scraped_jobs = await scrape(values.scrape_limit);
-        console.log(`Scraped ${scraped_jobs.length} jobs successfully...`);
+        console.log(`Scraped ${scraped_jobs.length} unique jobs successfully...`);
     }
 }
 
