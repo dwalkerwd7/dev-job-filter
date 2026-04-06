@@ -54,7 +54,7 @@ async function fetchGreenhouse(slug) {
     })).filter(job => job.url);
 }
 
-async function shallow_scrape(browser, url, selectors) {
+async function shallowScrape(browser, url, selectors) {
     const context = await browser.newContext({
         userAgent: `Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36`
     });
@@ -76,7 +76,7 @@ async function shallow_scrape(browser, url, selectors) {
     return jobs.filter(job => job.url);
 }
 
-async function deep_scrape(browser, url) {
+async function deepScrape(browser, url) {
     const context = await browser.newContext({
         userAgent: `Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36`
     });
@@ -112,7 +112,7 @@ async function scrape(limit) {
     const [remoteok, remotive, wwr, ...greenhouse] = await Promise.allSettled([
         fetchRemoteOK(),
         fetchRemotive(),
-        shallow_scrape(browser, "https://weworkremotely.com/categories/remote-full-stack-programming-jobs", {
+        shallowScrape(browser, "https://weworkremotely.com/categories/remote-full-stack-programming-jobs", {
             main: ".new-listing-container",
             title: ".new-listing__header__title__text",
             company: ".new-listing__company-name",
@@ -140,7 +140,7 @@ async function scrape(limit) {
     const candidates = limit ? deduped.slice(0, limit) : deduped;
 
     const deep_results = await Promise.allSettled(
-        candidates.map(job => deep_scrape(browser, job.url))
+        candidates.map(job => deepScrape(browser, job.url))
     );
 
     browser.close();
