@@ -1,0 +1,17 @@
+{
+  "name": "smb-job-scraper",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "pipeline.js",
+  "scripts": {
+    "scraper": "node scraper.js",
+    "filter": "node filter.js",
+    "pipeline": "npm run scraper && npm run filter"
+  },
+  "dependencies": {
+    "playwright": "^1.59.1"
+  }
+}
