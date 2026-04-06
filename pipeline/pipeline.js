@@ -1,5 +1,6 @@
 const { parseArgs } = require("util");
 const { scrape } = require("./scraper");
+const { filter } = require("./filter");
 
 async function pipeline() {
     const { values } = parseArgs({
@@ -11,9 +12,13 @@ async function pipeline() {
 
     if (values.should_scrape) {
         console.log("Scraping jobs...");
-        const scraped_jobs = await scrape(values.scrape_limit);
-        console.log(`Scraped ${scraped_jobs.length} unique jobs successfully...`);
+        const scraped_jobs = await scrape(parseInt(values.scrape_limit));
+        console.log(`Scraped ${scraped_jobs.length} unique jobs.`);
     }
+
+    console.log("\nFiltering jobs...");
+    const filtered_jobs = await filter(scraped_jobs);
+    console.log(`${filtered_jobs.length} jobs passed the filter.`);
 }
 
 // run pipeline
