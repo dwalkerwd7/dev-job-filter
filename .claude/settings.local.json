@@ -5,7 +5,9 @@
       "Bash(npm install:*)",
       "WebSearch",
       "WebFetch(domain:varlock.dev)",
-      "Bash(npx varlock:*)"
+      "Bash(npx varlock:*)",
+      "Bash(git fsck:*)",
+      "Bash(git branch:*)"
     ]
   }
 }
