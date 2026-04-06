@@ -5,7 +5,7 @@ async function pipeline() {
     const { values } = parseArgs({
         options: {
             should_scrape: { type: "boolean", default: true },
-            scrape_limit: { type: "string", default: "10" }
+            scrape_limit: { type: "string", default: "100" }
         }
     });
 
