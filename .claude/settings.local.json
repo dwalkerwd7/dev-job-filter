@@ -10,7 +10,9 @@
       "Bash(git branch:*)",
       "WebFetch(domain:www.greenhouse.io)",
       "WebFetch(domain:www.greenhouse.com)",
-      "WebFetch(domain:boards.greenhouse.io)"
+      "WebFetch(domain:boards.greenhouse.io)",
+      "Bash(npm show:*)",
+      "Bash(node -e \"require\\('varlock/auto-load'\\)\")"
     ]
   }
 }
