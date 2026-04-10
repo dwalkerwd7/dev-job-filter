@@ -14,19 +14,19 @@ const TARGET_STACK = [
     "typescript", "javascript",
     "next.js", "nextjs",
     "tailwind", "tailwindcss", "tailwind css",
-    "sql", "nosql", "monogdb",
+    "sql", "nosql", "monogdb", "postgresql"
 ];
 
 const STACK_KEYWORDS = [
     "tech", "stack",
     "framework", "frameworks",
     "front-end", "back-end",
-    "database", "aws", "azure",
-    "ci/cd", "devops"
+    "database", "aws",
+    "sql", "nosql"
 ];
 
 const MIN_EMPLOYEES = 5;
-const MAX_EMPLOYEES = 500;
+const MAX_EMPLOYEES = 200;
 const MIN_DESCRIPTION_LENGTH = 300;
 
 function getTextWindows(text, keywords, windowSize = MIN_DESCRIPTION_LENGTH) {
@@ -99,6 +99,7 @@ async function filter(jobs, limit) {
     // Only look up employee counts for jobs that passed the tech stack check
     const stackPassed = enriched.filter(job => job.tech_stack.length > 0);
     const stackPassedLimited = limit ? stackPassed.slice(0, Math.min(limit, stackPassed.length)) : stackPassed;
+
     for (let i = 0; i < stackPassedLimited.length; i += BATCH_SIZE) {
         if (i > 0) await new Promise(r => setTimeout(r, BATCH_DELAY_MS));
         await Promise.all(
@@ -108,8 +109,8 @@ async function filter(jobs, limit) {
         );
     }
 
-    const results = hardFilter(stackPassedLimited).map(({ title, company, url, tech_stack, employee_count }) => ({
-        title, company, url, tech_stack, employee_count
+    const results = hardFilter(stackPassedLimited).map(({ title, company, url, tech_stack, employee_count, scrapedAt }) => ({
+        title, company, url, tech_stack, employee_count, scrapedAt
     }));
     results.forEach(job => console.log(`[filtered] ${job.company} — ${job.title}`));
 
