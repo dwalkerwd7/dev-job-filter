@@ -1,10 +1,14 @@
 const mongoose = require("mongoose");
 
+const SlugSchema = new mongoose.Schema({
+    name: { type: String, required: true }
+});
+
 const ScrapedJobSchema = new mongoose.Schema({
     title: { type: String, required: true },
     company: { type: String, required: true },
     url: { type: String, required: true, unique: true },
-    extractedText: { type: String },
+    jobDesc: { type: String },
     scrapedAt: { type: Date, default: Date.now() }
 });
 
@@ -14,10 +18,12 @@ const FilteredJobSchema = new mongoose.Schema({
     url: { type: String, required: true, unique: true },
     tech_stack: { type: [String], default: [] },
     employee_count: { type: Number, default: null },
+    workArrangement: { type: String, enum: ["remote", "hybrid", "in-person", null], default: null },
     applied: { type: Boolean, default: false },
     scrapedAt: { type: Date, default: Date.now }
 });
 
+const Slug = mongoose.model("Slug", SlugSchema);
 const ScrapedJob = mongoose.model("ScrapedJob", ScrapedJobSchema);
 const FilteredJob = mongoose.model("FilteredJob", FilteredJobSchema);
 
@@ -33,6 +39,12 @@ async function disconnect() {
     await mongoose.disconnect();
 }
 
+async function renewSlugs(slugs) {
+    await Slug.deleteMany({});
+    const docs = slugs.map(slug => ({ name: slug }));
+    return Slug.insertMany(docs);
+}
+
 async function upsertScrapedJobs(jobs) {
     const ops = jobs.map(job => ({
         updateOne: {
@@ -41,7 +53,7 @@ async function upsertScrapedJobs(jobs) {
                 $set: {
                     title: job.title,
                     company: job.company,
-                    extractedText: job.extractedText ?? null,
+                    jobDesc: job.jobDesc ?? null,
                     scrapedAt: new Date()
                 },
             },
@@ -60,9 +72,9 @@ async function upsertFilteredJobs(jobs) {
                 $set: {
                     title: job.title,
                     company: job.company,
-                    extractedText: job.extractedText ?? null,
                     tech_stack: job.tech_stack,
                     employee_count: job.employee_count ?? null,
+                    workArrangement: job.workArrangement ?? null,
                     scrapedAt: new Date()
                 },
                 $setOnInsert: { applied: false }
@@ -76,6 +88,11 @@ async function upsertFilteredJobs(jobs) {
 
 async function upsertAlignedJobs(_) {
     return true;
+}
+
+async function getSlugs() {
+    const docs = await Slug.find().lean();
+    return docs.map(s => s.name);
 }
 
 async function getScrapedJobs() {
@@ -93,6 +110,6 @@ async function getAppliedUrls() {
 
 module.exports = {
     connect, disconnect,
-    upsertScrapedJobs, upsertFilteredJobs, upsertAlignedJobs,
-    getScrapedJobs, getFilteredJobs, getAppliedUrls
+    renewSlugs, upsertScrapedJobs, upsertFilteredJobs, upsertAlignedJobs,
+    getSlugs, getScrapedJobs, getFilteredJobs, getAppliedUrls
 };
