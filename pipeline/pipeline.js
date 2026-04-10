@@ -1,7 +1,6 @@
 const { parseArgs } = require("util");
 const { scrape } = require("./scraper");
 const { filter } = require("./filter");
-const { align } = require("./aligner");
 const db = require('./lib/db');
 
 async function pipelineStep(stepCb, jobType) {
@@ -26,7 +25,6 @@ async function pipeline() {
             aligning: { type: "boolean", default: true },
             scrape_limit: { type: "string", default: "100" },
             filter_limit: { type: "string", default: "100" },
-            align_limit: { type: "string", default: "100" }
         },
         allowNegative: true
     });
@@ -56,16 +54,6 @@ async function pipeline() {
             }, 'filtered');
         } else {
             filtered_jobs = await db.getFilteredJobs();
-        }
-
-        /* Alignment Step */
-        let aligned_jobs = [];
-        if (values.aligning && filtered_jobs.length > 0) {
-            await pipelineStep(async _ => {
-                console.log("Aligning jobs...\n");
-                aligned_jobs = await align(filtered_jobs, parseInt(values.align_limit));
-                return await db.upsertAlignedJobs(aligned_jobs);
-            }, 'aligned');
         }
     } finally {
         await db.disconnect();
