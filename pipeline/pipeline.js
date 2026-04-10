@@ -20,6 +20,7 @@ function afterDBUpdate(res, jobType) {
 async function pipeline() {
     const { values } = parseArgs({
         options: {
+            renew_slugs: { type: "boolean", default: false },
             scraping: { type: "boolean", default: true },
             filtering: { type: "boolean", default: true },
             aligning: { type: "boolean", default: true },
@@ -37,7 +38,7 @@ async function pipeline() {
         if (values.scraping) {
             await pipelineStep(async _ => {
                 console.log("Scraping jobs...\n");
-                scraped_jobs = await scrape(parseInt(values.scrape_limit));
+                scraped_jobs = await scrape(parseInt(values.scrape_limit), values.renew_slugs);
                 return await db.upsertScrapedJobs(scraped_jobs);
             }, 'scraped');
         } else {

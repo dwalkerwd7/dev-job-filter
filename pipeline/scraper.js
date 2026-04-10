@@ -1,43 +1,34 @@
 const { chromium } = require("playwright");
 const { removeTextNoise } = require("./lib/utils");
+const db = require("./lib/db");
 
 const JOB_KEYWORDS = [
     "web developer",
     "full-stack",
     "front-end",
     "back-end",
-    "javascript"
+    "javascript",
+    "typescript"
 ];
 
 const JOB_DESC_SELECTORS = [
     // Greenhouse
     ".job__description",
+    // Lever
+    ".posting-description",
+    // Workable
+    ".job-description",
+    // General
     "#job-description",
-    // WeWorkRemotely
-    ".listing-container",
-    // Generic job-specific (most specific first)
+    "#jobDescription",
     "[class*='job-description']",
-    "[id*='job-description']",
-    "[class*='job_description']",
-    "[id*='job_description']",
     "[class*='jobDescription']",
-    "[class*='job-details']",
-    "[class*='jobDetails']",
-    "[class*='job-body']",
-    "[class*='job-content']",
-    "[class*='jobContent']",
-    "[class*='posting-content']",
-    "[class*='listing-content']",
-    // Semantic HTML (broad but meaningful)
+    "[data-testid*='job-description']",
     "article",
     "main",
-    // Last-resort generics
-    "[class*='description']",
-    ".content",
-    "#content",
 ];
 
-async function fetchGreenhouse(slug, maxJobsPerSlug = 20) {
+async function fetchGreenhouse(slug, maxJobsPerSlug = 50) {
     const res = await fetch(`https://boards-api.greenhouse.io/v1/boards/${slug}/jobs`);
     if (!res.ok) return [];
     const { jobs } = await res.json();
@@ -95,28 +86,6 @@ async function scrapeGreenhouseSlugs(keywords, maxPages = 5) {
     return [...slugs];
 }
 
-async function shallowScrape(browser, url, selectors, maxJobs = 50) {
-    const context = await browser.newContext({
-        userAgent: `Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36`
-    });
-
-    const page = await context.newPage();
-
-    await page.goto(url, { waitUntil: "domcontentloaded" });
-    await page.waitForSelector(selectors.main, { timeout: 15000 });
-
-    const jobs = await page.$$eval(selectors.main, (nodes, args) => {
-        return nodes.map(node => ({
-            title: node.querySelector(args.title)?.innerText.trim() ?? '',
-            company: node.querySelector(args.company)?.innerText.trim() ?? '',
-            url: node.querySelector(args.url)?.href ?? ''
-        })).filter(job => job.url);
-    }, selectors);
-
-    await context.close();
-    return jobs.slice(0, maxJobs);
-}
-
 async function deepScrape(browser, url) {
     const context = await browser.newContext({
         userAgent: `Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36`
@@ -125,59 +94,44 @@ async function deepScrape(browser, url) {
 
     try {
         await page.goto(url, { waitUntil: "domcontentloaded", timeout: 30000 });
-        console.log(`Scraping ${url}`);
+        console.log(`[scrape] ${url}`);
 
-        let extractedText = null;
+        let jobDesc = null;
         for (const selector of JOB_DESC_SELECTORS) {
             const el = await page.$(selector);
             if (el) {
-                extractedText = await el.innerText();
+                jobDesc = await el.innerText();
                 break;
             }
         }
 
-        if (!extractedText) {
-            extractedText = await page.locator("body").innerText();
+        if (!jobDesc) {
+            jobDesc = await page.locator("body").innerText();
         }
 
-        return { url, extractedText: removeTextNoise(extractedText) };
+        return { url, jobDesc: removeTextNoise(jobDesc) };
     } catch (err) {
         console.error(`[deepScrape] failed ${url}: ${err.message}`);
-        return { url, extractedText: null, error: err.message };
+        return { url, jobDesc: null, error: err.message };
     } finally {
         await context.close();
     }
 }
 
-async function scrape(limit) {
+async function scrape(limit, renewSlugs) {
     const browser = await chromium.launch({ headless: true });
 
-    const greenhouseSlugs = await scrapeGreenhouseSlugs(JOB_KEYWORDS);
-    const [wwr, ...greenhouse] = await Promise.allSettled([
-        shallowScrape(browser, "https://weworkremotely.com/categories/remote-full-stack-programming-jobs", {
-            main: ".new-listing-container",
-            title: ".new-listing__header__title__text",
-            company: ".new-listing__company-name",
-            url: "a.listing-link--unlocked"
-        }),
-        ...greenhouseSlugs.map(slug => fetchGreenhouse(slug))
-    ]);
+    let slugs = [];
+    if (renewSlugs) {
+        slugs = await scrapeGreenhouseSlugs(JOB_KEYWORDS);
+        await db.renewSlugs(slugs);
+    } else {
+        slugs = await db.getSlugs();
+    }
 
-    const extract = result => result.status === "fulfilled" ? result.value : [];
-
-    const all_jobs = [
-        ...extract(wwr),
-        ...greenhouse.flatMap(extract)
-    ];
-
-    const seen = new Set();
-    const deduped = all_jobs.filter(job => {
-        if (!job.url || seen.has(job.url)) return false;
-        seen.add(job.url);
-        return true;
-    });
-
-    const candidates = limit ? deduped.slice(0, limit) : deduped;
+    const greenhouse = await Promise.all(slugs.map(slug => fetchGreenhouse(slug)));
+    const all_jobs = greenhouse.flat();
+    const candidates = limit ? all_jobs.slice(0, limit) : all_jobs;
 
     // so that 5 contexts run at a time to not starve system resources and make each page timeout on load
     const CONCURRENCY = 5;
@@ -193,9 +147,9 @@ async function scrape(limit) {
 
     return candidates.map((job, i) => {
         const result = deep_results[i];
-        const { extractedText = null, error = null } =
+        const { jobDesc = null, error = null } =
             result.status === "fulfilled" ? result.value : { error: result.reason?.message };
-        return { ...job, extractedText, error };
+        return { ...job, jobDesc, error };
     });
 }
 
