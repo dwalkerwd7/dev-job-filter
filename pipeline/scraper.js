@@ -1,60 +1,101 @@
 const { chromium } = require("playwright");
+const { removeTextNoise } = require("./lib/utils");
 
-const GREENHOUSE_COMPANIES = [
-    "retool", "replit", "webflow", "sourcegraph", "snyk",
-    "loom", "notion", "mercury", "brex", "iterable",
-    "postman", "netlify", "algolia", "amplitude", "mixpanel",
-    "productboard", "typeform", "intercom", "dbtlabs", "planetscale"
+const JOB_KEYWORDS = [
+    "web developer",
+    "full-stack",
+    "front-end",
+    "back-end",
+    "javascript"
 ];
 
 const JOB_DESC_SELECTORS = [
+    // Greenhouse
+    ".job__description",
+    "#job-description",
+    // WeWorkRemotely
+    ".listing-container",
+    // Generic job-specific (most specific first)
     "[class*='job-description']",
     "[id*='job-description']",
+    "[class*='job_description']",
+    "[id*='job_description']",
     "[class*='jobDescription']",
-    "[class*='description']",
+    "[class*='job-details']",
+    "[class*='jobDetails']",
+    "[class*='job-body']",
+    "[class*='job-content']",
+    "[class*='jobContent']",
+    "[class*='posting-content']",
+    "[class*='listing-content']",
+    // Semantic HTML (broad but meaningful)
     "article",
     "main",
+    // Last-resort generics
+    "[class*='description']",
     ".content",
     "#content",
 ];
 
-async function fetchRemoteOK() {
-    const res = await fetch("https://remoteok.com/api", {
-        headers: { "User-Agent": "Mozilla/5.0" }
-    });
-    const data = await res.json();
-    return data
-        .slice(1) // first element is metadata
-        .map(job => ({
-            title: job.position ?? '',
-            company: job.company ?? '',
-            url: job.url ?? ''
-        }))
-        .filter(job => job.url);
-}
-
-async function fetchRemotive() {
-    const res = await fetch("https://remotive.com/api/remote-jobs?category=software-dev");
-    const { jobs } = await res.json();
-    return jobs.map(job => ({
-        title: job.title ?? '',
-        company: job.company_name ?? '',
-        url: job.url ?? ''
-    }));
-}
-
-async function fetchGreenhouse(slug) {
+async function fetchGreenhouse(slug, maxJobsPerSlug = 20) {
     const res = await fetch(`https://boards-api.greenhouse.io/v1/boards/${slug}/jobs`);
     if (!res.ok) return [];
     const { jobs } = await res.json();
-    return jobs.map(job => ({
+
+    return jobs.slice(0, maxJobsPerSlug).map(job => ({
         title: job.title ?? '',
         company: slug,
         url: job.absolute_url ?? ''
     })).filter(job => job.url);
 }
 
-async function shallowScrape(browser, url, selectors) {
+async function scrapeGreenhouseSlugs(keywords, maxPages = 5) {
+    let query = `site:boards.greenhouse.io "${keywords[0]}"`;
+    for (const kw of keywords.slice(1, -1)) {
+        query += ` OR "${kw}"`;
+    }
+
+    let slugs = new Set();
+
+    for (let page = 0; page < maxPages; page++) {
+        const serper = await fetch(
+            "https://google.serper.dev/search",
+            {
+                method: "post",
+                headers: {
+                    'X-API-KEY': process.env.SERPER_API_KEY || '',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    q: query,
+                    page,
+                    num: 10
+                })
+            }
+        );
+
+        const { organic } = await serper.json();
+        organic.forEach(result => {
+            const match = result.link.match(/boards\.greenhouse\.io\/([^\/]+)/);
+            if (match) {
+                const m = match[1];
+                let slug = "";
+
+                if (m.indexOf("?") !== -1) {
+                    slug = m.slice(0, m.indexOf("?"));
+                } else {
+                    slug = m
+                }
+
+                slugs.add(slug);
+            }
+        });
+    }
+
+    return [...slugs];
+}
+
+async function shallowScrape(browser, url, selectors, maxJobs = 50) {
     const context = await browser.newContext({
         userAgent: `Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36`
     });
@@ -69,11 +110,11 @@ async function shallowScrape(browser, url, selectors) {
             title: node.querySelector(args.title)?.innerText.trim() ?? '',
             company: node.querySelector(args.company)?.innerText.trim() ?? '',
             url: node.querySelector(args.url)?.href ?? ''
-        }));
+        })).filter(job => job.url);
     }, selectors);
 
     await context.close();
-    return jobs.filter(job => job.url);
+    return jobs.slice(0, maxJobs);
 }
 
 async function deepScrape(browser, url) {
@@ -83,7 +124,8 @@ async function deepScrape(browser, url) {
     const page = await context.newPage();
 
     try {
-        await page.goto(url, { waitUntil: "domcontentloaded", timeout: 15000 });
+        await page.goto(url, { waitUntil: "domcontentloaded", timeout: 30000 });
+        console.log(`Scraping ${url}`);
 
         let extractedText = null;
         for (const selector of JOB_DESC_SELECTORS) {
@@ -98,8 +140,9 @@ async function deepScrape(browser, url) {
             extractedText = await page.locator("body").innerText();
         }
 
-        return { url, extractedText: extractedText.trim() };
+        return { url, extractedText: removeTextNoise(extractedText) };
     } catch (err) {
+        console.error(`[deepScrape] failed ${url}: ${err.message}`);
         return { url, extractedText: null, error: err.message };
     } finally {
         await context.close();
@@ -109,23 +152,20 @@ async function deepScrape(browser, url) {
 async function scrape(limit) {
     const browser = await chromium.launch({ headless: true });
 
-    const [remoteok, remotive, wwr, ...greenhouse] = await Promise.allSettled([
-        fetchRemoteOK(),
-        fetchRemotive(),
+    const greenhouseSlugs = await scrapeGreenhouseSlugs(JOB_KEYWORDS);
+    const [wwr, ...greenhouse] = await Promise.allSettled([
         shallowScrape(browser, "https://weworkremotely.com/categories/remote-full-stack-programming-jobs", {
             main: ".new-listing-container",
             title: ".new-listing__header__title__text",
             company: ".new-listing__company-name",
             url: "a.listing-link--unlocked"
         }),
-        ...GREENHOUSE_COMPANIES.map(slug => fetchGreenhouse(slug))
+        ...greenhouseSlugs.map(slug => fetchGreenhouse(slug))
     ]);
 
     const extract = result => result.status === "fulfilled" ? result.value : [];
 
     const all_jobs = [
-        ...extract(remoteok),
-        ...extract(remotive),
         ...extract(wwr),
         ...greenhouse.flatMap(extract)
     ];
@@ -139,9 +179,15 @@ async function scrape(limit) {
 
     const candidates = limit ? deduped.slice(0, limit) : deduped;
 
-    const deep_results = await Promise.allSettled(
-        candidates.map(job => deepScrape(browser, job.url))
-    );
+    // so that 5 contexts run at a time to not starve system resources and make each page timeout on load
+    const CONCURRENCY = 5;
+    const deep_results = [];
+    for (let i = 0; i < candidates.length; i += CONCURRENCY) {
+        const batch = await Promise.allSettled(
+            candidates.slice(i, i + CONCURRENCY).map(job => deepScrape(browser, job.url))
+        );
+        deep_results.push(...batch);
+    }
 
     browser.close();
 

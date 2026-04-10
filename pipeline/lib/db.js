@@ -1,5 +1,13 @@
 const mongoose = require("mongoose");
 
+const ScrapedJobSchema = new mongoose.Schema({
+    title: { type: String, required: true },
+    company: { type: String, required: true },
+    url: { type: String, required: true, unique: true },
+    extractedText: { type: String },
+    scrapedAt: { type: Date, default: Date.now() }
+});
+
 const FilteredJobSchema = new mongoose.Schema({
     title: { type: String, required: true },
     company: { type: String, required: true },
@@ -13,27 +21,27 @@ const FilteredJobSchema = new mongoose.Schema({
     scrapedAt: { type: Date, default: Date.now }
 });
 
-const RawJobSchema = new mongoose.Schema({
-    title: { type: String, required: true },
-    company: { type: String, required: true },
-    url: { type: String, required: true, unique: true },
-    extractedText: { type: String },
-    scrapedAt: { type: Date, default: Date.now() }
+const AlignedJobSchema = new mongoose.Schema({
+
 });
 
-const RawJob = mongoose.model("RawJob", RawJobSchema);
+const ScrapedJob = mongoose.model("ScrapedJob", ScrapedJobSchema);
 const FilteredJob = mongoose.model("FilteredJob", FilteredJobSchema);
+const AlignedJob = mongoose.model("AlignedJob", AlignedJobSchema);
 
 async function connect() {
     const uri = process.env.MONGODB_URI;
-    await mongoose.connect(uri);
+    // socketTimeoutMS: keep the connection alive for up to 2 min to survive the filter pipeline step
+    // step (batched Claude API calls). Default is 0 (no timeout), but Atlas free tier
+    // drops idle sockets around 60s — explicit value prevents pool-closed errors mid-run.
+    await mongoose.connect(uri, { socketTimeoutMS: 120000, serverSelectionTimeoutMS: 30000 });
 }
 
 async function disconnect() {
     await mongoose.disconnect();
 }
 
-async function upsertRawJobs(jobs) {
+async function upsertScrapedJobs(jobs) {
     const ops = jobs.map(job => ({
         updateOne: {
             filter: { url: job.url },
@@ -49,7 +57,7 @@ async function upsertRawJobs(jobs) {
         }
     }));
 
-    return RawJob.bulkWrite(ops); // updates existing records and adds new ones
+    return ScrapedJob.bulkWrite(ops);
 }
 
 async function upsertFilteredJobs(jobs) {
@@ -74,9 +82,25 @@ async function upsertFilteredJobs(jobs) {
     return FilteredJob.bulkWrite(ops); // updates existing records and adds new ones
 }
 
+async function upsertAlignedJobs(_) {
+    return true;
+}
+
+async function getScrapedJobs() {
+    return await ScrapedJob.find();
+}
+
+async function getFilteredJobs() {
+    return await FilteredJob.find();
+}
+
 async function getAppliedUrls() {
-    const applied = await FilteredJob.find({ applied: true }, { url: 1, _id: 0 }).lean();
+    const applied = await AlignedJob.find({ applied: true }, { url: 1, _id: 0 }).lean();
     return new Set(applied.map(j => j.url));
 }
 
-module.exports = { connect, disconnect, upsertRawJobs, upsertFilteredJobs, getAppliedUrls, RawJob, FilteredJob };
+module.exports = {
+    connect, disconnect,
+    upsertScrapedJobs, upsertFilteredJobs, upsertAlignedJobs,
+    getScrapedJobs, getFilteredJobs, getAppliedUrls
+};

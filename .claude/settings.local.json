@@ -12,7 +12,15 @@
       "WebFetch(domain:www.greenhouse.com)",
       "WebFetch(domain:boards.greenhouse.io)",
       "Bash(npm show:*)",
-      "Bash(node -e \"require\\('varlock/auto-load'\\)\")"
+      "Bash(node -e \"require\\('varlock/auto-load'\\)\")",
+      "Bash(git fetch:*)",
+      "Bash(./node_modules/.bin/varlock --help)",
+      "Bash(./node_modules/.bin/varlock init:*)",
+      "Bash(./node_modules/.bin/varlock load:*)",
+      "Bash(./node_modules/.bin/varlock run:*)",
+      "Bash(node -e \"require\\('dotenv'\\).config\\(\\); console.log\\(process.env.MONGODB_URI\\)\")",
+      "Bash(npm run:*)",
+      "Skill(claude-api)"
     ]
   }
 }

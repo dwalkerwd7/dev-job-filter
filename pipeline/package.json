@@ -7,9 +7,10 @@
   "type": "commonjs",
   "main": "pipeline.js",
   "scripts": {
-    "scraper": "node scraper.js",
-    "filter": "node filter.js",
-    "pipeline": "npm run scraper && npm run filter"
+    "scrape": "varlock run -- node pipeline.js --no-filtering --no-aligning",
+    "filter": "varlock run -- node pipeline.js --no-scraping --no-aligning",
+    "align": "varlock run -- node pipeline.js --no-scraping --no-filtering",
+    "pipeline": "varlock run -- node pipeline.js"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.82.0",
