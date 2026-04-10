@@ -12,16 +12,21 @@ const FilteredJobSchema = new mongoose.Schema({
     title: { type: String, required: true },
     company: { type: String, required: true },
     url: { type: String, required: true, unique: true },
-    extractedText: { type: String },
+    tech_stack: { type: [String], default: [] },
+    employee_count: { type: Number, default: null },
+    scrapedAt: { type: Date, default: Date.now }
+});
+
+const AlignedJobSchema = new mongoose.Schema({
+    title: { type: String, required: true },
+    company: { type: String, required: true },
+    url: { type: String, required: true, unique: true },
     tech_stack: { type: [String], default: [] },
     employee_count: { type: Number, default: null },
     embedding: { type: [Number], default: [] },
     matchScore: { type: Number, default: null },
     applied: { type: Boolean, default: false },
     scrapedAt: { type: Date, default: Date.now }
-});
-
-const AlignedJobSchema = new mongoose.Schema({
 
 });
 
@@ -87,11 +92,11 @@ async function upsertAlignedJobs(_) {
 }
 
 async function getScrapedJobs() {
-    return await ScrapedJob.find();
+    return await ScrapedJob.find().lean();
 }
 
 async function getFilteredJobs() {
-    return await FilteredJob.find();
+    return await FilteredJob.find().lean();
 }
 
 async function getAppliedUrls() {
