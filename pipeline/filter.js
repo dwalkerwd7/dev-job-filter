@@ -3,8 +3,8 @@ const Anthropic = require("@anthropic-ai/sdk");
 const client = new Anthropic();
 
 // Pause between batches to stay under Anthropic's 50k tokens-per-minute limit.
-const BATCH_SIZE = 5;
-const BATCH_DELAY_MS = 8000;
+const BATCH_SIZE = 10;
+const BATCH_DELAY_MS = 5000;
 const MAX_TOKENS = 16;
 
 const TARGET_STACK = [
