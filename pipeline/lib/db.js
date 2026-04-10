@@ -14,25 +14,12 @@ const FilteredJobSchema = new mongoose.Schema({
     url: { type: String, required: true, unique: true },
     tech_stack: { type: [String], default: [] },
     employee_count: { type: Number, default: null },
-    scrapedAt: { type: Date, default: Date.now }
-});
-
-const AlignedJobSchema = new mongoose.Schema({
-    title: { type: String, required: true },
-    company: { type: String, required: true },
-    url: { type: String, required: true, unique: true },
-    tech_stack: { type: [String], default: [] },
-    employee_count: { type: Number, default: null },
-    embedding: { type: [Number], default: [] },
-    matchScore: { type: Number, default: null },
     applied: { type: Boolean, default: false },
     scrapedAt: { type: Date, default: Date.now }
-
 });
 
 const ScrapedJob = mongoose.model("ScrapedJob", ScrapedJobSchema);
 const FilteredJob = mongoose.model("FilteredJob", FilteredJobSchema);
-const AlignedJob = mongoose.model("AlignedJob", AlignedJobSchema);
 
 async function connect() {
     const uri = process.env.MONGODB_URI;
@@ -100,7 +87,7 @@ async function getFilteredJobs() {
 }
 
 async function getAppliedUrls() {
-    const applied = await AlignedJob.find({ applied: true }, { url: 1, _id: 0 }).lean();
+    const applied = await FilteredJob.find({ applied: true }, { url: 1, _id: 0 }).lean();
     return new Set(applied.map(j => j.url));
 }
 
