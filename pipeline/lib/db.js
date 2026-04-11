@@ -17,7 +17,7 @@ const FilteredJobSchema = new mongoose.Schema({
     company: { type: String, required: true },
     url: { type: String, required: true, unique: true },
     tech_stack: { type: [String], default: [] },
-    employee_count: { type: Number, default: null },
+    location: { type: String, default: null },
     workArrangement: { type: String, enum: ["remote", "hybrid", "in-person", null], default: null },
     applied: { type: Boolean, default: false },
     scrapedAt: { type: Date, default: Date.now }
@@ -73,7 +73,7 @@ async function upsertFilteredJobs(jobs) {
                     title: job.title,
                     company: job.company,
                     tech_stack: job.tech_stack,
-                    employee_count: job.employee_count ?? null,
+                    location: job.location ?? null,
                     workArrangement: job.workArrangement ?? null,
                     scrapedAt: new Date()
                 },
