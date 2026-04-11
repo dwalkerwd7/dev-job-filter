@@ -4,7 +4,6 @@ Stack
 
 Scraper: Playwright or Puppeteer (Node.js)
 Extraction: Claude API (parse raw HTML → structured JSON)
-Ranking: OpenAI or similar embeddings + cosine similarity vs. resume
 Backend/DB: MongoDB
 Frontend: Next.js dashboard
 
@@ -15,9 +14,7 @@ Architecture
        ↓
 [LLM extraction]       ← Claude API: HTML → structured JSON
        ↓
-[Hard filter]          ← Rule-based (stack match, company size, not already applied)
-       ↓
-[Embedding rank]       ← Cosine similarity vs. resume embedding
+[Hard filter]          ← Rule-based (stack match, not already applied)
        ↓
 [MongoDB + Next.js dashboard]
 Data Sources
@@ -35,29 +32,17 @@ js{
   company: String,
   extractedText: String,
   tech_stack: [String],
-  employee_count: Number,
-  embedding: [Number],   // 1536 floats (text-embedding-3-small)
-  matchScore: Number,    // cosine similarity vs. resume
+  location: String,
+  workArrangement: String,  // "remote" | "hybrid" | "in-person"
   applied: Boolean,
   scrapedAt: Date
 }
-Filtering & Ranking Logic
+Filtering Logic
 
-Hard filter first (before embedding to save API costs):
+Hard filter (stack match only):
 
 Stack overlap with target skills (React, Node.js, TypeScript, Next.js)
-Company size < 200 employees
 Not already applied
-
-
-Embed + rank remaining candidates via cosine similarity against resume embedding
-Store matchScore in MongoDB; dashboard queries sorted by score descending
-
-Key Decisions
-
-No custom ML model needed at this scale — use LLM for extraction, embeddings for ranking
-Store embeddings directly in MongoDB (no vector DB needed for hundreds of jobs; migrate to pgvector or MongoDB Atlas Vector Search if scale increases)
-Fine-tuning a sentence-transformers model on labeled apply/outcome data is a future v2 option
 
 Commands
 
