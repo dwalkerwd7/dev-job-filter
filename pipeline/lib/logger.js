@@ -21,7 +21,7 @@ function initLogger() {
     const origError = console.error.bind(console);
 
     console.log = (...args) => { origLog(...args); write("LOG  ", args); };
-    console.error = (...args) => { origError(...args); write("ERROR", args); };
+    console.error = (...args) => { origError(...args); write("ERROR  ", args); };
 
     console.log(`[logger] writing to ${logPath}`);
     return logPath;
