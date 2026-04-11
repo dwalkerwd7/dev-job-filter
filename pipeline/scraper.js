@@ -1,32 +1,7 @@
 const { chromium } = require("playwright");
 const { removeTextNoise } = require("./lib/utils");
 const db = require("./lib/db");
-
-const JOB_KEYWORDS = [
-    "web developer",
-    "full-stack",
-    "front-end",
-    "back-end",
-    "javascript",
-    "typescript"
-];
-
-const JOB_DESC_SELECTORS = [
-    // Greenhouse
-    ".job__description",
-    // Lever
-    ".posting-description",
-    // Workable
-    ".job-description",
-    // General
-    "#job-description",
-    "#jobDescription",
-    "[class*='job-description']",
-    "[class*='jobDescription']",
-    "[data-testid*='job-description']",
-    "article",
-    "main",
-];
+const { scraper: cfg } = require("./lib/config");
 
 async function fetchGreenhouse(slug, maxJobsPerSlug = 50) {
     const res = await fetch(`https://boards-api.greenhouse.io/v1/boards/${slug}/jobs`);
@@ -97,7 +72,7 @@ async function deepScrape(browser, url) {
         console.log(`[scrape] ${url}`);
 
         let jobDesc = null;
-        for (const selector of JOB_DESC_SELECTORS) {
+        for (const selector of cfg.jobDescSelectors) {
             const el = await page.$(selector);
             if (el) {
                 jobDesc = await el.innerText();
@@ -123,7 +98,7 @@ async function scrape(limit, renewSlugs) {
 
     let slugs = [];
     if (renewSlugs) {
-        slugs = await scrapeGreenhouseSlugs(JOB_KEYWORDS);
+        slugs = await scrapeGreenhouseSlugs(cfg.jobKeywords);
         await db.renewSlugs(slugs);
     } else {
         slugs = await db.getSlugs();
@@ -133,8 +108,8 @@ async function scrape(limit, renewSlugs) {
     const all_jobs = greenhouse.flat();
     const candidates = limit ? all_jobs.slice(0, limit) : all_jobs;
 
-    // so that 5 contexts run at a time to not starve system resources and make each page timeout on load
-    const CONCURRENCY = 5;
+    // limit concurrent contexts to not starve system resources or cause page timeouts
+    const CONCURRENCY = cfg.concurrency;
     const deep_results = [];
     for (let i = 0; i < candidates.length; i += CONCURRENCY) {
         const batch = await Promise.allSettled(
