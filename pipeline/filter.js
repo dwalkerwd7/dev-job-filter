@@ -4,29 +4,41 @@ const { filter: cfg } = require("./lib/config");
 const client = new Anthropic();
 
 // Pause between batches to stay under Anthropic's 50k TPM limit.
-// Stack batches: 5 jobs × ~700 tokens = ~3500 tokens/batch → need ≥ 4.2s, use 8s for headroom.
-// Info batches: 5 jobs × ~700 tokens (location + work arrangement) = ~3500 tokens/batch → 8s should suffice, using 60s for now (see TODO: tune delays).
+// Stack batches: 5 jobs × ~1100 tokens (900 in + 100 out) = ~5500 tokens/batch → need ≥ 6.6s, use 12s for 1.8× headroom.
+// Info batches: 5 jobs × ~1840 tokens (900 in × 2 calls + 40 out) = ~9200 tokens/batch → need ≥ 11s, use 25s for 2.3× headroom.
 
 function getTextWindows(text, keywords, windowSize = cfg.minDescriptionLength) {
-    let windows = [];
+    const half = Math.round(windowSize / 2);
 
-    for (kw of keywords) {
-        const kwIdx = text.indexOf(kw);
-        if (kwIdx !== -1) {
-            const halfWindowSize = Math.round(windowSize / 2);
-            if (kwIdx > halfWindowSize) {
-                windows.push(text.slice(kwIdx - halfWindowSize, kwIdx + halfWindowSize));
-            } else {
-                windows.push(text.slice(0, windowSize));
-            }
+    // Collect [start, end] for each keyword hit
+    const ranges = [];
+    for (const kw of keywords) {
+        const idx = text.indexOf(kw);
+        if (idx !== -1) {
+            ranges.push([Math.max(0, idx - half), Math.min(text.length, idx + half)]);
         }
     }
 
-    return windows;
+    if (ranges.length === 0) return [];
+
+    // Sort by start then merge overlapping ranges to avoid sending duplicate text
+    ranges.sort((a, b) => a[0] - b[0]);
+    const merged = [ranges[0]]; // commit to the first range being in merged
+    for (const [start, end] of ranges.slice(1)) {
+        const last = merged[merged.length - 1]; // the last committed range
+        if (start <= last[1]) { // if they overlap
+            // extend "last" so that it includes the new range -- this way both ranges will get merged together as one in the return statement
+            last[1] = Math.max(last[1], end); // mutating arrays with a const ref works b/c javascript is cool
+        } else {
+            merged.push([start, end]);
+        }
+    }
+
+    return merged.map(([start, end]) => text.slice(start, end));
 }
 
 function preFilter(jobDesc) {
-    return getTextWindows(jobDesc, cfg.windowKeywords).flat().join('\n');
+    return getTextWindows(jobDesc, cfg.windowKeywords).join('\n');
 }
 
 async function fetchTechStack(filteredText) {
