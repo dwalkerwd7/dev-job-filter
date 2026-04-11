@@ -20,7 +20,8 @@
       "Bash(./node_modules/.bin/varlock run:*)",
       "Bash(node -e \"require\\('dotenv'\\).config\\(\\); console.log\\(process.env.MONGODB_URI\\)\")",
       "Bash(npm run:*)",
-      "Skill(claude-api)"
+      "Skill(claude-api)",
+      "Bash(git config:*)"
     ]
   }
 }
