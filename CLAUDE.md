@@ -8,8 +8,6 @@ Backend/DB: MongoDB
 Frontend: Next.js dashboard
 
 Architecture
-[Scheduler / cron]
-       ↓
 [Scraper layer]        ← Playwright/Puppeteer
        ↓
 [LLM extraction]       ← Claude API: HTML → structured JSON
