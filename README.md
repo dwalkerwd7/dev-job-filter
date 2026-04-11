@@ -1,6 +1,6 @@
-# SMB Job Filter
+# Dev Job Filter
 
-A personal tool to discover and filter tech-related jobs. Only jobs that overlap with a target tech stack make it through.
+A tool to discover and filter tech-related jobs. Only jobs that overlap with a target tech stack make it through.
 `NOTE`: It costs about $1 in Claude tokens and 20 minutes to run the pipeline end-to-end for 1000 jobs.
 
 ## Pipeline
