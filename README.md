@@ -1,17 +1,18 @@
 # SMB Job Filter
 
-A personal tool to discover, extract, rank, and track job postings at SMBs and startups based on resume fit.
+A personal tool to discover and filter tech-related jobs. Only jobs that overlap with a target tech stack make it through.
+`NOTE`: It costs about $1 in Claude tokens and 20 minutes to run the pipeline end-to-end for 1000 jobs.
 
 ## Pipeline
 
 ```
-[Scraper]           ← Playwright + public APIs (RemoteOK, Remotive, WeWorkRemotely, Greenhouse)
+[Scraper]           ← Playwright + Greenhouse public API (slugs found via Serper search)
      ↓
-[Raw Jobs → MongoDB]
+[Scraped Jobs → MongoDB]
      ↓
-[LLM Extraction]    ← Claude Haiku: extracts tech_stack + employee_count from job text
+[LLM Filter]        ← Claude Haiku: extracts tech_stack, location, work arrangement
      ↓
-[Hard Filter]       ← Stack match (React/Node/TS/Next.js) + company size (5–200 employees)
+[Hard Filter]       ← Stack match (React / Node / TS / Next.js)
      ↓
 [Filtered Jobs → MongoDB]
      ↓
@@ -22,17 +23,19 @@ A personal tool to discover, extract, rank, and track job postings at SMBs and s
 
 ```bash
 cd pipeline
-node pipeline.js                          # scrape + filter (default 100 jobs)
-node pipeline.js --scrape-limit=50        # limit scrape count
-node pipeline.js --no-should-scrape       # skip scraping, re-filter existing raw jobs
+npm run pipeline    # scrape + filter
+npm run scrape      # scrape only
+npm run filter      # filter only
 ```
 
-Or via npm scripts:
+Flags (passed after `--`):
 
 ```bash
-npm run scraper     # scrape only
-npm run filter      # filter only
-npm run pipeline    # scrape + filter
+node pipeline.js --no-scraping              # skip scraping, re-filter existing scraped jobs
+node pipeline.js --no-filtering             # scrape only (long form of npm run scrape)
+node pipeline.js --scrape_limit=50          # cap jobs scraped (default: 100)
+node pipeline.js --filter_limit=50          # cap jobs filtered (default: 100)
+node pipeline.js --renew_slugs              # re-search for Greenhouse company slugs via Serper
 ```
 
 ### Running the dashboard
@@ -52,17 +55,16 @@ npm run dev         # http://localhost:3000
 |---|---|
 | `playwright` | Headless browser for deep-scraping job description text |
 | `@anthropic-ai/sdk` | Claude Haiku — extracts structured data from raw job text |
-| `mongoose` | MongoDB ODM for raw and filtered job storage |
-| `varlock` | Secure env var management (wraps `ANTHROPIC_API_KEY`, `MONGODB_URI`) |
+| `mongoose` | MongoDB ODM for scraped and filtered job storage |
+| `varlock` | Secure env var management |
 
 ### Dashboard (`dashboard/`)
 
 | Package | Purpose |
 |---|---|
-| `next` (16.x) | Frontend framework |
+| `next` | Frontend framework |
 | `react` / `react-dom` | UI |
 | `mongoose` | MongoDB queries from API routes |
-| `varlock` / `@varlock/nextjs-integration` | Env var management integrated into Next.js build |
 | `tailwindcss` | Styling |
 | `typescript` | Type safety |
 
@@ -72,45 +74,40 @@ npm run dev         # http://localhost:3000
 
 | Source | Method |
 |---|---|
-| [RemoteOK](https://remoteok.com) | Public JSON API |
-| [Remotive](https://remotive.com) | Public JSON API (software-dev category) |
-| [WeWorkRemotely](https://weworkremotely.com) | Playwright shallow scrape |
-| [Greenhouse](https://greenhouse.io) | Public board API across ~20 target companies |
+| [Greenhouse](https://greenhouse.io) | Public board API — company slugs discovered via Serper Google search |
 
 ---
 
 ## MongoDB Schema
 
-### `rawjobs`
+### `scrapedjobs`
 
-Stores every job collected before filtering.
+Every job collected before filtering.
 
 ```js
 {
-  title:         String,   // required
-  company:       String,   // required
-  url:           String,   // required, unique
-  extractedText: String,   // raw text scraped from the job page
-  scrapedAt:     Date
+  title:     String,   // required
+  company:   String,   // required
+  url:       String,   // required, unique
+  jobDesc:   String,   // raw text scraped from the job page
+  scrapedAt: Date
 }
 ```
 
 ### `filteredjobs`
 
-Jobs that passed the hard filter. Embedding/ranking fields are reserved for a future pass.
+Jobs that passed the hard filter.
 
 ```js
 {
-  title:         String,    // required
-  company:       String,    // required
-  url:           String,    // required, unique
-  extractedText: String,    // raw text from job page
-  tech_stack:    [String],  // extracted by Claude Haiku
-  employee_count: Number,   // extracted by Claude Haiku (null if unknown)
-  embedding:     [Number],  // 1536 floats — text-embedding-3-small (future)
-  matchScore:    Number,    // cosine similarity vs. resume embedding (future)
-  applied:       Boolean,   // tracked via dashboard (default: false)
-  scrapedAt:     Date
+  title:           String,    // required
+  company:         String,    // required
+  url:             String,    // required, unique
+  tech_stack:      [String],  // extracted by Claude Haiku
+  location:        String,    // extracted by Claude Haiku (null if unknown)
+  workArrangement: String,    // "remote" | "hybrid" | "in-person" (null if unknown)
+  applied:         Boolean,   // tracked via dashboard (default: false)
+  scrapedAt:       Date
 }
 ```
 
@@ -118,13 +115,8 @@ Jobs that passed the hard filter. Embedding/ranking fields are reserved for a fu
 
 ## Filter Logic
 
-**Hard filter** (applied before any embedding to save API cost):
-
-- Tech stack overlaps with: `React`, `Angular`, `Node.js`, `Express`, `TypeScript`, `JavaScript`, `Next.js`
-- Company size: 5–200 employees (or unknown)
+- Tech stack overlaps with target skills (React, Angular, Node.js, Express, TypeScript, JavaScript, Next.js, etc.)
 - Not already marked `applied: true`
-
-**Ranking** (planned): cosine similarity between job embedding and resume embedding, stored as `matchScore`.
 
 ---
 
@@ -135,4 +127,5 @@ Managed via [varlock](https://github.com/varlock/varlock). Required vars:
 ```
 ANTHROPIC_API_KEY   # Claude API key (used in filter.js)
 MONGODB_URI         # MongoDB connection string
+SERPER_API_KEY      # Serper API key (used to find Greenhouse company slugs)
 ```
