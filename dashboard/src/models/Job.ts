@@ -5,7 +5,7 @@ export interface IJob extends Document {
   company: string;
   jobDesc: string;
   tech_stack: string[];
-  employee_count: number;
+  location: string | null;
   embedding: number[];
   matchScore: number;
   applied: boolean;
@@ -17,7 +17,7 @@ const JobSchema = new Schema<IJob>({
   company: { type: String, required: true },
   jobDesc: { type: String, default: "" },
   tech_stack: { type: [String], default: [] },
-  employee_count: { type: Number, default: 0 },
+  location: { type: String, default: null },
   embedding: { type: [Number], default: [] },
   matchScore: { type: Number, default: 0 },
   applied: { type: Boolean, default: false },
