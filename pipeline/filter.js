@@ -148,7 +148,8 @@ async function filter(jobs, limit) {
     const results = stackPassed.map(({ title, company, url, tech_stack, location, workArrangement, scrapedAt }) => ({
         title, company, url, tech_stack, location, workArrangement, scrapedAt
     }));
-    console.log(`[filter] done: ${results.length} jobs passed`);
+
+    console.log(`[filter] ${results.length} jobs passed.`);
 
     return results;
 }
