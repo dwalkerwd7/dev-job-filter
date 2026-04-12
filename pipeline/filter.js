@@ -85,9 +85,10 @@ async function filterStack(jobs, limit, saveProgress) {
                 }
             })
         );
-        if (calledClaude && i + cfg.batchSize < preFiltered.length)
+        const isNotLastBatch = i + cfg.batchSize < preFiltered.length;
+        if (calledClaude && isNotLastBatch)
             await new Promise(r => setTimeout(r, cfg.batchDelayMs));
-        if (saveProgress && batch % 10 === 0) {
+        if (saveProgress && (batch % 10 === 0 || !isNotLastBatch)) {
             await saveProgress(preFiltered.slice(lastSaveIdx, i + cfg.batchSize));
             lastSaveIdx = i + cfg.batchSize;
         }
