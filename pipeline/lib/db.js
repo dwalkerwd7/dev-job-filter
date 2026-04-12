@@ -13,7 +13,8 @@ const JobSchema = new mongoose.Schema({
     location: { type: String, default: null },
     workArrangement: { type: String, enum: ["remote", "hybrid", "in-person", null], default: null },
     applied: { type: Boolean, default: false },
-    filteredThrough: { type: Boolean, default: false },
+    filterRan: { type: Boolean, default: false },
+    filterPassed: { type: Boolean, default: false },
     scrapedAt: { type: Date, default: Date.now }
 });
 
@@ -68,7 +69,8 @@ async function upsertFilteredJobs(jobs) {
                     tech_stack: job.tech_stack,
                     location: job.location ?? null,
                     workArrangement: job.workArrangement ?? null,
-                    filteredThrough: true,
+                    filterRan: true,
+                    filterPassed: true,
                 },
                 $setOnInsert: { applied: false, scrapedAt: new Date() }
             },
@@ -90,7 +92,7 @@ async function getScrapedJobs() {
 }
 
 async function getFilteredJobs() {
-    return await Job.find({ filteredThrough: true }).lean();
+    return await Job.find({ filterPassed: true }).lean();
 }
 
 async function getAppliedUrls() {
