@@ -4,8 +4,6 @@ const { scrape } = require("./scraper");
 const { filter } = require("./filter");
 const db = require('./lib/db');
 
-initLogger();
-
 async function pipelineStep(stepCb, jobType) {
     const res = await stepCb();
     afterDBUpdate(res, jobType);
@@ -21,6 +19,8 @@ function afterDBUpdate(res, jobType) {
 }
 
 async function pipeline() {
+    initLogger();
+
     const { values } = parseArgs({
         options: {
             renew_slugs: { type: "boolean", default: false },
