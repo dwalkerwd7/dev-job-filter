@@ -69,7 +69,7 @@ async function deepScrape(browser, url) {
 
     try {
         await page.goto(url, { waitUntil: "domcontentloaded", timeout: 30000 });
-        console.log(`[scrape] ${url}`);
+        console.log(`[scraper] ${url}`);
 
         let jobDesc = null;
         for (const selector of cfg.jobDescSelectors) {
