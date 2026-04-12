@@ -9,7 +9,6 @@
   "scripts": {
     "scrape": "varlock run -- node pipeline.js --no-filtering --no-aligning",
     "filter": "varlock run -- node pipeline.js --no-scraping --no-aligning",
-    "align": "varlock run -- node pipeline.js --no-scraping --no-filtering",
     "pipeline": "varlock run -- node pipeline.js"
   },
   "dependencies": {
