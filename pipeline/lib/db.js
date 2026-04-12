@@ -79,17 +79,6 @@ async function upsertFilteredJobs(jobs) {
     return Job.bulkWrite(ops);
 }
 
-async function upsertPreFilteredJobs(jobs) {
-    const ops = jobs.map(job => ({
-        updateOne: {
-            filter: { url: job.url },
-            update: { $set: { filteredThrough: false } },
-            upsert: false  // these should already exist from the scrape step
-        }
-    }));
-
-    return Job.bulkWrite(ops);
-}
 
 async function getSlugs() {
     const docs = await Slug.find().lean();
@@ -111,6 +100,6 @@ async function getAppliedUrls() {
 
 module.exports = {
     connect, disconnect,
-    renewSlugs, upsertScrapedJobs, upsertFilteredJobs, upsertPreFilteredJobs,
+    renewSlugs, upsertScrapedJobs, upsertFilteredJobs,
     getSlugs, getScrapedJobs, getFilteredJobs, getAppliedUrls
 };
