@@ -1,7 +1,8 @@
 const { parseArgs } = require("util");
 const { initLogger } = require("./lib/logger");
 const { scrape } = require("./scraper");
-const { filter } = require("./filter");
+const { filterStack } = require("./filter");
+const { gatherInfo } = require("./info");
 const db = require('./lib/db');
 
 async function pipelineStep(stepCb, jobType) {
@@ -26,7 +27,7 @@ async function pipeline() {
             renew_slugs: { type: "boolean", default: false },
             scraping: { type: "boolean", default: true },
             filtering: { type: "boolean", default: true },
-            aligning: { type: "boolean", default: true },
+            info: { type: "boolean", default: true },
             scrape_limit: { type: "string", default: "100" },
             filter_limit: { type: "string", default: "100" },
         },
@@ -48,16 +49,25 @@ async function pipeline() {
             scraped_jobs = await db.getScrapedJobs();
         }
 
-        /* Filtering Step */
-        let filtered_jobs = [];
+        /* Stack Filter Step */
+        let stack_passed_jobs = [];
         if (values.filtering && scraped_jobs.length > 0) {
             await pipelineStep(async _ => {
-                console.log("Filtering jobs...\n");
-                filtered_jobs = await filter(scraped_jobs, parseInt(values.filter_limit));
-                return await db.upsertFilteredJobs(filtered_jobs);
-            }, 'filtered');
+                console.log("Filtering jobs (stack)...\n");
+                stack_passed_jobs = await filterStack(scraped_jobs, parseInt(values.filter_limit));
+                return await db.upsertStackPassedJobs(stack_passed_jobs);
+            }, 'stack-passed');
         } else {
-            filtered_jobs = await db.getFilteredJobs();
+            stack_passed_jobs = await db.getStackPassedJobs();
+        }
+
+        /* Info Step */
+        if (values.info && stack_passed_jobs.length > 0) {
+            await pipelineStep(async _ => {
+                console.log("Fetching job info...\n");
+                const info_jobs = await gatherInfo(stack_passed_jobs);
+                return await db.upsertInfoJobs(info_jobs);
+            }, 'complete');
         }
     } finally {
         await db.disconnect();
@@ -68,5 +78,4 @@ async function pipeline() {
 
 /* Run pipeline */
 pipeline()
-    .then(success => success && console.log("Pipeline completed successfully!"))
     .catch(error => console.error(`Pipeline Error: ${error}`));

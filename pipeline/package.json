@@ -7,9 +7,11 @@
   "type": "commonjs",
   "main": "pipeline.js",
   "scripts": {
-    "scrape": "varlock run -- node pipeline.js --no-filtering --no-aligning",
-    "filter": "varlock run -- node pipeline.js --no-scraping --no-aligning",
-    "pipeline": "varlock run -- node pipeline.js"
+    "scrape": "varlock run -- node pipeline.js --no-filtering --no-info",
+    "filter": "varlock run -- node pipeline.js --no-scraping --no-info",
+    "info": "varlock run -- node pipeline.js --no-scraping --no-filtering",
+    "pipeline": "varlock run -- node pipeline.js",
+    "migrate": "varlock run -- node migrate.js"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.82.0",

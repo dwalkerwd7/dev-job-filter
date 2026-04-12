@@ -58,7 +58,7 @@ async function upsertScrapedJobs(jobs) {
     return Job.bulkWrite(ops);
 }
 
-async function upsertFilteredJobs(jobs) {
+async function upsertStackPassedJobs(jobs) {
     const ops = jobs.map(job => ({
         updateOne: {
             filter: { url: job.url },
@@ -67,14 +67,28 @@ async function upsertFilteredJobs(jobs) {
                     title: job.title,
                     company: job.company,
                     tech_stack: job.tech_stack,
-                    location: job.location ?? null,
-                    workArrangement: job.workArrangement ?? null,
                     filterRan: true,
                     filterPassed: true,
                 },
                 $setOnInsert: { applied: false, scrapedAt: new Date() }
             },
             upsert: true
+        }
+    }));
+
+    return Job.bulkWrite(ops);
+}
+
+async function upsertInfoJobs(jobs) {
+    const ops = jobs.map(job => ({
+        updateOne: {
+            filter: { url: job.url },
+            update: {
+                $set: {
+                    location: job.location ?? null,
+                    workArrangement: job.workArrangement ?? null,
+                }
+            },
         }
     }));
 
@@ -91,7 +105,7 @@ async function getScrapedJobs() {
     return await Job.find().lean();
 }
 
-async function getFilteredJobs() {
+async function getStackPassedJobs() {
     return await Job.find({ filterPassed: true }).lean();
 }
 
@@ -102,6 +116,6 @@ async function getAppliedUrls() {
 
 module.exports = {
     connect, disconnect,
-    renewSlugs, upsertScrapedJobs, upsertFilteredJobs,
-    getSlugs, getScrapedJobs, getFilteredJobs, getAppliedUrls
+    renewSlugs, upsertScrapedJobs, upsertStackPassedJobs, upsertInfoJobs,
+    getSlugs, getScrapedJobs, getStackPassedJobs, getAppliedUrls
 };
