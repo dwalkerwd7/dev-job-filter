@@ -21,6 +21,12 @@ const JobSchema = new mongoose.Schema({
 const Slug = mongoose.model("Slug", SlugSchema);
 const Job = mongoose.model("Job", JobSchema);
 
+function logResult(res, label) {
+    if ((res.upsertedCount ?? 0) + (res.modifiedCount ?? 0) > 0) {
+        console.log(`[db] ${label}: ${res.upsertedCount} inserted, ${res.modifiedCount} modified.`);
+    }
+}
+
 async function connect() {
     const uri = process.env.MONGODB_URI;
     // socketTimeoutMS: keep the connection alive for up to 2 min to survive the filter pipeline step
@@ -55,7 +61,9 @@ async function upsertScrapedJobs(jobs) {
         }
     }));
 
-    return Job.bulkWrite(ops);
+    const res = await Job.bulkWrite(ops);
+    logResult(res, 'scraped');
+    return res;
 }
 
 async function upsertStackPassedJobs(jobs) {
@@ -76,7 +84,9 @@ async function upsertStackPassedJobs(jobs) {
         }
     }));
 
-    return Job.bulkWrite(ops);
+    const res = await Job.bulkWrite(ops);
+    logResult(res, 'stack-passed');
+    return res;
 }
 
 async function upsertTechStackProgress(jobs) {
@@ -87,7 +97,9 @@ async function upsertTechStackProgress(jobs) {
         }
     }));
 
-    return Job.bulkWrite(ops);
+    const res = await Job.bulkWrite(ops);
+    logResult(res, 'tech stack progress');
+    return res;
 }
 
 async function upsertPreFilteredJobs(jobs) {
@@ -98,7 +110,9 @@ async function upsertPreFilteredJobs(jobs) {
         }
     }));
 
-    return Job.bulkWrite(ops);
+    const res = await Job.bulkWrite(ops);
+    logResult(res, 'pre-filtered');
+    return res;
 }
 
 async function upsertInfoJobs(jobs) {
@@ -114,7 +128,9 @@ async function upsertInfoJobs(jobs) {
         }
     }));
 
-    return Job.bulkWrite(ops);
+    const res = await Job.bulkWrite(ops);
+    logResult(res, 'info');
+    return res;
 }
 
 
@@ -125,6 +141,10 @@ async function getSlugs() {
 
 async function getScrapedJobs() {
     return await Job.find().lean();
+}
+
+async function getUnfilteredJobs() {
+    return await Job.find({ filterRan: false }).lean();
 }
 
 async function getStackPassedJobs() {
@@ -139,5 +159,5 @@ async function getAppliedUrls() {
 module.exports = {
     connect, disconnect,
     renewSlugs, upsertScrapedJobs, upsertStackPassedJobs, upsertTechStackProgress, upsertPreFilteredJobs, upsertInfoJobs,
-    getSlugs, getScrapedJobs, getStackPassedJobs, getAppliedUrls
+    getSlugs, getScrapedJobs, getUnfilteredJobs, getStackPassedJobs, getAppliedUrls
 };
