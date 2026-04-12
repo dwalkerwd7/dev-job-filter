@@ -76,13 +76,17 @@ async function filterStack(jobs, limit, saveProgress) {
     for (let i = 0; i < preFiltered.length; i += cfg.batchSize) {
         const batch = Math.floor(i / cfg.batchSize) + 1;
         console.log(`[filter] stack [${batch}/${stackBatches}]`);
-        if (i > 0) await new Promise(r => setTimeout(r, cfg.batchDelayMs));
+        let calledClaude = false;
         await Promise.all(
             preFiltered.slice(i, i + cfg.batchSize).map(async job => {
-                if (job.tech_stack.length === 0)
+                if (job.tech_stack.length === 0) {
+                    calledClaude = true;
                     job.tech_stack = await fetchTechStack(job.jobDesc);
+                }
             })
         );
+        if (calledClaude && i + cfg.batchSize < preFiltered.length)
+            await new Promise(r => setTimeout(r, cfg.batchDelayMs));
         if (saveProgress && batch % 10 === 0) {
             await saveProgress(preFiltered.slice(lastSaveIdx, i + cfg.batchSize));
             lastSaveIdx = i + cfg.batchSize;
