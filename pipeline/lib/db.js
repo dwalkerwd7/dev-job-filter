@@ -4,28 +4,21 @@ const SlugSchema = new mongoose.Schema({
     name: { type: String, required: true }
 });
 
-const ScrapedJobSchema = new mongoose.Schema({
+const JobSchema = new mongoose.Schema({
     title: { type: String, required: true },
     company: { type: String, required: true },
     url: { type: String, required: true, unique: true },
     jobDesc: { type: String },
-    scrapedAt: { type: Date, default: Date.now() }
-});
-
-const FilteredJobSchema = new mongoose.Schema({
-    title: { type: String, required: true },
-    company: { type: String, required: true },
-    url: { type: String, required: true, unique: true },
     tech_stack: { type: [String], default: [] },
     location: { type: String, default: null },
     workArrangement: { type: String, enum: ["remote", "hybrid", "in-person", null], default: null },
     applied: { type: Boolean, default: false },
+    filteredThrough: { type: Boolean, default: false },
     scrapedAt: { type: Date, default: Date.now }
 });
 
 const Slug = mongoose.model("Slug", SlugSchema);
-const ScrapedJob = mongoose.model("ScrapedJob", ScrapedJobSchema);
-const FilteredJob = mongoose.model("FilteredJob", FilteredJobSchema);
+const Job = mongoose.model("Job", JobSchema);
 
 async function connect() {
     const uri = process.env.MONGODB_URI;
@@ -61,7 +54,7 @@ async function upsertScrapedJobs(jobs) {
         }
     }));
 
-    return ScrapedJob.bulkWrite(ops);
+    return Job.bulkWrite(ops);
 }
 
 async function upsertFilteredJobs(jobs) {
@@ -75,19 +68,27 @@ async function upsertFilteredJobs(jobs) {
                     tech_stack: job.tech_stack,
                     location: job.location ?? null,
                     workArrangement: job.workArrangement ?? null,
-                    scrapedAt: new Date()
+                    filteredThrough: true,
                 },
-                $setOnInsert: { applied: false }
+                $setOnInsert: { applied: false, scrapedAt: new Date() }
             },
             upsert: true
         }
     }));
 
-    return FilteredJob.bulkWrite(ops); // updates existing records and adds new ones
+    return Job.bulkWrite(ops);
 }
 
-async function upsertAlignedJobs(_) {
-    return true;
+async function upsertPreFilteredJobs(jobs) {
+    const ops = jobs.map(job => ({
+        updateOne: {
+            filter: { url: job.url },
+            update: { $set: { filteredThrough: false } },
+            upsert: false  // these should already exist from the scrape step
+        }
+    }));
+
+    return Job.bulkWrite(ops);
 }
 
 async function getSlugs() {
@@ -96,20 +97,20 @@ async function getSlugs() {
 }
 
 async function getScrapedJobs() {
-    return await ScrapedJob.find().lean();
+    return await Job.find().lean();
 }
 
 async function getFilteredJobs() {
-    return await FilteredJob.find().lean();
+    return await Job.find({ filteredThrough: true }).lean();
 }
 
 async function getAppliedUrls() {
-    const applied = await FilteredJob.find({ applied: true }, { url: 1, _id: 0 }).lean();
+    const applied = await Job.find({ applied: true }, { url: 1, _id: 0 }).lean();
     return new Set(applied.map(j => j.url));
 }
 
 module.exports = {
     connect, disconnect,
-    renewSlugs, upsertScrapedJobs, upsertFilteredJobs, upsertAlignedJobs,
+    renewSlugs, upsertScrapedJobs, upsertFilteredJobs, upsertPreFilteredJobs,
     getSlugs, getScrapedJobs, getFilteredJobs, getAppliedUrls
 };
