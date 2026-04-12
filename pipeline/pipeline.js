@@ -54,7 +54,6 @@ async function pipeline() {
             await pipelineStep(async _ => {
                 console.log("Filtering jobs...\n");
                 filtered_jobs = await filter(scraped_jobs, parseInt(values.filter_limit));
-                console.log(`${filtered_jobs.length} jobs were filtered!`);
                 return await db.upsertFilteredJobs(filtered_jobs);
             }, 'filtered');
         } else {
