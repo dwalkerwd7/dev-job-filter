@@ -54,7 +54,13 @@ async function pipeline() {
         if (values.filtering && scraped_jobs.length > 0) {
             await pipelineStep(async _ => {
                 console.log("Filtering jobs (stack)...\n");
-                stack_passed_jobs = await filterStack(scraped_jobs, parseInt(values.filter_limit));
+                const { passed, preFilteredOut } = await filterStack(
+                    scraped_jobs,
+                    parseInt(values.filter_limit),
+                    (jobs) => db.upsertTechStackProgress(jobs)
+                );
+                stack_passed_jobs = passed;
+                if (preFilteredOut.length > 0) await db.upsertPreFilteredJobs(preFilteredOut);
                 return await db.upsertStackPassedJobs(stack_passed_jobs);
             }, 'stack-passed');
         } else {

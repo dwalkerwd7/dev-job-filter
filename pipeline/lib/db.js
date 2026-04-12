@@ -79,6 +79,28 @@ async function upsertStackPassedJobs(jobs) {
     return Job.bulkWrite(ops);
 }
 
+async function upsertTechStackProgress(jobs) {
+    const ops = jobs.map(job => ({
+        updateOne: {
+            filter: { url: job.url },
+            update: { $set: { tech_stack: job.tech_stack } },
+        }
+    }));
+
+    return Job.bulkWrite(ops);
+}
+
+async function upsertPreFilteredJobs(jobs) {
+    const ops = jobs.map(job => ({
+        updateOne: {
+            filter: { url: job.url },
+            update: { $set: { filterRan: true, filterPassed: false } },
+        }
+    }));
+
+    return Job.bulkWrite(ops);
+}
+
 async function upsertInfoJobs(jobs) {
     const ops = jobs.map(job => ({
         updateOne: {
@@ -116,6 +138,6 @@ async function getAppliedUrls() {
 
 module.exports = {
     connect, disconnect,
-    renewSlugs, upsertScrapedJobs, upsertStackPassedJobs, upsertInfoJobs,
+    renewSlugs, upsertScrapedJobs, upsertStackPassedJobs, upsertTechStackProgress, upsertPreFilteredJobs, upsertInfoJobs,
     getSlugs, getScrapedJobs, getStackPassedJobs, getAppliedUrls
 };

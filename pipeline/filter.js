@@ -58,28 +58,35 @@ async function fetchTechStack(filteredText) {
     }
 }
 
-async function filterStack(jobs, limit) {
+async function filterStack(jobs, limit, saveProgress) {
     // Pre-filter text windows, skip jobs with no usable description
     const jobsLimited = limit ? jobs.slice(0, Math.min(jobs.length, limit)) : jobs;
+    const preFilteredOut = [];
     const preFiltered = jobsLimited.flatMap(job => {
-        if (!job.jobDesc) return [];
+        if (!job.jobDesc) { preFilteredOut.push(job); return []; }
         const filtered = preFilter(job.jobDesc);
-        if (filtered.length < cfg.minDescriptionLength) return [];
-        return [{ ...job, tech_stack: [], jobDesc: filtered }];
+        if (filtered.length < cfg.minDescriptionLength) { preFilteredOut.push(job); return []; }
+        return [{ ...job, tech_stack: job.tech_stack ?? [], jobDesc: filtered }];
     });
     console.log(`[filter] pre-filter: ${preFiltered.length}/${jobsLimited.length} jobs have usable descriptions`);
 
-    // Extract tech stack via Claude for each pre-filtered job
+    // Extract tech stack via Claude, skipping jobs that already have one
     const stackBatches = Math.ceil(preFiltered.length / cfg.batchSize);
+    let lastSaveIdx = 0;
     for (let i = 0; i < preFiltered.length; i += cfg.batchSize) {
         const batch = Math.floor(i / cfg.batchSize) + 1;
         console.log(`[filter] stack [${batch}/${stackBatches}]`);
         if (i > 0) await new Promise(r => setTimeout(r, cfg.batchDelayMs));
         await Promise.all(
             preFiltered.slice(i, i + cfg.batchSize).map(async job => {
-                job.tech_stack = await fetchTechStack(job.jobDesc);
+                if (job.tech_stack.length === 0)
+                    job.tech_stack = await fetchTechStack(job.jobDesc);
             })
         );
+        if (saveProgress && batch % 10 === 0) {
+            await saveProgress(preFiltered.slice(lastSaveIdx, i + cfg.batchSize));
+            lastSaveIdx = i + cfg.batchSize;
+        }
     }
 
     const stackPassed = preFiltered.filter(job => {
@@ -88,9 +95,12 @@ async function filterStack(jobs, limit) {
     });
     console.log(`[filter] stack: ${stackPassed.length}/${preFiltered.length} passed`);
 
-    return stackPassed.map(({ title, company, url, tech_stack, jobDesc, scrapedAt }) => ({
-        title, company, url, tech_stack, jobDesc, scrapedAt
-    }));
+    return {
+        passed: stackPassed.map(({ title, company, url, tech_stack, jobDesc, scrapedAt }) => ({
+            title, company, url, tech_stack, jobDesc, scrapedAt
+        })),
+        preFilteredOut,
+    };
 }
 
 module.exports = { filterStack };
