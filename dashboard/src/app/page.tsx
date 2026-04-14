@@ -10,7 +10,7 @@ export default async function Home({ searchParams }: { searchParams: Promise<{ [
         <div className="min-h-full bg-gray-50">
             <div className="max-w-6xl mx-auto px-6 py-8">
                 <div className="mb-6">
-                    <h1 className="text-xl font-semibold text-gray-900">Job Board</h1>
+                    <h1 className="text-xl font-semibold text-gray-900">DEV Job Board Filter</h1>
                 </div>
                 <Suspense fallback={<StatsBarSkeleton />}>
                     <StatsBar />
