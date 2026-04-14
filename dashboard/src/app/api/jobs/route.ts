@@ -4,6 +4,6 @@ import Job from "@/models/Job";
 
 export async function GET() {
   await connectDB();
-  const jobs = await Job.find({}).sort({ matchScore: -1 }).lean();
+  const jobs = await Job.find({}).sort({ scrapedAt: -1 }).lean();
   return NextResponse.json(jobs);
 }
