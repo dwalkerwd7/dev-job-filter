@@ -5,6 +5,7 @@ import JobCard from "@/components/JobCard";
 type Filters = {
     arrangement?: string;
     view?: string;
+    search?: string;
 };
 
 export default async function JobList({ filters }: { filters: Filters }) {
@@ -27,6 +28,10 @@ export default async function JobList({ filters }: { filters: Filters }) {
     }
 
     if (filters.arrangement) query.workArrangement = filters.arrangement;
+    if (filters.search) {
+        const regex = { $regex: filters.search, $options: "i" };
+        query.$or = [{ title: regex }, { company: regex }];
+    }
 
     const jobs = await Job.find(query)
         .sort({ scrapedAt: -1 })
