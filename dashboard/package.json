@@ -14,12 +14,10 @@
     }
   },
   "dependencies": {
-    "@varlock/nextjs-integration": "^0.3.2",
     "mongoose": "^9.4.1",
     "next": "16.2.2",
     "react": "19.2.4",
-    "react-dom": "19.2.4",
-    "varlock": "^0.7.1"
+    "react-dom": "19.2.4"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
