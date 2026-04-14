@@ -11,6 +11,7 @@ type JobData = {
     location: string | null;
     workArrangement: "remote" | "hybrid" | "in-person" | null;
     applied: boolean;
+    dismissed: boolean;
     scrapedAt: Date | string;
 };
 
@@ -27,26 +28,24 @@ export default function JobCard({ job }: { job: JobData }) {
         year: "numeric"
     });
 
-    const [dismissed, setDismissed] = useState(false);
+    const [dismissed, setDismissed] = useState(job.dismissed);
     const [error, setError] = useState<string | null>(null);
 
-    async function handleDismiss() {
-        setDismissed(true);
+    async function handleDismissRenew(dismiss: boolean = true) {
+        setDismissed(dismiss);
 
         try {
             const res = await fetch(`/api/jobs/${job._id}`, {
                 method: "PATCH",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ dismissed: true })
+                body: JSON.stringify({ dismissed: dismiss })
             });
             if (!res.ok) throw new Error("Request failed");
         } catch {
-            setDismissed(false);
-            setError("Failed to dismiss. Try again.");
+            setDismissed(!dismiss);
+            setError(`Failed to ${dismiss ? 'dismiss' : 'renew'} job. Try again.`);
         }
     }
-
-    if (dismissed) return null;
 
     return (
         <div className="bg-white border border-gray-200 rounded-md p-5">
@@ -73,12 +72,21 @@ export default function JobCard({ job }: { job: JobData }) {
                             {job.workArrangement}
                         </span>
                     )}
-                    <button onClick={handleDismiss}
-                        className="text-gray_300 hover:text-gray-500 transition-colors ml-1"
-                        aria-label="Dismiss"
-                    >
-                        ✕
-                    </button>
+                    {!dismissed ? (
+                        <button onClick={() => handleDismissRenew()}
+                            className="text-gray-300 hover:text-gray-500 transition-colors ml-1"
+                            aria-label="Dismiss"
+                        >
+                            ✕
+                        </button>
+                    ) : (
+                        <button onClick={() => handleDismissRenew(false)}
+                            className="text-blue-500 hover: text-blue-700, transition-colors ml-1"
+                            aria-label="Renew"
+                        >
+                            +
+                        </button>
+                    )}
                 </div>
             </div>
             {job.tech_stack.length > 0 && (
