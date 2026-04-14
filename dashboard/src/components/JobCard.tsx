@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 type JobData = {
     _id: string;
@@ -21,19 +22,21 @@ const arrangementStyles: Record<string, string> = {
     "in-person": "bg-gray-100 text-gray-600 border-gray-200"
 };
 
-export default function JobCard({ job }: { job: JobData }) {
+export default function JobCard({ job, filters }: { job: JobData, filters: Record<string, unknown> }) {
     const date = new Date(job.scrapedAt).toLocaleDateString("en-US", {
         month: "short",
         day: "numeric",
         year: "numeric"
     });
 
+    const router = useRouter();
+
     const [dismissed, setDismissed] = useState(job.dismissed);
+    const [isApplied, setIsApplied] = useState(job.applied);
     const [error, setError] = useState<string | null>(null);
 
     async function handleDismissRenew(dismiss: boolean = true) {
         setDismissed(dismiss);
-
         try {
             const res = await fetch(`/api/jobs/${job._id}`, {
                 method: "PATCH",
@@ -41,11 +44,30 @@ export default function JobCard({ job }: { job: JobData }) {
                 body: JSON.stringify({ dismissed: dismiss })
             });
             if (!res.ok) throw new Error("Request failed");
+            router.refresh();
         } catch {
             setDismissed(!dismiss);
             setError(`Failed to ${dismiss ? 'dismiss' : 'renew'} job. Try again.`);
         }
     }
+
+    async function handleApply() {
+        setIsApplied(!isApplied);
+        try {
+            const res = await fetch(`api/jobs/${job._id}`, {
+                method: "PATCH",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ applied: !isApplied }),
+            });
+            if (!res.ok) throw new Error("Request failed");
+            router.refresh();
+        } catch {
+            setIsApplied(isApplied);
+            setError("Failed to update application status. Try again.");
+        }
+    }
+
+    if (dismissed && filters.view !== "dismissed") return null;
 
     return (
         <div className="bg-white border border-gray-200 rounded-md p-5">
@@ -62,11 +84,16 @@ export default function JobCard({ job }: { job: JobData }) {
                     </a>
                 </div>
                 <div className="flex items-center gap-2 shrink-0">
-                    {job.applied && (
-                        <span className="text-sm font-medium text-green-700 bg-green-50 border border-green-200 rounded px-2 py-0.5">
-                            Applied
-                        </span>
-                    )}
+                    <button
+                        onClick={handleApply}
+                        className={`text-xs font-medium border rounded px-2 py-0.5 transition-colors
+                            ${isApplied
+                                ? "text-green-700 bg-green-50 border-green-200"
+                                : "text-gray-400 bg-white border-gray-200 hover:border-gray-400 hover: text-gray-600"
+                            }`}
+                    >
+                        {isApplied ? "Applied" : "Mark Applied"}
+                    </button>
                     {job.workArrangement && (
                         <span className={`text-xs font-medium border rounded px-2 py-0.5 capitalize ${arrangementStyles[job.workArrangement]}`}>
                             {job.workArrangement}
@@ -91,8 +118,8 @@ export default function JobCard({ job }: { job: JobData }) {
             </div>
             {job.tech_stack.length > 0 && (
                 <div className="flex flex-wrap mt-3 gap-1.5">
-                    {job.tech_stack.map(tech => (
-                        <span key={tech} className="text-xs bg-gray-100 text-gray-600 rounded px-2 py-0.5">
+                    {job.tech_stack.map((tech, i) => (
+                        <span key={`${tech}-${i}`} className="text-xs bg-gray-100 text-gray-600 rounded px-2 py-0.5">
                             {tech}
                         </span>
                     ))}

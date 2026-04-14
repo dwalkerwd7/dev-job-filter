@@ -4,19 +4,29 @@ import JobCard from "@/components/JobCard";
 
 type Filters = {
     arrangement?: string;
-    applied?: string;
-    dismissed?: string;
+    view?: string;
 };
 
 export default async function JobList({ filters }: { filters: Filters }) {
     await connectDB();
-    const query: Record<string, unknown> = { filterPassed: true };
+    const query: Record<string, unknown> = {};
+
+    if (filters.view === "applied") {
+        query.filterPassed = true;
+        query.applied = true;
+    }
+    else if (filters.view === "dismissed") {
+        query.dismissed = true;
+    }
+    else if (filters.view === "passed") {
+        query.filterPassed = true;
+    }
+    else if (filters.view === "all") {
+        query.filterPassed = true;
+        query.dismissed = { $ne: true };
+    }
 
     if (filters.arrangement) query.workArrangement = filters.arrangement;
-    if (filters.applied !== undefined && filters.applied !== "") {
-        query.applied = filters.applied === "true";
-    }
-    if (filters.dismissed !== "true") query.dismissed = { $ne: true };
 
     const jobs = await Job.find(query)
         .sort({ scrapedAt: -1 })
@@ -29,7 +39,7 @@ export default async function JobList({ filters }: { filters: Filters }) {
     return (
         <div className="flex flex-col mt-6 gap-3">
             {jobs.map(job => (
-                <JobCard key={String(job._id)} job={{ ...job, _id: String(job._id) }} />
+                <JobCard key={String(job._id)} job={{ ...job, _id: String(job._id) }} filters={filters} />
             ))}
         </div>
     );
