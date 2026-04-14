@@ -34,7 +34,7 @@ export default function JobCard({ job }: { job: JobData }) {
         setDismissed(true);
 
         try {
-            const res = await fetch(`/api/jobs${job._id}`, {
+            const res = await fetch(`/api/jobs/${job._id}`, {
                 method: "PATCH",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ dismissed: true })
