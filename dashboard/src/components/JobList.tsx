@@ -2,11 +2,30 @@ import { connectDB } from "@/lib/mongodb";
 import Job from "@/models/Job";
 import JobCard from "@/components/JobCard";
 
-export default async function JobList() {
+type Filters = {
+    arrangement?: string;
+    applied?: string;
+    dismissed?: string;
+};
+
+export default async function JobList({ filters }: { filters: Filters }) {
     await connectDB();
-    const jobs = await Job.find({ filterPassed: true })
+    const query: Record<string, unknown> = { filterPassed: true };
+
+    if (filters.arrangement) query.workArrangement = filters.arrangement;
+    if (filters.applied !== undefined && filters.applied !== "") {
+        query.applied = filters.applied === "true";
+    }
+    if (filters.dismissed !== "true") query.dismissed = { $ne: true };
+
+    const jobs = await Job.find(query)
         .sort({ scrapedAt: -1 })
         .lean();
+
+    if (jobs.length === 0) {
+        return <p className="text-sm text-gray-400">No jobs match your filters.</p>;
+    }
+
     return (
         <div className="flex flex-col mt-6 gap-3">
             {jobs.map(job => (
