@@ -1,3 +1,7 @@
+"use client"
+
+import { useState } from "react";
+
 type JobData = {
     _id: string;
     title: string;
@@ -22,6 +26,27 @@ export default function JobCard({ job }: { job: JobData }) {
         day: "numeric",
         year: "numeric"
     });
+
+    const [dismissed, setDismissed] = useState(false);
+    const [error, setError] = useState<string | null>(null);
+
+    async function handleDismiss() {
+        setDismissed(true);
+
+        try {
+            const res = await fetch(`/api/jobs${job._id}`, {
+                method: "PATCH",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ dismissed: true })
+            });
+            if (!res.ok) throw new Error("Request failed");
+        } catch {
+            setDismissed(false);
+            setError("Failed to dismiss. Try again.");
+        }
+    }
+
+    if (dismissed) return null;
 
     return (
         <div className="bg-white border border-gray-200 rounded-md p-5">
@@ -48,6 +73,12 @@ export default function JobCard({ job }: { job: JobData }) {
                             {job.workArrangement}
                         </span>
                     )}
+                    <button onClick={handleDismiss}
+                        className="text-gray_300 hover:text-gray-500 transition-colors ml-1"
+                        aria-label="Dismiss"
+                    >
+                        ✕
+                    </button>
                 </div>
             </div>
             {job.tech_stack.length > 0 && (
@@ -63,6 +94,9 @@ export default function JobCard({ job }: { job: JobData }) {
                 <span>{job.location ?? "Location unknown"}</span>
                 <span>{date}</span>
             </div>
+            {error && (
+                <p className="mt-2 text-xs text-red-500">{error}</p>
+            )}
         </div>
     );
 };
