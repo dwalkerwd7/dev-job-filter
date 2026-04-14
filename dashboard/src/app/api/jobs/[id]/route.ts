@@ -13,7 +13,7 @@ export async function PATCH(
     const job = await Job.findByIdAndUpdate(
         id,
         { $set: body },
-        { new: true }
+        { returnDocument: "after" }
     ).lean();
 
     if (!job) return NextResponse.json({ error: "Not Found" }, { status: 404 });
