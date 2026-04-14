@@ -19,8 +19,6 @@ export default function FilterBar() {
     }
 
     const arrangement = searchParams.get("arrangement") ?? "";
-    const applied = searchParams.get("applied") ?? "";
-    const showDismissed = searchParams.get("dismissed") ?? "";
 
     return (
         <div className="flex items-center gap-3 flex-wrap">
@@ -34,26 +32,6 @@ export default function FilterBar() {
                 <option value="hybrid">Hybrid</option>
                 <option value="in-person">In-Person</option>
             </select>
-
-            <select
-                value={applied}
-                onChange={e => updateFilter("applied", e.target.value)}
-                className="text-sm border border-gray-200 rounded px-3 py-1.5 bg-white text-gray-700"
-            >
-                <option value="">All Jobs</option>
-                <option value="true">Applied</option>
-                <option value="false">Not Applied</option>
-            </select>
-
-            <label className="flex items-center gap-2 text-sm text-gray-600 cursor-pointer">
-                <input
-                    type="checkbox"
-                    checked={showDismissed === "true"}
-                    onChange={(e) => updateFilter("dismissed", e.target.checked ? "true" : "")}
-                    className="rounded border-gray-300"
-                />
-                Show dismissed
-            </label>
         </div>
     )
 };
