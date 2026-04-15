@@ -37,12 +37,12 @@ export default function StatsCards({ total, passed, applied, dismissed }: Props)
     ];
 
     return (
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid grid-cols-4 gap-2">
             {stats.map(({ label, value, view }) => (
                 <button
                     key={label}
                     onClick={() => setView(view)}
-                    className={`text-left bg-white border rounded-md px-5 py-4 transition-colors 
+                    className={`text-left bg-white border rounded-md px-3 py-4 transition-colors 
                         ${activeView === view
                             ? "border-blue-500 ring-1 ring-blue-500"
                             : "border-gray-200 hover:border-gray-400"

@@ -57,7 +57,7 @@ export default async function JobList({ filters }: { filters: Filters }) {
     }
 
     return (
-        <div className="flex flex-col mt-6 gap-3">
+        <div className="flex flex-col mt-3 gap-3">
             <Pagination currentPage={page} totalPages={TOTAL_PAGES} pageSize={PAGE_SIZE} showing={SHOWING} />
             {jobs.map(job => (
                 <JobCard key={String(job._id)} job={{ ...job, _id: String(job._id) }} filters={filters} />
