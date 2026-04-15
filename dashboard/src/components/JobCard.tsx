@@ -8,6 +8,7 @@ type JobData = {
     title: string;
     company: string;
     url: string;
+    jobDesc: string;
     tech_stack: string[];
     location: string | null;
     workArrangement: "remote" | "hybrid" | "in-person" | null;
@@ -34,8 +35,10 @@ export default function JobCard({ job, filters }: { job: JobData, filters: Recor
     const [dismissed, setDismissed] = useState(job.dismissed);
     const [isApplied, setIsApplied] = useState(job.applied);
     const [error, setError] = useState<string | null>(null);
+    const [isExpanded, setIsExpanded] = useState(false);
 
-    async function handleDismissRenew(dismiss: boolean = true) {
+    async function handleDismissRenew(e: React.MouseEvent, dismiss: boolean = true) {
+        e.stopPropagation(); // so that it doesn't trigger the container div onClick
         setDismissed(dismiss);
         try {
             const res = await fetch(`/api/jobs/${job._id}`, {
@@ -51,7 +54,8 @@ export default function JobCard({ job, filters }: { job: JobData, filters: Recor
         }
     }
 
-    async function handleApply() {
+    async function handleApply(e: React.MouseEvent) {
+        e.stopPropagation();
         setIsApplied(!isApplied);
         try {
             const res = await fetch(`api/jobs/${job._id}`, {
@@ -70,7 +74,7 @@ export default function JobCard({ job, filters }: { job: JobData, filters: Recor
     if (dismissed && filters.view !== "dismissed") return null;
 
     return (
-        <div className="bg-white border border-gray-200 rounded-md p-5">
+        <div className="bg-white border border-gray-200 rounded-md p-5 pb-2">
             <div className="flex items-start justify-between gap-4">
                 <div>
                     <h2 className="text-sm font-semibold text-gray-900">{job.title}</h2>
@@ -85,7 +89,7 @@ export default function JobCard({ job, filters }: { job: JobData, filters: Recor
                 </div>
                 <div className="flex items-center gap-2 shrink-0">
                     <button
-                        onClick={handleApply}
+                        onClick={e => handleApply(e)}
                         className={`text-xs font-medium border rounded px-2 py-0.5 transition-colors
                             ${isApplied
                                 ? "text-green-700 bg-green-50 border-green-200"
@@ -100,14 +104,14 @@ export default function JobCard({ job, filters }: { job: JobData, filters: Recor
                         </span>
                     )}
                     {!dismissed ? (
-                        <button onClick={() => handleDismissRenew()}
+                        <button onClick={e => handleDismissRenew(e)}
                             className="text-gray-300 hover:text-gray-500 transition-colors ml-1"
                             aria-label="Dismiss"
                         >
                             ✕
                         </button>
                     ) : (
-                        <button onClick={() => handleDismissRenew(false)}
+                        <button onClick={e => handleDismissRenew(e, false)}
                             className="text-blue-500 hover: text-blue-700, transition-colors ml-1"
                             aria-label="Renew"
                         >
@@ -129,8 +133,24 @@ export default function JobCard({ job, filters }: { job: JobData, filters: Recor
                 <span>{job.location ?? "Location unknown"}</span>
                 <span>{date}</span>
             </div>
+            <div className="flex flex-row-reverse text-sm text-blue-400">
+                {isExpanded ? (
+                    <span onClick={() => setIsExpanded(false)} className="hover:cursor-pointer">▴ Details</span>
+                ) : (
+                    <span onClick={() => setIsExpanded(true)} className="hover:cursor-pointer">▾ Details</span>
+                )}
+            </div>
             {error && (
                 <p className="mt-2 text-xs text-red-500">{error}</p>
+            )}
+            {isExpanded && (
+                <div className="mt-4 pt-4 border-t border-gray-100 text-sm text-gray-600 whitespace-pre-line leading-relaxed">
+                    {job.jobDesc.split(/\n/).map((p, i) => (
+                        <p key={i} className="text-sm text-gray-600 leading-relaxed m-2">
+                            {p.trim()}
+                        </p>
+                    ))}
+                </div>
             )}
         </div>
     );
