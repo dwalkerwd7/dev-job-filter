@@ -1,30 +1,38 @@
 import { connectDB } from "@/lib/mongodb";
 import Job from "@/models/Job";
 import JobCard from "@/components/JobCard";
+import Pagination from "@/components/Pagination";
 
 type Filters = {
     arrangement?: string;
     view?: string;
     search?: string;
+    page?: string;
+    pageSize?: string;
 };
 
 export default async function JobList({ filters }: { filters: Filters }) {
     await connectDB();
     const query: Record<string, unknown> = {};
 
+    const MIN_PAGE_SIZE = 10;
+    const MAX_PAGE_SIZE = 50;
+    const PAGE_SIZE_FROM_FILTER = filters.pageSize ? Math.round(Number(filters.pageSize) / 10) * 10 : 10;
+    const PAGE_SIZE = Math.min(MAX_PAGE_SIZE, Math.max(MIN_PAGE_SIZE, PAGE_SIZE_FROM_FILTER));
+    const page = Math.max(1, Number(filters.page ?? 1));
+    const skip = (page - 1) * PAGE_SIZE;
+
+    query.dismissed = { $ne: true };
+
     if (filters.view === "applied") {
         query.filterPassed = true;
         query.applied = true;
-    }
-    else if (filters.view === "dismissed") {
+    } else if (filters.view === "dismissed") {
         query.dismissed = true;
-    }
-    else if (filters.view === "passed") {
+    } else if (filters.view === "passed") {
         query.filterPassed = true;
-    }
-    else if (filters.view === "all") {
+    } else if (filters.view !== "all") {
         query.filterPassed = true;
-        query.dismissed = { $ne: true };
     }
 
     if (filters.arrangement) query.workArrangement = filters.arrangement;
@@ -33,9 +41,16 @@ export default async function JobList({ filters }: { filters: Filters }) {
         query.$or = [{ title: regex }, { company: regex }];
     }
 
-    const jobs = await Job.find(query)
-        .sort({ scrapedAt: -1 })
-        .lean();
+    const [jobs, numJobs] = await Promise.all([
+        Job.find(query)
+            .sort({ scrapedAt: -1 })
+            .skip(skip).limit(PAGE_SIZE)
+            .lean(),
+        Job.countDocuments(query)
+    ]);
+
+    const SHOWING = [Math.min(PAGE_SIZE, numJobs), numJobs];
+    const TOTAL_PAGES = Math.ceil(numJobs / PAGE_SIZE);
 
     if (jobs.length === 0) {
         return <p className="text-sm text-gray-400">No jobs match your filters.</p>;
@@ -43,9 +58,11 @@ export default async function JobList({ filters }: { filters: Filters }) {
 
     return (
         <div className="flex flex-col mt-6 gap-3">
+            <Pagination currentPage={page} totalPages={TOTAL_PAGES} pageSize={PAGE_SIZE} showing={SHOWING} />
             {jobs.map(job => (
                 <JobCard key={String(job._id)} job={{ ...job, _id: String(job._id) }} filters={filters} />
             ))}
+            <Pagination currentPage={page} totalPages={TOTAL_PAGES} pageSize={PAGE_SIZE} showing={SHOWING} />
         </div>
     );
 };
