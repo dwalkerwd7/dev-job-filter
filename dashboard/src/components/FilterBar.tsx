@@ -29,28 +29,46 @@ export default function FilterBar() {
     }, [searchInput]);
 
     const arrangement = searchParams.get("arrangement") ?? "";
+    const sort = searchParams.get("sort") ?? "";
 
     return (
-        <div className="flex items-center gap-3 flex-wrap">
-            <select
-                value={arrangement}
-                onChange={e => updateFilter("arrangement", e.target.value)}
-                className="text-sm border border-gray-200 rounded px-3 py-1.5 bg-white text-gray-700"
-            >
-                <option value="">All arrangements</option>
-                <option value="remote">Remote</option>
-                <option value="hybrid">Hybrid</option>
-                <option value="in-person">In-Person</option>
-            </select>
-
-            <input
-                type="text"
-                value={searchInput}
-                onChange={(e) => setSearchInput(e.target.value)}
-                placeholder="Search by title or company..."
-                className="text-sm border border-gray-200 rounded px-3 py-1.5 bg-white text-gray-700 w-64 
+        <div className="flex items-end gap-3 flex-wrap">
+            <div className="flex flex-col gap-2 items-center justify-center">
+                <label aria-label="Sort By" className="text-xs text-gray-350">Sort by</label>
+                <select
+                    value={sort}
+                    onChange={e => updateFilter("sort", e.target.value)}
+                    className="text-sm border border-gray-200 rounded px-3 py-1.5 bg-white text-gray-700"
+                >
+                    <option value="">Newest</option>
+                    <option value="oldest">Oldest</option>
+                    <option value="company">Company</option>
+                    <option value="title">Title</option>
+                </select>
+            </div>
+            <div className="flex flex-col gap-2 items-center justify-center">
+                <label aria-label="Arrangements" className="text-xs text-gray-350">Arrangement</label>
+                <select
+                    value={arrangement}
+                    onChange={e => updateFilter("arrangement", e.target.value)}
+                    className="text-sm border border-gray-200 rounded px-3 py-1.5 bg-white text-gray-700"
+                >
+                    <option value="">All arrangements</option>
+                    <option value="remote">Remote</option>
+                    <option value="hybrid">Hybrid</option>
+                    <option value="in-person">In-Person</option>
+                </select>
+            </div>
+            <div className="flex flex-col items-end justify-end">
+                <input
+                    type="text"
+                    value={searchInput}
+                    onChange={(e) => setSearchInput(e.target.value)}
+                    placeholder="Search by title or company..."
+                    className="text-sm border border-gray-200 rounded px-3 py-1.5 bg-white text-gray-700 w-64 
                     focus:outline-none focus:border-gray-400"
-            />
+                />
+            </div>
         </div>
     )
 };

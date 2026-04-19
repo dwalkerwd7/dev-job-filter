@@ -4,6 +4,7 @@ import JobCard from "@/components/JobCard";
 import Pagination from "@/components/Pagination";
 
 type Filters = {
+    sort?: string;
     arrangement?: string;
     view?: string;
     search?: string;
@@ -41,9 +42,16 @@ export default async function JobList({ filters }: { filters: Filters }) {
         query.$or = [{ title: regex }, { company: regex }];
     }
 
+    const sortMap: Record<string, Record<string, 1 | -1>> = {
+        oldest: { scrapedAt: 1 },
+        company: { company: 1, title: 1 },
+        title: { title: 1 }
+    };
+    const sortOrder = sortMap[filters.sort ?? ""] ?? { scrapedAt: -1 }
+
     const [jobs, numJobs] = await Promise.all([
         Job.find(query)
-            .sort({ scrapedAt: -1 })
+            .sort(sortOrder)
             .skip(skip).limit(PAGE_SIZE)
             .lean(),
         Job.countDocuments(query)
