@@ -25,7 +25,7 @@ async function pipeline() {
 
     try {
         /* Deletion step if required */
-        if (clear_jobs) await db.deleteAll()
+        if (values.clear_jobs) await db.deleteAll()
 
         /* Scraping Step */
         let scraped_jobs = []
