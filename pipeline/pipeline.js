@@ -10,7 +10,7 @@ async function pipeline() {
 
     const { values } = parseArgs({
         options: {
-            renew_slugs: { type: "boolean", default: false },
+            renew_slugs: { type: "boolean", default: true },
             scraping: { type: "boolean", default: true },
             filtering: { type: "boolean", default: true },
             info: { type: "boolean", default: true },
