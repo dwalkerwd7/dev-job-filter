@@ -9,6 +9,7 @@ export default function RunPanel() {
   const [filterEnabled, setFilterEnabled] = useState(false)
   const [scrapeLimit, setScrapeLimit] = useState("")
   const [filterLimit, setFilterLimit] = useState("")
+  const [clearJobs, setClearJobs] = useState(false)
   const [running, setRunning] = useState(false)
   const [log, setLog] = useState("")
   const [exitState, setExitState] = useState<"success" | "error" | "killed" | null>(null)
@@ -33,6 +34,7 @@ export default function RunPanel() {
       body: JSON.stringify({
         scrape_limit: scrapeEnabled ? Number(scrapeLimit) : null,
         filter_limit: filterEnabled ? Number(filterLimit) : null,
+        clear_jobs: clearJobs,
       })
     })
 
@@ -98,6 +100,20 @@ export default function RunPanel() {
             />
           </div>
         ))}
+
+        <div className="flex items-center gap-3 pt-1 border-t border-gray-100">
+          <input
+            type="checkbox"
+            id="clear_jobs"
+            checked={clearJobs}
+            onChange={e => {
+              if (e.target.checked && window.confirm("Delete all jobs before the pipeline runs? This cannot be undone.")) setClearJobs(true)
+              else setClearJobs(false)
+            }}
+            className="accent-red-600"
+          />
+          <label htmlFor="clear_jobs" className="text-sm text-red-600 font-medium">Clear all jobs before run</label>
+        </div>
       </div>
 
       <div className="flex items-center gap-3">

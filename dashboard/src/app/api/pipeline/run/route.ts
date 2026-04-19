@@ -9,16 +9,18 @@ export async function POST(req: Request) {
         return new Response("Pipeline running...", { status: 409 })
     }
 
-    const { scrape_limit, filter_limit } = await req.json()
+    const { scrape_limit, filter_limit, clear_jobs } = await req.json()
     const flags: string[] = []
 
+    if (clear_jobs) flags.push("--clear_jobs")
+
     if (!scrape_limit) flags.push("--no-scraping")
-    else flags.push(`--scrape-limit=${scrape_limit}`)
+    else flags.push(`--scrape_limit=${scrape_limit}`)
 
     if (!filter_limit) flags.push("--no-filtering")
     else flags.push(`--filter_limit=${filter_limit}`)
 
-    const projectRoot = path.resolve(process.cwd(), "../")
+    const projectRoot = path.resolve(process.cwd(), "../pipeline")
 
     const stream = new ReadableStream({
         start(controller) {
