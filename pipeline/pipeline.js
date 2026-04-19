@@ -16,6 +16,7 @@ async function pipeline() {
             info: { type: "boolean", default: true },
             scrape_limit: { type: "string", default: "100" },
             filter_limit: { type: "string", default: "100" },
+            clear_jobs: { type: "boolean", default: false }
         },
         allowNegative: true
     });
@@ -23,6 +24,9 @@ async function pipeline() {
     await db.connect();
 
     try {
+        /* Deletion step if required */
+        if (clear_jobs) await db.deleteAll()
+
         /* Scraping Step */
         let scraped_jobs = []
         if (values.scraping) {

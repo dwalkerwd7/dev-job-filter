@@ -156,8 +156,13 @@ async function getAppliedUrls() {
     return new Set(applied.map(j => j.url));
 }
 
+async function deleteAll() {
+    return Job.deleteMany({})
+}
+
 module.exports = {
     connect, disconnect,
     renewSlugs, upsertScrapedJobs, upsertStackPassedJobs, upsertTechStackProgress, upsertPreFilteredJobs, upsertInfoJobs,
-    getSlugs, getScrapedJobs, getUnfilteredJobs, getStackPassedJobs, getAppliedUrls
+    getSlugs, getScrapedJobs, getUnfilteredJobs, getStackPassedJobs, getAppliedUrls,
+    deleteAll
 };
