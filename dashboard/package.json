@@ -8,11 +8,6 @@
     "start": "next start",
     "lint": "eslint"
   },
-  "overrides": {
-    "next": {
-      "@next/env": "npm:@varlock/nextjs-integration"
-    }
-  },
   "dependencies": {
     "mongoose": "^9.4.1",
     "next": "16.2.2",
