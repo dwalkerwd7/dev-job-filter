@@ -23,7 +23,7 @@ function initLogger() {
     console.log = (...args) => { origLog(...args); write("LOG  ", args); };
     console.error = (...args) => { origError(...args); write("ERROR  ", args); };
 
-    console.log(`[logger] writing to ${logPath}`);
+    //console.log(`[logger] writing to ${logPath}`);
     return logPath;
 }
 
