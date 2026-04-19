@@ -1,7 +1,8 @@
-import { spawn } from "child_process"
+import { spawn, ChildProcess } from "child_process"
 import path from "path"
 
 let isRunning = false
+let activeProc: ChildProcess | null = null
 
 export async function POST(req: Request) {
     if (isRunning) {
@@ -25,6 +26,7 @@ export async function POST(req: Request) {
             const proc = spawn("npm", ["run", "pipeline", "--", ...flags], {
                 cwd: projectRoot
             })
+            activeProc = proc
 
             const send = (line: string) =>
                 controller.enqueue(new TextEncoder().encode(line + "\n"))
@@ -32,10 +34,11 @@ export async function POST(req: Request) {
             proc.stdout.on("data", chunk => send(chunk.toString()))
             proc.stderr.on("data", chunk => send(chunk.toString()))
 
-            proc.on("close", code => {
-                send(`[exit:${code}]`) // signal to client that proc finished
+            proc.on("close", (code, signal) => {
+                send(signal ? "[exit:killed]" : `[exit:${code}]`)
                 controller.close()
                 isRunning = false
+                activeProc = null
             })
         }
     })
@@ -46,4 +49,12 @@ export async function POST(req: Request) {
             "Cache-Control": "no-cache"
         }
     })
+}
+
+export async function DELETE() {
+    if (!activeProc) {
+        return new Response("No pipeline running", { status: 404 })
+    }
+    activeProc.kill("SIGTERM")
+    return new Response("OK", { status: 200 })
 }

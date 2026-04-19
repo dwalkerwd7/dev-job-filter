@@ -11,7 +11,7 @@ export default function RunPanel() {
   const [filterLimit, setFilterLimit] = useState("")
   const [running, setRunning] = useState(false)
   const [log, setLog] = useState("")
-  const [exitState, setExitState] = useState<"success" | "error" | null>(null)
+  const [exitState, setExitState] = useState<"success" | "error" | "killed" | null>(null)
   const logRef = useRef<HTMLPreElement>(null)
 
   useEffect(() => {
@@ -61,6 +61,11 @@ export default function RunPanel() {
         setLog(prev => prev + text.replace(/\[exit:1\]\n?/, ""))
         break
       }
+      if (text.includes("[exit:killed]")) {
+        setExitState("killed")
+        setLog(prev => prev + text.replace(/\[exit:killed\]\n?/, ""))
+        break
+      }
 
       setLog(prev => prev + text)
     }
@@ -95,17 +100,27 @@ export default function RunPanel() {
         ))}
       </div>
 
-      <button
-        disabled={running || !canRun}
-        onClick={run}
-        className="px-4 py-2 text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
-      >
-        {running ? "Running..." : "Run Pipeline"}
-      </button>
+      <div className="flex items-center gap-3">
+        <button
+          disabled={running || !canRun}
+          onClick={run}
+          className="px-4 py-2 text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+        >
+          {running ? "Running..." : "Run Pipeline"}
+        </button>
+        {running && (
+          <button
+            onClick={() => fetch("/api/pipeline/run", { method: "DELETE" })}
+            className="px-4 py-2 text-sm font-medium text-red-600 border border-red-300 hover:bg-red-50 transition-colors"
+          >
+            Stop
+          </button>
+        )}
+      </div>
 
       {exitState && (
         <p className={`mt-3 text-sm font-medium ${exitState === "success" ? "text-green-600" : "text-red-600"}`}>
-          {exitState === "success" ? "Completed successfully." : "Exited with errors."}
+          {exitState === "success" ? "Completed successfully." : exitState === "killed" ? "Stopped." : "Exited with errors."}
         </p>
       )}
 
