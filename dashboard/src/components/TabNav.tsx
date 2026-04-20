@@ -8,7 +8,8 @@ export default function TabNav() {
 
     const tabs = [
         { label: "Jobs", href: "/" },
-        { label: "Pipeline", href: "/pipeline" }
+        { label: "Pipeline", href: "/pipeline" },
+        { label: "About", href: "/about" }
     ];
 
     return (
