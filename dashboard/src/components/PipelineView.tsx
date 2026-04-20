@@ -8,12 +8,13 @@ type Stats = {
     filterRan: number
     filterPassed: number
 }
-type ActiveStep = "scrape" | "filter" | "complete" | null
+type ActiveStep = "scrape" | "filter" | "info" | "complete" | null
 
 const stepTags = {
     scraper: "[scraper]",
     filter: "[filter]",
-    passed: "successfully!",
+    info: "[info]",
+    complete: "successfully!",
     db: "[db]"
 }
 
@@ -39,14 +40,16 @@ export default function PipelineView({ initial, lastRun }: { initial: Stats, las
     const onChunk = useCallback((text: string) => {
         if (text.includes(stepTags.scraper)) setActiveStep("scrape")
         else if (text.includes(stepTags.filter)) setActiveStep("filter")
-        else if (text.includes(stepTags.passed)) setActiveStep("complete")
+        else if (text.includes(stepTags.info)) setActiveStep("info")
+        else if (text.includes(stepTags.complete)) setActiveStep("complete")
 
         if (text.toLowerCase().includes(stepTags.db)) fetchStats()
     }, [fetchStats])
 
     const cards = [
         { step: "scrape", label: "Total Scraped", value: stats.totalScraped, sub: null },
-        { step: "filter", label: "Filter Runnable", value: stats.filterRan, sub: `${pct(stats.filterRan, stats.totalScraped)} of scraped` },
+        { step: "filter", label: "Filter", value: stats.filterRan, sub: `${pct(stats.filterRan, stats.totalScraped)} of scraped` },
+        { step: "info", label: "Gathering Info", value: '...', sub: null },
         { step: "complete", label: "Filter Passed", value: stats.filterPassed, sub: `${pct(stats.filterPassed, stats.totalScraped)} of scraped` },
     ]
 
