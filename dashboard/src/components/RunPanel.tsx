@@ -13,7 +13,18 @@ export default function RunPanel() {
     const [running, setRunning] = useState(false)
     const [log, setLog] = useState("")
     const [exitState, setExitState] = useState<"success" | "error" | "killed" | null>(null)
+    const [elapsed, setElapsed] = useState(0)
     const logRef = useRef<HTMLPreElement>(null)
+    const timerRef = useRef<ReturnType<typeof setInterval> | null>(null)
+
+    useEffect(() => {
+        if (running) {
+            timerRef.current = setInterval(() => setElapsed(s => s + 1), 1000)
+        } else {
+            if (timerRef.current) clearInterval(timerRef.current)
+        }
+        return () => { if (timerRef.current) clearInterval(timerRef.current) }
+    }, [running])
 
     useEffect(() => {
         if (logRef.current) logRef.current.scrollTop = logRef.current.scrollHeight
@@ -24,6 +35,7 @@ export default function RunPanel() {
         (!filterEnabled || filterLimit)
 
     async function run() {
+        setElapsed(0)
         setRunning(true)
         setLog("")
         setExitState(null)
@@ -125,18 +137,23 @@ export default function RunPanel() {
                     {running ? "Running..." : "Run Pipeline"}
                 </button>
                 {running && (
-                    <button
-                        onClick={() => fetch("/api/pipeline/run", { method: "DELETE" })}
-                        className="px-4 py-2 text-sm font-medium text-red-600 border border-red-300 hover:bg-red-50 transition-colors"
-                    >
-                        Stop
-                    </button>
+                    <>
+                        <button
+                            onClick={() => fetch("/api/pipeline/run", { method: "DELETE" })}
+                            className="px-4 py-2 text-sm font-medium text-red-600 border border-red-300 hover:bg-red-50 transition-colors"
+                        >
+                            Stop
+                        </button>
+                        <span className="text-sm text-gray-400 font-mono">
+                            {String(Math.floor(elapsed / 60)).padStart(2, "0")}:{String(elapsed % 60).padStart(2, "0")}
+                        </span>
+                    </>
                 )}
             </div>
 
             {exitState && (
                 <p className={`mt-3 text-sm font-medium ${exitState === "success" ? "text-green-600" : "text-red-600"}`}>
-                    {exitState === "success" ? "Completed successfully." : exitState === "killed" ? "Stopped." : "Exited with errors."}
+                    {exitState === "success" ? "Completed successfully." : exitState === "killed" ? "Pipeline halted." : "Exited with errors."}
                 </p>
             )}
 
