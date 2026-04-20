@@ -7,9 +7,10 @@ type Props = {
     running: boolean
     setRunning: (v: boolean) => void
     onChunk: (text: string) => void
+    onStop: () => void
 }
 
-export default function RunPanel({ running, setRunning, onChunk }: Props) {
+export default function RunPanel({ running, setRunning, onChunk, onStop }: Props) {
     const router = useRouter()
     const [scrapeEnabled, setScrapeEnabled] = useState(false)
     const [filterEnabled, setFilterEnabled] = useState(false)
@@ -145,7 +146,12 @@ export default function RunPanel({ running, setRunning, onChunk }: Props) {
                 {running && (
                     <>
                         <button
-                            onClick={() => fetch("/api/pipeline/run", { method: "DELETE" })}
+                            onClick={async () => {
+                                if (!window.confirm("Halt the running pipeline?")) return
+                                await fetch("/api/pipeline/run", { method: "DELETE" })
+                                setRunning(false)
+                                onStop()
+                            }}
                             className="px-4 py-2 text-sm font-medium text-red-600 border border-red-300 hover:bg-red-50 transition-colors"
                         >
                             Halt
