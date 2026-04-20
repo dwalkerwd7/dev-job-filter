@@ -144,22 +144,22 @@ export default function RunPanel({ running, setRunning, onChunk, onStop }: Props
                     {running ? "Running..." : "Run Pipeline"}
                 </button>
                 {running && (
-                    <>
-                        <button
-                            onClick={async () => {
-                                if (!window.confirm("Halt the running pipeline?")) return
-                                await fetch("/api/pipeline/run", { method: "DELETE" })
-                                setRunning(false)
-                                onStop()
-                            }}
-                            className="px-4 py-2 text-sm font-medium text-red-600 border border-red-300 hover:bg-red-50 transition-colors"
-                        >
-                            Halt
-                        </button>
-                        <span className="text-sm text-gray-400 font-mono">
-                            {String(Math.floor(elapsed / 60)).padStart(2, "0")}:{String(elapsed % 60).padStart(2, "0")}
-                        </span>
-                    </>
+                    <button
+                        onClick={async () => {
+                            if (!window.confirm("Halt the running pipeline?")) return
+                            await fetch("/api/pipeline/run", { method: "DELETE" })
+                            setRunning(false)
+                            onStop()
+                        }}
+                        className="px-4 py-2 text-sm font-medium text-red-600 border border-red-300 hover:bg-red-50 transition-colors"
+                    >
+                        Halt
+                    </button>
+                )}
+                {(running || exitState) && (
+                    <span className="text-sm text-gray-400 font-mono">
+                        {String(Math.floor(elapsed / 60)).padStart(2, "0")}:{String(elapsed % 60).padStart(2, "0")}
+                    </span>
                 )}
             </div>
 
