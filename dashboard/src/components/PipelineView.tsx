@@ -13,7 +13,7 @@ type ActiveStep = "scrape" | "filter" | "complete" | null
 const stepTags = {
     scraper: "[scraper]",
     filter: "[filter]",
-    passed: "Pipeline complete!",
+    passed: "successfully!",
     db: "[db]"
 }
 
@@ -46,8 +46,8 @@ export default function PipelineView({ initial, lastRun }: { initial: Stats, las
 
     const cards = [
         { step: "scrape", label: "Total Scraped", value: stats.totalScraped, sub: null },
-        { step: "filter", label: "Filter Ran", value: stats.filterRan, sub: `${pct(stats.filterRan, stats.totalScraped)} of scraped` },
-        { step: "complete", label: "Filter Passed", value: stats.filterPassed, sub: `${pct(stats.filterPassed, stats.filterRan)}` },
+        { step: "filter", label: "Filter Runnable", value: stats.filterRan, sub: `${pct(stats.filterRan, stats.totalScraped)} of scraped` },
+        { step: "complete", label: "Filter Passed", value: stats.filterPassed, sub: `${pct(stats.filterPassed, stats.totalScraped)} of scraped` },
     ]
 
     return (
@@ -80,7 +80,7 @@ export default function PipelineView({ initial, lastRun }: { initial: Stats, las
                     })}
                 </div>
             </div>
-            <RunPanel running={running} setRunning={setRunning} onChunk={onChunk} />
+            <RunPanel running={running} setRunning={setRunning} onChunk={onChunk} onStop={() => setActiveStep(null)} />
         </div >
     );
 }
