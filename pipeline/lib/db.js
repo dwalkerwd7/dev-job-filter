@@ -157,7 +157,7 @@ async function getAppliedUrls() {
 }
 
 async function deleteAll() {
-    return await Job.deleteMany({})
+    return await Job.deleteMany({}).lean();
 }
 
 module.exports = {
