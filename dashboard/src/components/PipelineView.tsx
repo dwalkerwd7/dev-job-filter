@@ -47,10 +47,10 @@ export default function PipelineView({ initial, lastRun }: { initial: Stats, las
     }, [fetchStats])
 
     const cards = [
-        { step: "scrape", label: "Total Scraped", value: stats.totalScraped, sub: null },
-        { step: "filter", label: "Filter", value: stats.filterRan, sub: `${pct(stats.filterRan, stats.totalScraped)} of scraped` },
+        { step: "scrape", label: "Scraping", value: stats.totalScraped, sub: null },
+        { step: "filter", label: "Filtering", value: stats.filterRan, sub: `${pct(stats.filterRan, stats.totalScraped)} of scraped` },
         { step: "info", label: "Gathering Info", value: '...', sub: null },
-        { step: "complete", label: "Filter Passed", value: stats.filterPassed, sub: `${pct(stats.filterPassed, stats.totalScraped)} of scraped` },
+        { step: "complete", label: "Passed Filter", value: stats.filterPassed, sub: `${pct(stats.filterPassed, stats.totalScraped)} of scraped` },
     ]
 
     return (
