@@ -1,132 +1,166 @@
 # Dev Job Filter
 
-A tool to discover and filter tech-related jobs. Only jobs that overlap with a target tech stack make it through.
+A self-hosted job search tool for software developers. Scrapes Greenhouse-hosted job boards, uses Claude to filter by tech stack and extract structured metadata, and surfaces results in a Next.js dashboard.
 
-`NOTE`: It costs about $0.33 in Claude tokens and 20 minutes to run the pipeline end-to-end for 800 jobs.
+> Pipeline cost: ~$0.33 in Claude API tokens and ~20 minutes to process 800 jobs end-to-end.
 
-## Pipeline
+---
+
+## How it works
 
 ```
-[Scraper]           ← Playwright + Greenhouse public API (slugs found via Serper search)
-     ↓
-[Scraped Jobs → MongoDB]
-     ↓
-[LLM Filter]        ← Claude Haiku: extracts tech_stack, location, work arrangement
-     ↓
-[Hard Filter]       ← Stack match (React / Node / TS / Next.js)
-     ↓
-[Filtered Jobs → MongoDB]
-     ↓
-[Next.js Dashboard] ← Browse and track applications
+Serper API (Google search) → Greenhouse company slugs
+        ↓
+Greenhouse public API → job listings
+        ↓
+Playwright → full job descriptions
+        ↓
+Claude Haiku → tech stack extraction → stack filter (React / Node.js / TypeScript / Next.js)
+        ↓
+Claude Haiku → location + work arrangement
+        ↓
+MongoDB → Next.js dashboard
 ```
 
-### Running the pipeline
+Jobs that don't match the target stack are discarded after the filter step. Everything else is browsable, searchable, and trackable in the dashboard.
+
+---
+
+## Stack
+
+| Layer | Technology |
+|---|---|
+| Scraper | Playwright + Node.js |
+| Company discovery | Serper API (Google search) |
+| AI extraction | Claude Haiku (`@anthropic-ai/sdk`) |
+| Database | MongoDB Atlas (Mongoose) |
+| Dashboard | Next.js (App Router) + Tailwind CSS |
+| Env management | varlock |
+
+---
+
+## Getting started
+
+### Prerequisites
+
+- Node.js 18+
+- MongoDB Atlas account (free tier works)
+- [Anthropic API key](https://console.anthropic.com/)
+- [Serper API key](https://serper.dev/)
+
+### Pipeline setup
 
 ```bash
 cd pipeline
-npm run pipeline    # scrape + filter
-npm run scrape      # scrape only
-npm run filter      # filter only
+npm install
 ```
 
-Flags (passed after `--`):
+Create a `.env` file in `pipeline/` (managed by varlock):
 
-```bash
-node pipeline.js --no-scraping              # skip scraping, re-filter existing scraped jobs
-node pipeline.js --no-filtering             # scrape only (long form of npm run scrape)
-node pipeline.js --scrape_limit=50          # cap jobs scraped (default: 100)
-node pipeline.js --filter_limit=50          # cap jobs filtered (default: 100)
-node pipeline.js --renew_slugs              # re-search for Greenhouse company slugs via Serper
+```
+MONGODB_URI=your_mongodb_connection_string
+ANTHROPIC_API_KEY=your_anthropic_key
+SERPER_API_KEY=your_serper_key
 ```
 
-### Running the dashboard
+### Dashboard setup
 
 ```bash
 cd dashboard
-npm run dev         # http://localhost:3000
+npm install
+```
+
+Create a `.env.local` file in `dashboard/`:
+
+```
+MONGODB_URI=your_mongodb_connection_string
 ```
 
 ---
 
-## Dependencies
+## Running the pipeline
 
-### Pipeline (`pipeline/`)
+```bash
+cd pipeline
 
-| Package | Purpose |
-|---|---|
-| `playwright` | Headless browser for deep-scraping job description text |
-| `@anthropic-ai/sdk` | Claude Haiku — extracts structured data from raw job text |
-| `mongoose` | MongoDB ODM for scraped and filtered job storage |
-| `varlock` | Secure env var management |
-
-### Dashboard (`dashboard/`)
-
-| Package | Purpose |
-|---|---|
-| `next` | Frontend framework |
-| `react` / `react-dom` | UI |
-| `mongoose` | MongoDB queries from API routes |
-| `tailwindcss` | Styling |
-| `typescript` | Type safety |
-
----
-
-## Data Sources
-
-| Source | Method |
-|---|---|
-| [Greenhouse](https://greenhouse.io) | Public board API — company slugs discovered via Serper Google search |
-
----
-
-## MongoDB Schema
-
-### `scrapedjobs`
-
-Every job collected before filtering.
-
-```js
-{
-  title:     String,   // required
-  company:   String,   // required
-  url:       String,   // required, unique
-  jobDesc:   String,   // raw text scraped from the job page
-  scrapedAt: Date
-}
+npm run pipeline   # full run: scrape → filter → info
+npm run scrape     # scrape only
+npm run filter     # stack filter only
+npm run info       # info gather only
 ```
 
-### `filteredjobs`
+### CLI flags
 
-Jobs that passed the hard filter.
+```bash
+node pipeline.js --scrape_limit=50     # cap jobs scraped
+node pipeline.js --filter_limit=50     # cap jobs filtered
+node pipeline.js --no-scraping         # skip scrape step
+node pipeline.js --no-filtering        # skip filter step
+node pipeline.js --no-info             # skip info step
+node pipeline.js --renew_slugs         # re-fetch Greenhouse company slugs via Serper
+node pipeline.js --clear_jobs          # wipe the jobs collection before running
+```
+
+### Configuration
+
+Edit `pipeline/pipeline.cfg` to customise:
+
+- `scraper.jobKeywords` — search terms used to discover companies via Serper
+- `filter.targetStack` — skills a job must mention to pass the filter
+- `filter.batchSize` / `filter.batchDelayMs` — Claude API rate limiting
+- `scraper.concurrency` — parallel Playwright pages
+
+---
+
+## Running the dashboard
+
+```bash
+cd dashboard
+npm run dev    # http://localhost:3000
+```
+
+The dashboard has three pages:
+
+- **Jobs** — browse, filter by work arrangement, search by keyword, mark as applied
+- **Pipeline** — run the pipeline from the browser with a live log stream and funnel stats
+- **About** — project overview
+
+---
+
+## Database schema
+
+One collection. `filterRan` and `filterPassed` track which pipeline stage each job has completed.
 
 ```js
 {
-  title:           String,    // required
-  company:         String,    // required
-  url:             String,    // required, unique
-  tech_stack:      [String],  // extracted by Claude Haiku
-  location:        String,    // extracted by Claude Haiku (null if unknown)
-  workArrangement: String,    // "remote" | "hybrid" | "in-person" (null if unknown)
-  applied:         Boolean,   // tracked via dashboard (default: false)
+  title:           String,   // required
+  company:         String,   // required
+  url:             String,   // required, unique
+  jobDesc:         String,   // raw scraped text
+  tech_stack:      [String], // extracted by Claude
+  location:        String,   // extracted by Claude (null if unknown)
+  workArrangement: String,   // "remote" | "hybrid" | "in-person" | null
+  applied:         Boolean,  // tracked via dashboard
+  filterRan:       Boolean,  // true = filter step ran (pass or fail)
+  filterPassed:    Boolean,  // true = passed the stack filter
   scrapedAt:       Date
 }
 ```
 
 ---
 
-## Filter Logic
+## Logs
 
-- Tech stack overlaps with target skills (React, Angular, Node.js, Express, TypeScript, JavaScript, Next.js, etc.)
-- Not already marked `applied: true`
+Each pipeline run writes a timestamped log to `logs/`:
+
+```
+logs/pipeline-2026-04-20T16-30-19-579Z.log
+```
+
+Line format: `[ISO_TIMESTAMP] LOG   [tag] message`
 
 ---
 
-## Environment Variables
+## License
 
-Managed via [varlock](https://github.com/varlock/varlock). Required vars:
-
-```
-ANTHROPIC_API_KEY   # Claude API key (used in filter.js)
-MONGODB_URI         # MongoDB connection string
-SERPER_API_KEY      # Serper API key (used to find Greenhouse company slugs)
-```
+MIT
