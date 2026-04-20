@@ -1,0 +1,1215 @@
+[2026-04-20T17:08:59.269Z] LOG   Scraping jobs...
+
+[2026-04-20T17:09:09.188Z] LOG   [scraper] https://careers.appsflyer.com/jobs/position/8509975002?gh_jid=8509975002
+[2026-04-20T17:09:09.229Z] LOG   [scraper] https://careers.appsflyer.com/jobs/position/8456892002?gh_jid=8456892002
+[2026-04-20T17:09:09.248Z] LOG   [scraper] https://careers.appsflyer.com/jobs/position/8465227002?gh_jid=8465227002
+[2026-04-20T17:09:09.613Z] LOG   [scraper] https://careers.appsflyer.com/jobs/position/8403527002?gh_jid=8403527002
+[2026-04-20T17:09:09.730Z] LOG   [scraper] https://careers.appsflyer.com/jobs/position/8405356002?gh_jid=8405356002
+[2026-04-20T17:09:12.388Z] LOG   [scraper] https://careers.appsflyer.com/jobs/position/8426614002?gh_jid=8426614002
+[2026-04-20T17:09:12.884Z] LOG   [scraper] https://careers.appsflyer.com/jobs/position/8434587002?gh_jid=8434587002
+[2026-04-20T17:09:12.972Z] LOG   [scraper] https://careers.appsflyer.com/jobs/position/8480742002?gh_jid=8480742002
+[2026-04-20T17:09:13.326Z] LOG   [scraper] https://careers.appsflyer.com/jobs/position/8477914002?gh_jid=8477914002
+[2026-04-20T17:09:13.595Z] LOG   [scraper] https://careers.appsflyer.com/jobs/position/8434636002?gh_jid=8434636002
+[2026-04-20T17:09:15.594Z] LOG   [scraper] https://careers.appsflyer.com/jobs/position/8420120002?gh_jid=8420120002
+[2026-04-20T17:09:16.051Z] LOG   [scraper] https://careers.appsflyer.com/jobs/position/8454717002?gh_jid=8454717002
+[2026-04-20T17:09:16.991Z] LOG   [scraper] https://careers.appsflyer.com/jobs/position/8423035002?gh_jid=8423035002
+[2026-04-20T17:09:17.009Z] LOG   [scraper] https://careers.appsflyer.com/jobs/position/8242776002?gh_jid=8242776002
+[2026-04-20T17:09:18.055Z] LOG   [scraper] https://careers.appsflyer.com/jobs/position/8327214002?gh_jid=8327214002
+[2026-04-20T17:09:20.907Z] LOG   [scraper] https://careers.appsflyer.com/jobs/position/8509902002?gh_jid=8509902002
+[2026-04-20T17:09:21.108Z] LOG   [scraper] https://careers.appsflyer.com/jobs/position/8478827002?gh_jid=8478827002
+[2026-04-20T17:09:21.380Z] LOG   [scraper] https://careers.appsflyer.com/jobs/position/8505552002?gh_jid=8505552002
+[2026-04-20T17:09:21.571Z] LOG   [scraper] https://careers.appsflyer.com/jobs/position/8505553002?gh_jid=8505553002
+[2026-04-20T17:09:21.688Z] LOG   [scraper] https://careers.appsflyer.com/jobs/position/8300434002?gh_jid=8300434002
+[2026-04-20T17:09:24.412Z] LOG   [scraper] https://careers.appsflyer.com/jobs/position/8463734002?gh_jid=8463734002
+[2026-04-20T17:09:24.905Z] LOG   [scraper] https://careers.appsflyer.com/jobs/position/8353950002?gh_jid=8353950002
+[2026-04-20T17:09:25.259Z] LOG   [scraper] https://careers.appsflyer.com/jobs/position/8509670002?gh_jid=8509670002
+[2026-04-20T17:09:25.573Z] LOG   [scraper] https://careers.appsflyer.com/jobs/position/8349704002?gh_jid=8349704002
+[2026-04-20T17:09:25.757Z] LOG   [scraper] https://careers.appsflyer.com/jobs/position/8353692002?gh_jid=8353692002
+[2026-04-20T17:09:27.908Z] LOG   [scraper] https://careers.appsflyer.com/jobs/position/8499703002?gh_jid=8499703002
+[2026-04-20T17:09:29.152Z] LOG   [scraper] https://careers.appsflyer.com/jobs/position/8401256002?gh_jid=8401256002
+[2026-04-20T17:09:29.180Z] LOG   [scraper] https://careers.appsflyer.com/jobs/position/8097465002?gh_jid=8097465002
+[2026-04-20T17:09:29.209Z] LOG   [scraper] https://careers.appsflyer.com/jobs/position/8097487002?gh_jid=8097487002
+[2026-04-20T17:09:29.581Z] LOG   [scraper] https://careers.appsflyer.com/jobs/position/8284810002?gh_jid=8284810002
+[2026-04-20T17:09:32.213Z] LOG   [scraper] https://careers.appsflyer.com/jobs/position/8394076002?gh_jid=8394076002
+[2026-04-20T17:09:33.070Z] LOG   [scraper] https://careers.appsflyer.com/jobs/position/8423371002?gh_jid=8423371002
+[2026-04-20T17:09:33.354Z] LOG   [scraper] https://careers.appsflyer.com/jobs/position/8284812002?gh_jid=8284812002
+[2026-04-20T17:09:33.437Z] LOG   [scraper] https://careers.appsflyer.com/jobs/position/8284805002?gh_jid=8284805002
+[2026-04-20T17:09:33.942Z] LOG   [scraper] https://careers.appsflyer.com/jobs/position/8311695002?gh_jid=8311695002
+[2026-04-20T17:09:37.876Z] LOG   [scraper] https://careers.appsflyer.com/jobs/position/8442641002?gh_jid=8442641002
+[2026-04-20T17:09:38.015Z] LOG   [scraper] https://careers.appsflyer.com/jobs/position/8513655002?gh_jid=8513655002
+[2026-04-20T17:09:38.290Z] LOG   [scraper] https://careers.appsflyer.com/jobs/position/8422801002?gh_jid=8422801002
+[2026-04-20T17:09:38.355Z] LOG   [scraper] https://careers.appsflyer.com/jobs/position/8393836002?gh_jid=8393836002
+[2026-04-20T17:09:38.824Z] LOG   [scraper] https://careers.appsflyer.com/jobs/position/8344579002?gh_jid=8344579002
+[2026-04-20T17:09:41.948Z] LOG   [scraper] https://careers.appsflyer.com/jobs/position/8458281002?gh_jid=8458281002
+[2026-04-20T17:09:42.275Z] LOG   [scraper] https://careers.appsflyer.com/jobs/position/8469417002?gh_jid=8469417002
+[2026-04-20T17:09:42.321Z] LOG   [scraper] https://careers.appsflyer.com/jobs/position/8454349002?gh_jid=8454349002
+[2026-04-20T17:09:42.507Z] LOG   [scraper] https://careers.appsflyer.com/jobs/position/8474364002?gh_jid=8474364002
+[2026-04-20T17:09:43.033Z] LOG   [scraper] https://careers.appsflyer.com/jobs/position/8500434002?gh_jid=8500434002
+[2026-04-20T17:09:46.323Z] LOG   [scraper] https://careers.appsflyer.com/jobs/position/8415972002?gh_jid=8415972002
+[2026-04-20T17:09:46.553Z] LOG   [scraper] https://careers.appsflyer.com/jobs/position/8484679002?gh_jid=8484679002
+[2026-04-20T17:09:47.001Z] LOG   [scraper] https://careers.appsflyer.com/jobs/position/8474373002?gh_jid=8474373002
+[2026-04-20T17:09:47.005Z] LOG   [scraper] https://careers.appsflyer.com/jobs/position/8507656002?gh_jid=8507656002
+[2026-04-20T17:09:47.198Z] LOG   [scraper] https://careers.appsflyer.com/jobs/position/8451331002?gh_jid=8451331002
+[2026-04-20T17:09:48.502Z] LOG   [scraper] https://job-boards.greenhouse.io/calendly/jobs/8464846002
+[2026-04-20T17:09:48.524Z] LOG   [scraper] https://job-boards.greenhouse.io/calendly/jobs/8508895002
+[2026-04-20T17:09:48.624Z] LOG   [scraper] https://job-boards.greenhouse.io/calendly/jobs/8510970002
+[2026-04-20T17:09:48.679Z] LOG   [scraper] https://job-boards.greenhouse.io/calendly/jobs/8512146002
+[2026-04-20T17:09:48.685Z] LOG   [scraper] https://job-boards.greenhouse.io/calendly/jobs/8444954002
+[2026-04-20T17:09:49.469Z] LOG   [scraper] https://job-boards.greenhouse.io/calendly/jobs/8506905002
+[2026-04-20T17:09:49.470Z] LOG   [scraper] https://job-boards.greenhouse.io/calendly/jobs/8395120002
+[2026-04-20T17:09:49.530Z] LOG   [scraper] https://job-boards.greenhouse.io/calendly/jobs/8391496002
+[2026-04-20T17:09:49.542Z] LOG   [scraper] https://job-boards.greenhouse.io/calendly/jobs/8474894002
+[2026-04-20T17:09:49.677Z] LOG   [scraper] https://job-boards.greenhouse.io/calendly/jobs/8438605002
+[2026-04-20T17:09:50.443Z] LOG   [scraper] https://job-boards.greenhouse.io/calendly/jobs/8390060002
+[2026-04-20T17:09:50.455Z] LOG   [scraper] https://job-boards.greenhouse.io/calendly/jobs/8504765002
+[2026-04-20T17:09:50.456Z] LOG   [scraper] https://job-boards.greenhouse.io/calendly/jobs/8430528002
+[2026-04-20T17:09:50.478Z] LOG   [scraper] https://job-boards.greenhouse.io/calendly/jobs/8495119002
+[2026-04-20T17:09:50.635Z] LOG   [scraper] https://job-boards.greenhouse.io/calendly/jobs/8354260002
+[2026-04-20T17:09:51.406Z] LOG   [scraper] https://job-boards.greenhouse.io/calendly/jobs/8433472002
+[2026-04-20T17:09:51.456Z] LOG   [scraper] https://job-boards.greenhouse.io/calendly/jobs/8139892002
+[2026-04-20T17:09:51.517Z] LOG   [scraper] https://job-boards.greenhouse.io/calendly/jobs/8450989002
+[2026-04-20T17:09:51.573Z] LOG   [scraper] https://job-boards.greenhouse.io/calendly/jobs/8472457002
+[2026-04-20T17:09:51.618Z] LOG   [scraper] https://job-boards.greenhouse.io/calendly/jobs/8171767002
+[2026-04-20T17:09:52.480Z] LOG   [scraper] https://boards.greenhouse.io/ardentmc/jobs/7706985?gh_jid=7706985
+[2026-04-20T17:09:52.501Z] LOG   [scraper] https://boards.greenhouse.io/ardentmc/jobs/7739445?gh_jid=7739445
+[2026-04-20T17:09:52.515Z] LOG   [scraper] https://boards.greenhouse.io/ardentmc/jobs/7819738?gh_jid=7819738
+[2026-04-20T17:09:52.567Z] LOG   [scraper] https://boards.greenhouse.io/ardentmc/jobs/6044374?gh_jid=6044374
+[2026-04-20T17:09:52.755Z] LOG   [scraper] https://boards.greenhouse.io/ardentmc/jobs/5006631?gh_jid=5006631
+[2026-04-20T17:09:53.603Z] LOG   [scraper] https://boards.greenhouse.io/ardentmc/jobs/6438205?gh_jid=6438205
+[2026-04-20T17:09:53.690Z] LOG   [scraper] https://boards.greenhouse.io/ardentmc/jobs/6980117?gh_jid=6980117
+[2026-04-20T17:09:53.754Z] LOG   [scraper] https://boards.greenhouse.io/ardentmc/jobs/6058901?gh_jid=6058901
+[2026-04-20T17:09:53.769Z] LOG   [scraper] https://boards.greenhouse.io/ardentmc/jobs/7826288?gh_jid=7826288
+[2026-04-20T17:09:53.769Z] LOG   [scraper] https://boards.greenhouse.io/ardentmc/jobs/6980102?gh_jid=6980102
+[2026-04-20T17:09:54.827Z] LOG   [scraper] https://boards.greenhouse.io/ardentmc/jobs/6980154?gh_jid=6980154
+[2026-04-20T17:09:54.866Z] LOG   [scraper] https://boards.greenhouse.io/ardentmc/jobs/6980098?gh_jid=6980098
+[2026-04-20T17:09:54.875Z] LOG   [scraper] https://boards.greenhouse.io/ardentmc/jobs/6980150?gh_jid=6980150
+[2026-04-20T17:09:54.972Z] LOG   [scraper] https://boards.greenhouse.io/ardentmc/jobs/4943958?gh_jid=4943958
+[2026-04-20T17:09:55.360Z] LOG   [scraper] https://boards.greenhouse.io/ardentmc/jobs/7271761?gh_jid=7271761
+[2026-04-20T17:09:56.159Z] LOG   [scraper] https://boards.greenhouse.io/ardentmc/jobs/6516039?gh_jid=6516039
+[2026-04-20T17:09:56.188Z] LOG   [scraper] https://boards.greenhouse.io/ardentmc/jobs/7827229?gh_jid=7827229
+[2026-04-20T17:09:56.232Z] LOG   [scraper] https://boards.greenhouse.io/ardentmc/jobs/7827190?gh_jid=7827190
+[2026-04-20T17:09:56.340Z] LOG   [scraper] https://boards.greenhouse.io/ardentmc/jobs/7091231?gh_jid=7091231
+[2026-04-20T17:09:56.377Z] LOG   [scraper] https://boards.greenhouse.io/ardentmc/jobs/7819766?gh_jid=7819766
+[2026-04-20T17:09:57.254Z] LOG   [scraper] https://boards.greenhouse.io/ardentmc/jobs/6440890?gh_jid=6440890
+[2026-04-20T17:09:57.274Z] LOG   [scraper] https://boards.greenhouse.io/ardentmc/jobs/7295176?gh_jid=7295176
+[2026-04-20T17:09:57.274Z] LOG   [scraper] https://boards.greenhouse.io/ardentmc/jobs/7736984?gh_jid=7736984
+[2026-04-20T17:09:57.331Z] LOG   [scraper] https://boards.greenhouse.io/ardentmc/jobs/7295282?gh_jid=7295282
+[2026-04-20T17:09:57.344Z] LOG   [scraper] https://boards.greenhouse.io/ardentmc/jobs/7739476?gh_jid=7739476
+[2026-04-20T17:09:58.222Z] LOG   [scraper] https://boards.greenhouse.io/ardentmc/jobs/7826313?gh_jid=7826313
+[2026-04-20T17:09:58.358Z] LOG   [scraper] https://boards.greenhouse.io/ardentmc/jobs/6673796?gh_jid=6673796
+[2026-04-20T17:09:58.407Z] LOG   [scraper] https://boards.greenhouse.io/ardentmc/jobs/7528394?gh_jid=7528394
+[2026-04-20T17:09:58.418Z] LOG   [scraper] https://boards.greenhouse.io/ardentmc/jobs/7528431?gh_jid=7528431
+[2026-04-20T17:09:59.033Z] LOG   [scraper] https://boards.greenhouse.io/ardentmc/jobs/6980100?gh_jid=6980100
+[2026-04-20T17:09:59.841Z] LOG   [scraper] https://boards.greenhouse.io/ardentmc/jobs/7733674?gh_jid=7733674
+[2026-04-20T17:09:59.935Z] LOG   [scraper] https://boards.greenhouse.io/ardentmc/jobs/7739327?gh_jid=7739327
+[2026-04-20T17:10:00.015Z] LOG   [scraper] https://boards.greenhouse.io/ardentmc/jobs/6219325?gh_jid=6219325
+[2026-04-20T17:10:00.039Z] LOG   [scraper] https://boards.greenhouse.io/ardentmc/jobs/7819762?gh_jid=7819762
+[2026-04-20T17:10:00.107Z] LOG   [scraper] https://boards.greenhouse.io/ardentmc/jobs/7826306?gh_jid=7826306
+[2026-04-20T17:10:01.047Z] LOG   [scraper] https://boards.greenhouse.io/andurilindustries/jobs/5037046007?gh_jid=5037046007
+[2026-04-20T17:10:01.077Z] LOG   [scraper] https://boards.greenhouse.io/andurilindustries/jobs/5061295007?gh_jid=5061295007
+[2026-04-20T17:10:01.222Z] LOG   [scraper] https://boards.greenhouse.io/andurilindustries/jobs/5107162007?gh_jid=5107162007
+[2026-04-20T17:10:01.231Z] LOG   [scraper] https://boards.greenhouse.io/andurilindustries/jobs/4910739007?gh_jid=4910739007
+[2026-04-20T17:10:03.574Z] LOG   [scraper] https://boards.greenhouse.io/ardentmc/jobs/7827149?gh_jid=7827149
+[2026-04-20T17:10:04.497Z] LOG   [scraper] https://boards.greenhouse.io/andurilindustries/jobs/5000486007?gh_jid=5000486007
+[2026-04-20T17:10:04.503Z] LOG   [scraper] https://boards.greenhouse.io/andurilindustries/jobs/5032351007?gh_jid=5032351007
+[2026-04-20T17:10:04.647Z] LOG   [scraper] https://boards.greenhouse.io/andurilindustries/jobs/5103907007?gh_jid=5103907007
+[2026-04-20T17:10:04.681Z] LOG   [scraper] https://boards.greenhouse.io/andurilindustries/jobs/5102282007?gh_jid=5102282007
+[2026-04-20T17:10:04.761Z] LOG   [scraper] https://boards.greenhouse.io/andurilindustries/jobs/5078023007?gh_jid=5078023007
+[2026-04-20T17:10:05.734Z] LOG   [scraper] https://boards.greenhouse.io/andurilindustries/jobs/5057131007?gh_jid=5057131007
+[2026-04-20T17:10:05.759Z] LOG   [scraper] https://boards.greenhouse.io/andurilindustries/jobs/5053108007?gh_jid=5053108007
+[2026-04-20T17:10:05.933Z] LOG   [scraper] https://boards.greenhouse.io/andurilindustries/jobs/5101597007?gh_jid=5101597007
+[2026-04-20T17:10:05.936Z] LOG   [scraper] https://boards.greenhouse.io/andurilindustries/jobs/5061611007?gh_jid=5061611007
+[2026-04-20T17:10:05.979Z] LOG   [scraper] https://boards.greenhouse.io/andurilindustries/jobs/5057132007?gh_jid=5057132007
+[2026-04-20T17:10:06.973Z] LOG   [scraper] https://boards.greenhouse.io/andurilindustries/jobs/5053111007?gh_jid=5053111007
+[2026-04-20T17:10:07.066Z] LOG   [scraper] https://boards.greenhouse.io/andurilindustries/jobs/4774803007?gh_jid=4774803007
+[2026-04-20T17:10:07.123Z] LOG   [scraper] https://boards.greenhouse.io/andurilindustries/jobs/4926917007?gh_jid=4926917007
+[2026-04-20T17:10:07.164Z] LOG   [scraper] https://boards.greenhouse.io/andurilindustries/jobs/4926908007?gh_jid=4926908007
+[2026-04-20T17:10:07.192Z] LOG   [scraper] https://boards.greenhouse.io/andurilindustries/jobs/4795856007?gh_jid=4795856007
+[2026-04-20T17:10:08.175Z] LOG   [scraper] https://boards.greenhouse.io/andurilindustries/jobs/5075760007?gh_jid=5075760007
+[2026-04-20T17:10:08.262Z] LOG   [scraper] https://boards.greenhouse.io/andurilindustries/jobs/5032464007?gh_jid=5032464007
+[2026-04-20T17:10:08.302Z] LOG   [scraper] https://boards.greenhouse.io/andurilindustries/jobs/5076520007?gh_jid=5076520007
+[2026-04-20T17:10:08.466Z] LOG   [scraper] https://boards.greenhouse.io/andurilindustries/jobs/5045513007?gh_jid=5045513007
+[2026-04-20T17:10:08.510Z] LOG   [scraper] https://boards.greenhouse.io/andurilindustries/jobs/5100706007?gh_jid=5100706007
+[2026-04-20T17:10:09.460Z] LOG   [scraper] https://boards.greenhouse.io/andurilindustries/jobs/5027655007?gh_jid=5027655007
+[2026-04-20T17:10:09.567Z] LOG   [scraper] https://boards.greenhouse.io/andurilindustries/jobs/5029722007?gh_jid=5029722007
+[2026-04-20T17:10:09.697Z] LOG   [scraper] https://boards.greenhouse.io/andurilindustries/jobs/5084907007?gh_jid=5084907007
+[2026-04-20T17:10:09.742Z] LOG   [scraper] https://boards.greenhouse.io/andurilindustries/jobs/4845566007?gh_jid=4845566007
+[2026-04-20T17:10:10.237Z] LOG   [scraper] https://boards.greenhouse.io/andurilindustries/jobs/5065741007?gh_jid=5065741007
+[2026-04-20T17:10:11.123Z] LOG   [scraper] https://boards.greenhouse.io/andurilindustries/jobs/5024754007?gh_jid=5024754007
+[2026-04-20T17:10:11.196Z] LOG   [scraper] https://boards.greenhouse.io/andurilindustries/jobs/5056395007?gh_jid=5056395007
+[2026-04-20T17:10:11.261Z] LOG   [scraper] https://boards.greenhouse.io/andurilindustries/jobs/4619191007?gh_jid=4619191007
+[2026-04-20T17:10:11.322Z] LOG   [scraper] https://boards.greenhouse.io/andurilindustries/jobs/4951316007?gh_jid=4951316007
+[2026-04-20T17:10:17.380Z] LOG   [scraper] https://boards.greenhouse.io/andurilindustries/jobs/5050522007?gh_jid=5050522007
+[2026-04-20T17:10:18.225Z] LOG   [scraper] https://boards.greenhouse.io/andurilindustries/jobs/5043844007?gh_jid=5043844007
+[2026-04-20T17:10:18.416Z] LOG   [scraper] https://boards.greenhouse.io/andurilindustries/jobs/4951318007?gh_jid=4951318007
+[2026-04-20T17:10:18.521Z] LOG   [scraper] https://boards.greenhouse.io/andurilindustries/jobs/4951325007?gh_jid=4951325007
+[2026-04-20T17:10:18.543Z] LOG   [scraper] https://boards.greenhouse.io/andurilindustries/jobs/5040889007?gh_jid=5040889007
+[2026-04-20T17:10:18.544Z] LOG   [scraper] https://boards.greenhouse.io/andurilindustries/jobs/5111193007?gh_jid=5111193007
+[2026-04-20T17:10:19.580Z] LOG   [scraper] https://boards.greenhouse.io/andurilindustries/jobs/5008207007?gh_jid=5008207007
+[2026-04-20T17:10:19.630Z] LOG   [scraper] https://boards.greenhouse.io/andurilindustries/jobs/4802288007?gh_jid=4802288007
+[2026-04-20T17:10:19.740Z] LOG   [scraper] https://boards.greenhouse.io/andurilindustries/jobs/4925945007?gh_jid=4925945007
+[2026-04-20T17:10:19.773Z] LOG   [scraper] https://boards.greenhouse.io/andurilindustries/jobs/4745669007?gh_jid=4745669007
+[2026-04-20T17:10:19.843Z] LOG   [scraper] https://boards.greenhouse.io/andurilindustries/jobs/4802276007?gh_jid=4802276007
+[2026-04-20T17:10:20.920Z] LOG   [scraper] https://boards.greenhouse.io/andurilindustries/jobs/5072024007?gh_jid=5072024007
+[2026-04-20T17:10:20.949Z] LOG   [scraper] https://boards.greenhouse.io/andurilindustries/jobs/5067006007?gh_jid=5067006007
+[2026-04-20T17:10:21.061Z] LOG   [scraper] https://boards.greenhouse.io/andurilindustries/jobs/4802297007?gh_jid=4802297007
+[2026-04-20T17:10:21.071Z] LOG   [scraper] https://boards.greenhouse.io/andurilindustries/jobs/5029084007?gh_jid=5029084007
+[2026-04-20T17:10:21.131Z] LOG   [scraper] https://boards.greenhouse.io/andurilindustries/jobs/5034650007?gh_jid=5034650007
+[2026-04-20T17:10:22.093Z] LOG   [scraper] https://careers.cookunity.com/open-roles?gh_jid=7625525003
+[2026-04-20T17:10:22.130Z] LOG   [scraper] https://boards.greenhouse.io/andurilindustries/jobs/5093304007?gh_jid=5093304007
+[2026-04-20T17:10:22.158Z] LOG   [scraper] https://careers.cookunity.com/open-roles?gh_jid=7691593003
+[2026-04-20T17:10:22.181Z] LOG   [scraper] https://careers.cookunity.com/open-roles?gh_jid=7599064003
+[2026-04-20T17:10:22.764Z] LOG   [scraper] https://careers.cookunity.com/open-roles?gh_jid=7594766003
+[2026-04-20T17:10:23.847Z] LOG   [scraper] https://careers.cookunity.com/open-roles?gh_jid=6656139003
+[2026-04-20T17:10:23.867Z] LOG   [scraper] https://careers.cookunity.com/open-roles?gh_jid=7654721003
+[2026-04-20T17:10:23.953Z] LOG   [scraper] https://careers.cookunity.com/open-roles?gh_jid=7681032003
+[2026-04-20T17:10:24.036Z] LOG   [scraper] https://careers.cookunity.com/open-roles?gh_jid=7662940003
+[2026-04-20T17:10:24.086Z] LOG   [scraper] https://careers.cookunity.com/open-roles?gh_jid=7666424003
+[2026-04-20T17:10:25.290Z] LOG   [scraper] https://careers.cookunity.com/open-roles?gh_jid=7587428003
+[2026-04-20T17:10:25.394Z] LOG   [scraper] https://careers.cookunity.com/open-roles?gh_jid=7551854003
+[2026-04-20T17:10:25.423Z] LOG   [scraper] https://careers.cookunity.com/open-roles?gh_jid=6535129003
+[2026-04-20T17:10:25.428Z] LOG   [scraper] https://careers.cookunity.com/open-roles?gh_jid=7482019003
+[2026-04-20T17:10:25.625Z] LOG   [scraper] https://careers.cookunity.com/open-roles?gh_jid=6559368003
+[2026-04-20T17:10:26.653Z] LOG   [scraper] https://careers.cookunity.com/open-roles?gh_jid=7668069003
+[2026-04-20T17:10:26.663Z] LOG   [scraper] https://careers.cookunity.com/open-roles?gh_jid=6533755003
+[2026-04-20T17:10:26.717Z] LOG   [scraper] https://careers.cookunity.com/open-roles?gh_jid=7687798003
+[2026-04-20T17:10:26.729Z] LOG   [scraper] https://careers.cookunity.com/open-roles?gh_jid=6614817003
+[2026-04-20T17:10:26.868Z] LOG   [scraper] https://careers.cookunity.com/open-roles?gh_jid=6533756003
+[2026-04-20T17:10:28.045Z] LOG   [scraper] https://careers.cookunity.com/open-roles?gh_jid=6788081003
+[2026-04-20T17:10:28.051Z] LOG   [scraper] https://careers.cookunity.com/open-roles?gh_jid=7575267003
+[2026-04-20T17:10:28.130Z] LOG   [scraper] https://careers.cookunity.com/open-roles?gh_jid=7638811003
+[2026-04-20T17:10:28.166Z] LOG   [scraper] https://careers.cookunity.com/open-roles?gh_jid=7595147003
+[2026-04-20T17:10:28.292Z] LOG   [scraper] https://careers.cookunity.com/open-roles?gh_jid=7698587003
+[2026-04-20T17:10:29.372Z] LOG   [scraper] https://careers.cookunity.com/open-roles?gh_jid=7646019003
+[2026-04-20T17:10:29.455Z] LOG   [scraper] https://careers.cookunity.com/open-roles?gh_jid=6254751003
+[2026-04-20T17:10:29.484Z] LOG   [scraper] https://careers.cookunity.com/open-roles?gh_jid=7508926003
+[2026-04-20T17:10:29.491Z] LOG   [scraper] https://careers.cookunity.com/open-roles?gh_jid=7611664003
+[2026-04-20T17:10:29.496Z] LOG   [scraper] https://careers.cookunity.com/open-roles?gh_jid=6316688003
+[2026-04-20T17:10:30.680Z] LOG   [scraper] https://careers.cookunity.com/open-roles?gh_jid=7617068003
+[2026-04-20T17:10:30.714Z] LOG   [scraper] https://careers.cookunity.com/open-roles?gh_jid=7568829003
+[2026-04-20T17:10:30.724Z] LOG   [scraper] https://careers.cookunity.com/open-roles?gh_jid=7586632003
+[2026-04-20T17:10:30.807Z] LOG   [scraper] https://careers.cookunity.com/open-roles?gh_jid=7528108003
+[2026-04-20T17:10:30.813Z] LOG   [scraper] https://careers.cookunity.com/open-roles?gh_jid=7574167003
+[2026-04-20T17:10:31.943Z] LOG   [scraper] https://careers.cookunity.com/open-roles?gh_jid=6509356003
+[2026-04-20T17:10:31.979Z] LOG   [scraper] https://careers.cookunity.com/open-roles?gh_jid=7677199003
+[2026-04-20T17:10:32.007Z] LOG   [scraper] https://careers.cookunity.com/open-roles?gh_jid=7496588003
+[2026-04-20T17:10:32.043Z] LOG   [scraper] https://careers.cookunity.com/open-roles?gh_jid=7496585003
+[2026-04-20T17:10:32.049Z] LOG   [scraper] https://careers.cookunity.com/open-roles?gh_jid=7651154003
+[2026-04-20T17:10:33.150Z] LOG   [scraper] https://careers.cookunity.com/open-roles?gh_jid=6510648003
+[2026-04-20T17:10:33.243Z] LOG   [scraper] https://careers.cookunity.com/open-roles?gh_jid=7677044003
+[2026-04-20T17:10:33.258Z] LOG   [scraper] https://careers.cookunity.com/open-roles?gh_jid=7646414003
+[2026-04-20T17:10:33.270Z] LOG   [scraper] https://careers.cookunity.com/open-roles?gh_jid=7512211003
+[2026-04-20T17:10:33.463Z] LOG   [scraper] https://careers.cookunity.com/open-roles?gh_jid=7529067003
+[2026-04-20T17:10:34.496Z] LOG   [scraper] https://careers.cookunity.com/open-roles?gh_jid=7676020003
+[2026-04-20T17:10:34.505Z] LOG   [scraper] https://careers.cookunity.com/open-roles?gh_jid=7497337003
+[2026-04-20T17:10:34.659Z] LOG   [scraper] https://careers.cookunity.com/open-roles?gh_jid=6496609003
+[2026-04-20T17:10:34.670Z] LOG   [scraper] https://careers.cookunity.com/open-roles?gh_jid=7643155003
+[2026-04-20T17:10:34.714Z] LOG   [scraper] https://careers.cookunity.com/open-roles?gh_jid=7689184003
+[2026-04-20T17:10:35.845Z] LOG   [scraper] https://careers.cookunity.com/open-roles?gh_jid=7592543003
+[2026-04-20T17:10:35.959Z] LOG   [scraper] https://boards.greenhouse.io/spacex/jobs/8495838002?gh_jid=8495838002
+[2026-04-20T17:10:35.981Z] LOG   [scraper] https://boards.greenhouse.io/spacex/jobs/8399574002?gh_jid=8399574002
+[2026-04-20T17:10:36.064Z] LOG   [scraper] https://boards.greenhouse.io/spacex/jobs/8426303002?gh_jid=8426303002
+[2026-04-20T17:10:36.109Z] LOG   [scraper] https://boards.greenhouse.io/spacex/jobs/8436532002?gh_jid=8436532002
+[2026-04-20T17:10:37.117Z] LOG   [scraper] https://boards.greenhouse.io/spacex/jobs/8441155002?gh_jid=8441155002
+[2026-04-20T17:10:37.210Z] LOG   [scraper] https://boards.greenhouse.io/spacex/jobs/8427546002?gh_jid=8427546002
+[2026-04-20T17:10:37.292Z] LOG   [scraper] https://boards.greenhouse.io/spacex/jobs/8495870002?gh_jid=8495870002
+[2026-04-20T17:10:37.338Z] LOG   [scraper] https://boards.greenhouse.io/spacex/jobs/8326515002?gh_jid=8326515002
+[2026-04-20T17:10:37.474Z] LOG   [scraper] https://boards.greenhouse.io/spacex/jobs/8476089002?gh_jid=8476089002
+[2026-04-20T17:10:38.346Z] LOG   [scraper] https://boards.greenhouse.io/spacex/jobs/8510610002?gh_jid=8510610002
+[2026-04-20T17:10:38.357Z] LOG   [scraper] https://boards.greenhouse.io/spacex/jobs/8199766002?gh_jid=8199766002
+[2026-04-20T17:10:38.366Z] LOG   [scraper] https://boards.greenhouse.io/spacex/jobs/8420343002?gh_jid=8420343002
+[2026-04-20T17:10:38.503Z] LOG   [scraper] https://boards.greenhouse.io/spacex/jobs/8484090002?gh_jid=8484090002
+[2026-04-20T17:10:38.503Z] LOG   [scraper] https://boards.greenhouse.io/spacex/jobs/8466748002?gh_jid=8466748002
+[2026-04-20T17:10:39.456Z] LOG   [scraper] https://boards.greenhouse.io/spacex/jobs/8501548002?gh_jid=8501548002
+[2026-04-20T17:10:39.463Z] LOG   [scraper] https://boards.greenhouse.io/spacex/jobs/8387092002?gh_jid=8387092002
+[2026-04-20T17:10:39.494Z] LOG   [scraper] https://boards.greenhouse.io/spacex/jobs/8511245002?gh_jid=8511245002
+[2026-04-20T17:10:39.511Z] LOG   [scraper] https://boards.greenhouse.io/spacex/jobs/8426398002?gh_jid=8426398002
+[2026-04-20T17:10:42.694Z] LOG   [scraper] https://boards.greenhouse.io/spacex/jobs/8369850002?gh_jid=8369850002
+[2026-04-20T17:10:43.018Z] LOG   [scraper] https://boards.greenhouse.io/spacex/jobs/8494240002?gh_jid=8494240002
+[2026-04-20T17:10:43.020Z] LOG   [scraper] https://boards.greenhouse.io/spacex/jobs/8499215002?gh_jid=8499215002
+[2026-04-20T17:10:43.026Z] LOG   [scraper] https://boards.greenhouse.io/spacex/jobs/8402778002?gh_jid=8402778002
+[2026-04-20T17:10:43.027Z] LOG   [scraper] https://boards.greenhouse.io/spacex/jobs/8478462002?gh_jid=8478462002
+[2026-04-20T17:10:43.315Z] LOG   [scraper] https://boards.greenhouse.io/spacex/jobs/8494238002?gh_jid=8494238002
+[2026-04-20T17:10:43.647Z] LOG   [scraper] https://boards.greenhouse.io/spacex/jobs/8302287002?gh_jid=8302287002
+[2026-04-20T17:10:43.649Z] LOG   [scraper] https://boards.greenhouse.io/spacex/jobs/8326139002?gh_jid=8326139002
+[2026-04-20T17:10:43.650Z] LOG   [scraper] https://boards.greenhouse.io/spacex/jobs/8302260002?gh_jid=8302260002
+[2026-04-20T17:10:43.654Z] LOG   [scraper] https://boards.greenhouse.io/spacex/jobs/8499121002?gh_jid=8499121002
+[2026-04-20T17:10:43.670Z] LOG   [scraper] https://boards.greenhouse.io/spacex/jobs/8457430002?gh_jid=8457430002
+[2026-04-20T17:10:44.033Z] LOG   [scraper] https://boards.greenhouse.io/spacex/jobs/8369211002?gh_jid=8369211002
+[2026-04-20T17:10:44.037Z] LOG   [scraper] https://boards.greenhouse.io/spacex/jobs/8395276002?gh_jid=8395276002
+[2026-04-20T17:10:44.040Z] LOG   [scraper] https://boards.greenhouse.io/spacex/jobs/8362097002?gh_jid=8362097002
+[2026-04-20T17:10:44.041Z] LOG   [scraper] https://boards.greenhouse.io/spacex/jobs/8420864002?gh_jid=8420864002
+[2026-04-20T17:10:44.051Z] LOG   [scraper] https://boards.greenhouse.io/spacex/jobs/8378282002?gh_jid=8378282002
+[2026-04-20T17:10:44.852Z] LOG   [scraper] https://boards.greenhouse.io/spacex/jobs/8456214002?gh_jid=8456214002
+[2026-04-20T17:10:44.857Z] LOG   [scraper] https://boards.greenhouse.io/spacex/jobs/8506443002?gh_jid=8506443002
+[2026-04-20T17:10:44.863Z] LOG   [scraper] https://boards.greenhouse.io/spacex/jobs/8218449002?gh_jid=8218449002
+[2026-04-20T17:10:44.865Z] LOG   [scraper] https://boards.greenhouse.io/spacex/jobs/8218090002?gh_jid=8218090002
+[2026-04-20T17:10:44.911Z] LOG   [scraper] https://boards.greenhouse.io/spacex/jobs/8350391002?gh_jid=8350391002
+[2026-04-20T17:10:45.221Z] LOG   [scraper] https://boards.greenhouse.io/spacex/jobs/8245092002?gh_jid=8245092002
+[2026-04-20T17:10:45.223Z] LOG   [scraper] https://boards.greenhouse.io/spacex/jobs/8433913002?gh_jid=8433913002
+[2026-04-20T17:10:45.224Z] LOG   [scraper] https://boards.greenhouse.io/spacex/jobs/8450986002?gh_jid=8450986002
+[2026-04-20T17:10:45.258Z] LOG   [scraper] https://boards.greenhouse.io/spacex/jobs/8399547002?gh_jid=8399547002
+[2026-04-20T17:10:45.263Z] LOG   [scraper] https://boards.greenhouse.io/spacex/jobs/8392889002?gh_jid=8392889002
+[2026-04-20T17:10:45.603Z] LOG   [scraper] https://boards.greenhouse.io/spacex/jobs/8202260002?gh_jid=8202260002
+[2026-04-20T17:10:45.614Z] LOG   [scraper] https://boards.greenhouse.io/spacex/jobs/8506464002?gh_jid=8506464002
+[2026-04-20T17:10:45.614Z] LOG   [scraper] https://boards.greenhouse.io/spacex/jobs/8493473002?gh_jid=8493473002
+[2026-04-20T17:10:45.625Z] LOG   [scraper] https://boards.greenhouse.io/spacex/jobs/8220064002?gh_jid=8220064002
+[2026-04-20T17:10:45.632Z] LOG   [scraper] https://boards.greenhouse.io/spacex/jobs/8391268002?gh_jid=8391268002
+[2026-04-20T17:10:45.987Z] LOG   [scraper] https://boards.greenhouse.io/spacex/jobs/8395296002?gh_jid=8395296002
+[2026-04-20T17:10:47.618Z] LOG   [scraper] https://sofi.com/careers/job/7637220003?gh_jid=7637220003
+[2026-04-20T17:10:47.671Z] LOG   [scraper] https://sofi.com/careers/job/7677710003?gh_jid=7677710003
+[2026-04-20T17:10:47.806Z] LOG   [scraper] https://sofi.com/careers/job/7668357003?gh_jid=7668357003
+[2026-04-20T17:10:47.819Z] LOG   [scraper] https://sofi.com/careers/job/7692677003?gh_jid=7692677003
+[2026-04-20T17:10:49.868Z] LOG   [scraper] https://sofi.com/careers/job/7698454003?gh_jid=7698454003
+[2026-04-20T17:10:50.375Z] LOG   [scraper] https://sofi.com/careers/job/7671191003?gh_jid=7671191003
+[2026-04-20T17:10:50.502Z] LOG   [scraper] https://sofi.com/careers/job/7656427003?gh_jid=7656427003
+[2026-04-20T17:10:50.539Z] LOG   [scraper] https://sofi.com/careers/job/7682544003?gh_jid=7682544003
+[2026-04-20T17:10:50.571Z] LOG   [scraper] https://sofi.com/careers/job/7698444003?gh_jid=7698444003
+[2026-04-20T17:10:53.102Z] LOG   [scraper] https://sofi.com/careers/job/7695791003?gh_jid=7695791003
+[2026-04-20T17:10:53.129Z] LOG   [scraper] https://sofi.com/careers/job/7524353003?gh_jid=7524353003
+[2026-04-20T17:10:53.216Z] LOG   [scraper] https://sofi.com/careers/job/7702058003?gh_jid=7702058003
+[2026-04-20T17:10:53.398Z] LOG   [scraper] https://sofi.com/careers/job/7670947003?gh_jid=7670947003
+[2026-04-20T17:10:53.400Z] LOG   [scraper] https://sofi.com/careers/job/7520477003?gh_jid=7520477003
+[2026-04-20T17:10:55.541Z] LOG   [scraper] https://sofi.com/careers/job/7636194003?gh_jid=7636194003
+[2026-04-20T17:10:55.851Z] LOG   [scraper] https://sofi.com/careers/job/7647935003?gh_jid=7647935003
+[2026-04-20T17:10:56.184Z] LOG   [scraper] https://sofi.com/careers/job/7598746003?gh_jid=7598746003
+[2026-04-20T17:10:56.327Z] LOG   [scraper] https://sofi.com/careers/job/7528057003?gh_jid=7528057003
+[2026-04-20T17:10:56.377Z] LOG   [scraper] https://sofi.com/careers/job/7681318003?gh_jid=7681318003
+[2026-04-20T17:10:58.620Z] LOG   [scraper] https://sofi.com/careers/job/7565483003?gh_jid=7565483003
+[2026-04-20T17:10:58.648Z] LOG   [scraper] https://sofi.com/careers/job/7695596003?gh_jid=7695596003
+[2026-04-20T17:10:59.115Z] LOG   [scraper] https://sofi.com/careers/job/7599336003?gh_jid=7599336003
+[2026-04-20T17:10:59.395Z] LOG   [scraper] https://sofi.com/careers/job/7570327003?gh_jid=7570327003
+[2026-04-20T17:11:00.450Z] LOG   [scraper] https://sofi.com/careers/job/7652484003?gh_jid=7652484003
+[2026-04-20T17:11:02.170Z] LOG   [scraper] https://sofi.com/careers/job/7704803003?gh_jid=7704803003
+[2026-04-20T17:11:02.468Z] LOG   [scraper] https://sofi.com/careers/job/7601581003?gh_jid=7601581003
+[2026-04-20T17:11:02.655Z] LOG   [scraper] https://sofi.com/careers/job/7655871003?gh_jid=7655871003
+[2026-04-20T17:11:02.761Z] LOG   [scraper] https://sofi.com/careers/job/7688737003?gh_jid=7688737003
+[2026-04-20T17:11:02.911Z] LOG   [scraper] https://sofi.com/careers/job/7679146003?gh_jid=7679146003
+[2026-04-20T17:11:04.718Z] LOG   [scraper] https://sofi.com/careers/job/7670817003?gh_jid=7670817003
+[2026-04-20T17:11:04.959Z] LOG   [scraper] https://sofi.com/careers/job/7593041003?gh_jid=7593041003
+[2026-04-20T17:11:05.087Z] LOG   [scraper] https://sofi.com/careers/job/7639014003?gh_jid=7639014003
+[2026-04-20T17:11:05.310Z] LOG   [scraper] https://sofi.com/careers/job/7449636003?gh_jid=7449636003
+[2026-04-20T17:11:05.507Z] LOG   [scraper] https://sofi.com/careers/job/7677718003?gh_jid=7677718003
+[2026-04-20T17:11:07.449Z] LOG   [scraper] https://sofi.com/careers/job/7663516003?gh_jid=7663516003
+[2026-04-20T17:11:08.049Z] LOG   [scraper] https://sofi.com/careers/job/7641299003?gh_jid=7641299003
+[2026-04-20T17:11:08.082Z] LOG   [scraper] https://sofi.com/careers/job/7650449003?gh_jid=7650449003
+[2026-04-20T17:11:08.105Z] LOG   [scraper] https://sofi.com/careers/job/7693952003?gh_jid=7693952003
+[2026-04-20T17:11:08.137Z] LOG   [scraper] https://sofi.com/careers/job/7674544003?gh_jid=7674544003
+[2026-04-20T17:11:10.094Z] LOG   [scraper] https://sofi.com/careers/job/7702000003?gh_jid=7702000003
+[2026-04-20T17:11:10.237Z] LOG   [scraper] https://sofi.com/careers/job/7637251003?gh_jid=7637251003
+[2026-04-20T17:11:10.861Z] LOG   [scraper] https://sofi.com/careers/job/7581360003?gh_jid=7581360003
+[2026-04-20T17:11:10.989Z] LOG   [scraper] https://sofi.com/careers/job/7660308003?gh_jid=7660308003
+[2026-04-20T17:11:12.103Z] LOG   [scraper] https://sofi.com/careers/job/7570377003?gh_jid=7570377003
+[2026-04-20T17:11:13.779Z] LOG   [scraper] https://sofi.com/careers/job/6604009003?gh_jid=6604009003
+[2026-04-20T17:11:13.960Z] LOG   [scraper] https://sofi.com/careers/job/7704192003?gh_jid=7704192003
+[2026-04-20T17:11:14.375Z] LOG   [scraper] https://sofi.com/careers/job/7704587003?gh_jid=7704587003
+[2026-04-20T17:11:14.416Z] LOG   [scraper] https://sofi.com/careers/job/7661750003?gh_jid=7661750003
+[2026-04-20T17:11:15.217Z] LOG   [scraper] https://sofi.com/careers/job/7568745003?gh_jid=7568745003
+[2026-04-20T17:11:16.278Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/unframe/jobs/4840638101
+[2026-04-20T17:11:16.298Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/unframe/jobs/4845127101
+[2026-04-20T17:11:16.417Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/unframe/jobs/4840612101
+[2026-04-20T17:11:16.419Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/unframe/jobs/4845129101
+[2026-04-20T17:11:18.667Z] LOG   [scraper] https://sofi.com/careers/job/7634836003?gh_jid=7634836003
+[2026-04-20T17:11:19.477Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/unframe/jobs/4845107101
+[2026-04-20T17:11:19.485Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/unframe/jobs/4845084101
+[2026-04-20T17:11:19.656Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/unframe/jobs/4785237101
+[2026-04-20T17:11:19.668Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/unframe/jobs/4842443101
+[2026-04-20T17:11:19.668Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/unframe/jobs/4845272101
+[2026-04-20T17:11:20.423Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/unframe/jobs/4795571101
+[2026-04-20T17:11:20.477Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/unframe/jobs/4845514101
+[2026-04-20T17:11:20.574Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/unframe/jobs/4845235101
+[2026-04-20T17:11:20.596Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/unframe/jobs/4845120101
+[2026-04-20T17:11:20.670Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/unframe/jobs/4845119101
+[2026-04-20T17:11:21.422Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/unframe/jobs/4845128101
+[2026-04-20T17:11:21.458Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/unframe/jobs/4845086101
+[2026-04-20T17:11:21.497Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/unframe/jobs/4841796101
+[2026-04-20T17:11:21.517Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/unframe/jobs/4845121101
+[2026-04-20T17:11:21.523Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/unframe/jobs/4841078101
+[2026-04-20T17:11:22.241Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/unframe/jobs/4845122101
+[2026-04-20T17:11:22.382Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/unframe/jobs/4843565101
+[2026-04-20T17:11:22.415Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/unframe/jobs/4839864101
+[2026-04-20T17:11:22.428Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/unframe/jobs/4845643101
+[2026-04-20T17:11:22.519Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/unframe/jobs/4843238101
+[2026-04-20T17:11:23.396Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/unframe/jobs/4829284101
+[2026-04-20T17:11:23.402Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/unframe/jobs/4829258101
+[2026-04-20T17:11:23.407Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/unframe/jobs/4829259101
+[2026-04-20T17:11:23.436Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/unframe/jobs/4844677101
+[2026-04-20T17:11:23.471Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/unframe/jobs/4844679101
+[2026-04-20T17:11:24.314Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/unframe/jobs/4842367101
+[2026-04-20T17:11:24.335Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/unframe/jobs/4842510101
+[2026-04-20T17:11:24.503Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/unframe/jobs/4842383101
+[2026-04-20T17:11:24.532Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/unframe/jobs/4840628101
+[2026-04-20T17:11:24.838Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/unframe/jobs/4840618101
+[2026-04-20T17:11:25.561Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/unframe/jobs/4840231101
+[2026-04-20T17:11:25.584Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/unframe/jobs/4773605101
+[2026-04-20T17:11:25.603Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/unframe/jobs/4829276101
+[2026-04-20T17:11:25.639Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/unframe/jobs/4829282101
+[2026-04-20T17:11:25.675Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/unframe/jobs/4773604101
+[2026-04-20T17:11:26.565Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/unframe/jobs/4820260101
+[2026-04-20T17:11:26.586Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/unframe/jobs/4820266101
+[2026-04-20T17:11:26.598Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/unframe/jobs/4820261101
+[2026-04-20T17:11:26.624Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/unframe/jobs/4840939101
+[2026-04-20T17:11:26.820Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/unframe/jobs/4843555101
+[2026-04-20T17:11:27.661Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/unframe/jobs/4824099101
+[2026-04-20T17:11:27.667Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/unframe/jobs/4845040101
+[2026-04-20T17:11:27.744Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/unframe/jobs/4842985101
+[2026-04-20T17:11:27.771Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/cision/jobs/4825121101
+[2026-04-20T17:11:27.782Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/unframe/jobs/4845041101
+[2026-04-20T17:11:28.478Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/cision/jobs/4792592101
+[2026-04-20T17:11:28.551Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/cision/jobs/4785348101
+[2026-04-20T17:11:28.560Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/cision/jobs/4815796101
+[2026-04-20T17:11:28.686Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/cision/jobs/4787875101
+[2026-04-20T17:11:28.773Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/cision/jobs/4826801101
+[2026-04-20T17:11:29.480Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/cision/jobs/4792464101
+[2026-04-20T17:11:29.511Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/cision/jobs/4792073101
+[2026-04-20T17:11:29.528Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/cision/jobs/4780801101
+[2026-04-20T17:11:29.537Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/cision/jobs/4739248101
+[2026-04-20T17:11:29.544Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/cision/jobs/4804177101
+[2026-04-20T17:11:30.419Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/cision/jobs/4775741101
+[2026-04-20T17:11:30.433Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/cision/jobs/4762667101
+[2026-04-20T17:11:30.433Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/cision/jobs/4782079101
+[2026-04-20T17:11:30.433Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/cision/jobs/4740959101
+[2026-04-20T17:11:30.671Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/cision/jobs/4752904101
+[2026-04-20T17:11:31.388Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/cision/jobs/4791720101
+[2026-04-20T17:11:31.422Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/cision/jobs/4821144101
+[2026-04-20T17:11:31.470Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/cision/jobs/4788002101
+[2026-04-20T17:11:31.532Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/cision/jobs/4802765101
+[2026-04-20T17:11:31.603Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/cision/jobs/4799524101
+[2026-04-20T17:11:32.440Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/cision/jobs/4686727101
+[2026-04-20T17:11:32.449Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/cision/jobs/4813128101
+[2026-04-20T17:11:32.514Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/cision/jobs/4747383101
+[2026-04-20T17:11:32.668Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/cision/jobs/4786805101
+[2026-04-20T17:11:32.702Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/cision/jobs/4841150101
+[2026-04-20T17:11:33.608Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/cision/jobs/4790903101
+[2026-04-20T17:11:33.650Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/cision/jobs/4823441101
+[2026-04-20T17:11:33.656Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/cision/jobs/4841825101
+[2026-04-20T17:11:33.662Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/cision/jobs/4803385101
+[2026-04-20T17:11:33.707Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/cision/jobs/4697855101
+[2026-04-20T17:11:34.493Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/cision/jobs/4745539101
+[2026-04-20T17:11:34.499Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/cision/jobs/4686661101
+[2026-04-20T17:11:34.642Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/cision/jobs/4816814101
+[2026-04-20T17:11:34.645Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/cision/jobs/4841133101
+[2026-04-20T17:11:34.673Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/cision/jobs/4697351101
+[2026-04-20T17:11:35.599Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/cision/jobs/4815837101
+[2026-04-20T17:11:35.626Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/cision/jobs/4787625101
+[2026-04-20T17:11:35.680Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/cision/jobs/4818344101
+[2026-04-20T17:11:35.686Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/cision/jobs/4790907101
+[2026-04-20T17:11:35.776Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/cision/jobs/4778596101
+[2026-04-20T17:11:36.643Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/cision/jobs/4820137101
+[2026-04-20T17:11:36.656Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/cision/jobs/4797980101
+[2026-04-20T17:11:36.682Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/cision/jobs/4828439101
+[2026-04-20T17:11:36.713Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/cision/jobs/4785608101
+[2026-04-20T17:11:36.750Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/cision/jobs/4828443101
+[2026-04-20T17:11:37.595Z] LOG   [scraper] https://job-boards.greenhouse.io/betsson/jobs/7774874
+[2026-04-20T17:11:37.620Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/cision/jobs/4824689101
+[2026-04-20T17:11:37.733Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/cision/jobs/4774563101
+[2026-04-20T17:11:37.735Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/cision/jobs/4785577101
+[2026-04-20T17:11:37.745Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/cision/jobs/4785400101
+[2026-04-20T17:11:38.605Z] LOG   [scraper] https://job-boards.greenhouse.io/betsson/jobs/7774913
+[2026-04-20T17:11:38.642Z] LOG   [scraper] https://job-boards.greenhouse.io/betsson/jobs/7541132
+[2026-04-20T17:11:38.651Z] LOG   [scraper] https://job-boards.greenhouse.io/betsson/jobs/7774877
+[2026-04-20T17:11:38.678Z] LOG   [scraper] https://job-boards.greenhouse.io/betsson/jobs/6788064
+[2026-04-20T17:11:38.681Z] LOG   [scraper] https://job-boards.greenhouse.io/betsson/jobs/7811541
+[2026-04-20T17:11:39.467Z] LOG   [scraper] https://job-boards.greenhouse.io/betsson/jobs/7475807
+[2026-04-20T17:11:39.474Z] LOG   [scraper] https://job-boards.greenhouse.io/betsson/jobs/7814755
+[2026-04-20T17:11:39.510Z] LOG   [scraper] https://job-boards.greenhouse.io/betsson/jobs/7566326
+[2026-04-20T17:11:39.519Z] LOG   [scraper] https://job-boards.greenhouse.io/betsson/jobs/6793946
+[2026-04-20T17:11:39.587Z] LOG   [scraper] https://job-boards.greenhouse.io/betsson/jobs/7119087
+[2026-04-20T17:11:40.473Z] LOG   [scraper] https://job-boards.greenhouse.io/betsson/jobs/1759805
+[2026-04-20T17:11:40.508Z] LOG   [scraper] https://job-boards.greenhouse.io/betsson/jobs/7557529
+[2026-04-20T17:11:40.538Z] LOG   [scraper] https://job-boards.greenhouse.io/betsson/jobs/7657365
+[2026-04-20T17:11:40.563Z] LOG   [scraper] https://job-boards.greenhouse.io/betsson/jobs/7300244
+[2026-04-20T17:11:40.582Z] LOG   [scraper] https://job-boards.greenhouse.io/betsson/jobs/7080187
+[2026-04-20T17:11:41.367Z] LOG   [scraper] https://job-boards.greenhouse.io/betsson/jobs/6873264
+[2026-04-20T17:11:41.395Z] LOG   [scraper] https://job-boards.greenhouse.io/betsson/jobs/6780948
+[2026-04-20T17:11:41.412Z] LOG   [scraper] https://job-boards.greenhouse.io/betsson/jobs/7355531
+[2026-04-20T17:11:41.459Z] LOG   [scraper] https://job-boards.greenhouse.io/betsson/jobs/7383131
+[2026-04-20T17:11:41.543Z] LOG   [scraper] https://job-boards.greenhouse.io/betsson/jobs/6893544
+[2026-04-20T17:11:42.386Z] LOG   [scraper] https://job-boards.greenhouse.io/betsson/jobs/7657049
+[2026-04-20T17:11:42.387Z] LOG   [scraper] https://job-boards.greenhouse.io/betsson/jobs/7811387
+[2026-04-20T17:11:42.399Z] LOG   [scraper] https://job-boards.greenhouse.io/betsson/jobs/7820159
+[2026-04-20T17:11:42.523Z] LOG   [scraper] https://job-boards.greenhouse.io/betsson/jobs/7814189
+[2026-04-20T17:11:42.552Z] LOG   [scraper] https://job-boards.greenhouse.io/betsson/jobs/7805940
+[2026-04-20T17:11:43.298Z] LOG   [scraper] https://job-boards.greenhouse.io/betsson/jobs/7174939
+[2026-04-20T17:11:43.329Z] LOG   [scraper] https://job-boards.greenhouse.io/betsson/jobs/7766033
+[2026-04-20T17:11:43.427Z] LOG   [scraper] https://job-boards.greenhouse.io/betsson/jobs/7556868
+[2026-04-20T17:11:43.482Z] LOG   [scraper] https://job-boards.greenhouse.io/betsson/jobs/7738686
+[2026-04-20T17:11:43.490Z] LOG   [scraper] https://job-boards.greenhouse.io/betsson/jobs/7774883
+[2026-04-20T17:11:44.161Z] LOG   [scraper] https://job-boards.greenhouse.io/betsson/jobs/6839570
+[2026-04-20T17:11:44.201Z] LOG   [scraper] https://job-boards.greenhouse.io/betsson/jobs/6049236
+[2026-04-20T17:11:44.340Z] LOG   [scraper] https://job-boards.greenhouse.io/betsson/jobs/6839573
+[2026-04-20T17:11:44.363Z] LOG   [scraper] https://job-boards.greenhouse.io/betsson/jobs/7299984
+[2026-04-20T17:11:44.363Z] LOG   [scraper] https://job-boards.greenhouse.io/betsson/jobs/7297500
+[2026-04-20T17:11:45.097Z] LOG   [scraper] https://job-boards.greenhouse.io/betsson/jobs/7760824
+[2026-04-20T17:11:45.129Z] LOG   [scraper] https://job-boards.greenhouse.io/betsson/jobs/7820359
+[2026-04-20T17:11:45.142Z] LOG   [scraper] https://job-boards.greenhouse.io/betsson/jobs/7742613
+[2026-04-20T17:11:45.171Z] LOG   [scraper] https://job-boards.greenhouse.io/betsson/jobs/7704617
+[2026-04-20T17:11:45.190Z] LOG   [scraper] https://job-boards.greenhouse.io/betsson/jobs/7780457
+[2026-04-20T17:11:45.888Z] LOG   [scraper] https://job-boards.greenhouse.io/betsson/jobs/7413170
+[2026-04-20T17:11:45.978Z] LOG   [scraper] https://job-boards.greenhouse.io/betsson/jobs/7535276
+[2026-04-20T17:11:46.000Z] LOG   [scraper] https://job-boards.greenhouse.io/betsson/jobs/7742247
+[2026-04-20T17:11:46.033Z] LOG   [scraper] https://job-boards.greenhouse.io/betsson/jobs/7672194
+[2026-04-20T17:11:46.069Z] LOG   [scraper] https://job-boards.greenhouse.io/betsson/jobs/7739131
+[2026-04-20T17:11:46.741Z] LOG   [scraper] https://job-boards.greenhouse.io/betsson/jobs/7471838
+[2026-04-20T17:11:46.782Z] LOG   [scraper] https://job-boards.greenhouse.io/betsson/jobs/7538799
+[2026-04-20T17:11:46.782Z] LOG   [scraper] https://job-boards.greenhouse.io/betsson/jobs/7538801
+[2026-04-20T17:11:46.809Z] LOG   [scraper] https://job-boards.greenhouse.io/betsson/jobs/7483292
+[2026-04-20T17:11:49.085Z] LOG   [scraper] https://www.monks.com/careers/5850454004/job?gh_jid=5850454004
+[2026-04-20T17:11:52.388Z] LOG   [scraper] https://www.monks.com/careers/5866518004/job?gh_jid=5866518004
+[2026-04-20T17:11:52.508Z] LOG   [scraper] https://www.monks.com/careers/5850446004/job?gh_jid=5850446004
+[2026-04-20T17:11:52.711Z] LOG   [scraper] https://www.monks.com/careers/5655334004/job?gh_jid=5655334004
+[2026-04-20T17:11:52.757Z] LOG   [scraper] https://www.monks.com/careers/5850452004/job?gh_jid=5850452004
+[2026-04-20T17:11:54.006Z] LOG   [scraper] https://www.monks.com/careers/5850455004/job?gh_jid=5850455004
+[2026-04-20T17:11:56.507Z] LOG   [scraper] https://www.monks.com/careers/5831566004/job?gh_jid=5831566004
+[2026-04-20T17:11:56.527Z] LOG   [scraper] https://www.monks.com/careers/5968233004/job?gh_jid=5968233004
+[2026-04-20T17:11:56.533Z] LOG   [scraper] https://www.monks.com/careers/5843584004/job?gh_jid=5843584004
+[2026-04-20T17:11:58.106Z] LOG   [scraper] https://www.monks.com/careers/5725299004/job?gh_jid=5725299004
+[2026-04-20T17:11:58.720Z] LOG   [scraper] https://www.monks.com/careers/5657897004/job?gh_jid=5657897004
+[2026-04-20T17:12:01.663Z] LOG   [scraper] https://www.monks.com/careers/5711691004/job?gh_jid=5711691004
+[2026-04-20T17:12:01.701Z] LOG   [scraper] https://www.monks.com/careers/5816383004/job?gh_jid=5816383004
+[2026-04-20T17:12:02.504Z] LOG   [scraper] https://www.monks.com/careers/5820990004/job?gh_jid=5820990004
+[2026-04-20T17:12:02.606Z] LOG   [scraper] https://www.monks.com/careers/5744220004/job?gh_jid=5744220004
+[2026-04-20T17:12:04.032Z] LOG   [scraper] https://www.monks.com/careers/5657876004/job?gh_jid=5657876004
+[2026-04-20T17:12:06.586Z] LOG   [scraper] https://www.monks.com/careers/5766581004/job?gh_jid=5766581004
+[2026-04-20T17:12:06.704Z] LOG   [scraper] https://www.monks.com/careers/5584577004/job?gh_jid=5584577004
+[2026-04-20T17:12:06.907Z] LOG   [scraper] https://www.monks.com/careers/5780238004/job?gh_jid=5780238004
+[2026-04-20T17:12:08.079Z] LOG   [scraper] https://www.monks.com/careers/5973063004/job?gh_jid=5973063004
+[2026-04-20T17:12:08.168Z] LOG   [scraper] https://www.monks.com/careers/5811110004/job?gh_jid=5811110004
+[2026-04-20T17:12:12.337Z] LOG   [scraper] https://www.monks.com/careers/5819102004/job?gh_jid=5819102004
+[2026-04-20T17:12:12.391Z] LOG   [scraper] https://www.monks.com/careers/5974095004/job?gh_jid=5974095004
+[2026-04-20T17:12:12.555Z] LOG   [scraper] https://www.monks.com/careers/5800465004/job?gh_jid=5800465004
+[2026-04-20T17:12:12.943Z] LOG   [scraper] https://www.monks.com/careers/5818728004/job?gh_jid=5818728004
+[2026-04-20T17:12:13.158Z] LOG   [scraper] https://www.monks.com/careers/5689825004/job?gh_jid=5689825004
+[2026-04-20T17:12:15.986Z] LOG   [scraper] https://www.monks.com/careers/5819041004/job?gh_jid=5819041004
+[2026-04-20T17:12:16.082Z] LOG   [scraper] https://www.monks.com/careers/5812233004/job?gh_jid=5812233004
+[2026-04-20T17:12:16.210Z] LOG   [scraper] https://www.monks.com/careers/5819044004/job?gh_jid=5819044004
+[2026-04-20T17:12:16.303Z] LOG   [scraper] https://www.monks.com/careers/5819101004/job?gh_jid=5819101004
+[2026-04-20T17:12:16.455Z] LOG   [scraper] https://www.monks.com/careers/5835947004/job?gh_jid=5835947004
+[2026-04-20T17:12:19.122Z] LOG   [scraper] https://www.monks.com/careers/5848571004/job?gh_jid=5848571004
+[2026-04-20T17:12:19.176Z] LOG   [scraper] https://www.monks.com/careers/5848589004/job?gh_jid=5848589004
+[2026-04-20T17:12:19.241Z] LOG   [scraper] https://www.monks.com/careers/5848105004/job?gh_jid=5848105004
+[2026-04-20T17:12:19.261Z] LOG   [scraper] https://www.monks.com/careers/5848572004/job?gh_jid=5848572004
+[2026-04-20T17:12:21.078Z] LOG   [scraper] https://www.monks.com/careers/5848106004/job?gh_jid=5848106004
+[2026-04-20T17:12:23.643Z] LOG   [scraper] https://www.monks.com/careers/5848573004/job?gh_jid=5848573004
+[2026-04-20T17:12:23.659Z] LOG   [scraper] https://www.monks.com/careers/5848588004/job?gh_jid=5848588004
+[2026-04-20T17:12:23.704Z] LOG   [scraper] https://www.monks.com/careers/5808443004/job?gh_jid=5808443004
+[2026-04-20T17:12:23.723Z] LOG   [scraper] https://www.monks.com/careers/5848592004/job?gh_jid=5848592004
+[2026-04-20T17:12:25.064Z] LOG   [scraper] https://www.monks.com/careers/5848590004/job?gh_jid=5848590004
+[2026-04-20T17:12:27.505Z] LOG   [scraper] https://www.monks.com/careers/5828910004/job?gh_jid=5828910004
+[2026-04-20T17:12:27.565Z] LOG   [scraper] https://www.monks.com/careers/5828914004/job?gh_jid=5828914004
+[2026-04-20T17:12:27.783Z] LOG   [scraper] https://www.monks.com/careers/5774956004/job?gh_jid=5774956004
+[2026-04-20T17:12:27.853Z] LOG   [scraper] https://www.monks.com/careers/5848591004/job?gh_jid=5848591004
+[2026-04-20T17:12:29.248Z] LOG   [scraper] https://www.monks.com/careers/5839058004/job?gh_jid=5839058004
+[2026-04-20T17:12:30.863Z] LOG   [scraper] https://job-boards.greenhouse.io/cycles/jobs/4186539009
+[2026-04-20T17:12:32.369Z] LOG   [scraper] https://www.monks.com/careers/5850458004/job?gh_jid=5850458004
+[2026-04-20T17:12:32.701Z] LOG   [scraper] https://www.monks.com/careers/5734226004/job?gh_jid=5734226004
+[2026-04-20T17:12:32.788Z] LOG   [scraper] https://www.monks.com/careers/5810798004/job?gh_jid=5810798004
+[2026-04-20T17:12:34.103Z] LOG   [scraper] https://www.monks.com/careers/5808889004/job?gh_jid=5808889004
+[2026-04-20T17:12:35.626Z] LOG   [scraper] https://job-boards.greenhouse.io/cycles/jobs/4181559009
+[2026-04-20T17:12:35.925Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/valtech/jobs/4751953101
+[2026-04-20T17:12:35.947Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/valtech/jobs/4751956101
+[2026-04-20T17:12:36.030Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/valtech/jobs/4750905101
+[2026-04-20T17:12:36.053Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/valtech/jobs/4786624101
+[2026-04-20T17:12:37.096Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/valtech/jobs/4829193101
+[2026-04-20T17:12:37.100Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/valtech/jobs/4657483101
+[2026-04-20T17:12:37.110Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/valtech/jobs/4751958101
+[2026-04-20T17:12:37.215Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/valtech/jobs/4786622101
+[2026-04-20T17:12:37.268Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/valtech/jobs/4786630101
+[2026-04-20T17:12:38.302Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/valtech/jobs/4780629101
+[2026-04-20T17:12:38.314Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/valtech/jobs/4601615101
+[2026-04-20T17:12:38.326Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/valtech/jobs/4650705101
+[2026-04-20T17:12:38.439Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/valtech/jobs/4788880101
+[2026-04-20T17:12:38.468Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/valtech/jobs/4725641101
+[2026-04-20T17:12:39.712Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/valtech/jobs/4770631101
+[2026-04-20T17:12:39.752Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/valtech/jobs/4791245101
+[2026-04-20T17:12:39.753Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/valtech/jobs/4702626101
+[2026-04-20T17:12:39.862Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/valtech/jobs/4795396101
+[2026-04-20T17:12:40.032Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/valtech/jobs/4789207101
+[2026-04-20T17:12:41.105Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/valtech/jobs/4822310101
+[2026-04-20T17:12:41.165Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/valtech/jobs/4786037101
+[2026-04-20T17:12:41.206Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/valtech/jobs/4768735101
+[2026-04-20T17:12:41.248Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/valtech/jobs/4768731101
+[2026-04-20T17:12:41.335Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/valtech/jobs/4664369101
+[2026-04-20T17:12:42.351Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/valtech/jobs/4828118101
+[2026-04-20T17:12:42.383Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/valtech/jobs/4836305101
+[2026-04-20T17:12:42.430Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/valtech/jobs/4829605101
+[2026-04-20T17:12:42.481Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/valtech/jobs/4836307101
+[2026-04-20T17:12:42.525Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/valtech/jobs/4829450101
+[2026-04-20T17:12:43.519Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/valtech/jobs/4724946101
+[2026-04-20T17:12:43.605Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/valtech/jobs/4798427101
+[2026-04-20T17:12:43.635Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/valtech/jobs/4844013101
+[2026-04-20T17:12:43.825Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/valtech/jobs/4844995101
+[2026-04-20T17:12:43.850Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/valtech/jobs/4844996101
+[2026-04-20T17:12:44.784Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/valtech/jobs/4842358101
+[2026-04-20T17:12:44.833Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/valtech/jobs/4724968101
+[2026-04-20T17:12:44.895Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/valtech/jobs/4746285101
+[2026-04-20T17:12:44.919Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/valtech/jobs/4650592101
+[2026-04-20T17:12:45.211Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/valtech/jobs/4780627101
+[2026-04-20T17:12:46.216Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/valtech/jobs/4774857101
+[2026-04-20T17:12:46.295Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/valtech/jobs/4774855101
+[2026-04-20T17:12:46.312Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/valtech/jobs/4746287101
+[2026-04-20T17:12:46.348Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/valtech/jobs/4683523101
+[2026-04-20T17:12:46.404Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/valtech/jobs/4790582101
+[2026-04-20T17:12:47.637Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/valtech/jobs/4781315101
+[2026-04-20T17:12:47.676Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/valtech/jobs/4715703101
+[2026-04-20T17:12:47.677Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/valtech/jobs/4764259101
+[2026-04-20T17:12:47.830Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/valtech/jobs/4813375101
+[2026-04-20T17:12:47.830Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/valtech/jobs/4820682101
+[2026-04-20T17:12:48.715Z] LOG   [scraper] https://job-boards.greenhouse.io/mightynetworks/jobs/8476343002?gh_jid=8476343002
+[2026-04-20T17:12:48.746Z] LOG   [scraper] https://job-boards.greenhouse.io/mightynetworks/jobs/8476219002?gh_jid=8476219002
+[2026-04-20T17:12:48.795Z] LOG   [scraper] https://job-boards.greenhouse.io/mightynetworks/jobs/8506355002?gh_jid=8506355002
+[2026-04-20T17:12:48.890Z] LOG   [scraper] https://job-boards.greenhouse.io/mightynetworks/jobs/8470809002?gh_jid=8470809002
+[2026-04-20T17:12:49.022Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/valtech/jobs/4826267101
+[2026-04-20T17:12:49.708Z] LOG   [scraper] https://job-boards.greenhouse.io/mightynetworks/jobs/8497526002?gh_jid=8497526002
+[2026-04-20T17:12:49.747Z] LOG   [scraper] https://job-boards.greenhouse.io/mightynetworks/jobs/8495638002?gh_jid=8495638002
+[2026-04-20T17:12:49.776Z] LOG   [scraper] https://job-boards.greenhouse.io/mightynetworks/jobs/8495496002?gh_jid=8495496002
+[2026-04-20T17:12:49.853Z] LOG   [scraper] https://job-boards.greenhouse.io/mightynetworks/jobs/8495526002?gh_jid=8495526002
+[2026-04-20T17:12:49.878Z] LOG   [scraper] https://job-boards.greenhouse.io/mightynetworks/jobs/8506638002?gh_jid=8506638002
+[2026-04-20T17:12:50.728Z] LOG   [scraper] https://boards.greenhouse.io/intrinsicrobotics/jobs/5742500004?gh_jid=5742500004
+[2026-04-20T17:12:50.821Z] LOG   [scraper] https://boards.greenhouse.io/intrinsicrobotics/jobs/5843008004?gh_jid=5843008004
+[2026-04-20T17:12:50.834Z] LOG   [scraper] https://boards.greenhouse.io/intrinsicrobotics/jobs/5973115004?gh_jid=5973115004
+[2026-04-20T17:12:50.932Z] LOG   [scraper] https://boards.greenhouse.io/intrinsicrobotics/jobs/5973136004?gh_jid=5973136004
+[2026-04-20T17:12:51.020Z] LOG   [scraper] https://boards.greenhouse.io/intrinsicrobotics/jobs/5623121004?gh_jid=5623121004
+[2026-04-20T17:12:51.857Z] LOG   [scraper] https://boards.greenhouse.io/intrinsicrobotics/jobs/5168279004?gh_jid=5168279004
+[2026-04-20T17:12:51.871Z] LOG   [scraper] https://boards.greenhouse.io/intrinsicrobotics/jobs/5743849004?gh_jid=5743849004
+[2026-04-20T17:12:51.990Z] LOG   [scraper] https://boards.greenhouse.io/intrinsicrobotics/jobs/5740769004?gh_jid=5740769004
+[2026-04-20T17:12:52.082Z] LOG   [scraper] https://boards.greenhouse.io/intrinsicrobotics/jobs/5831873004?gh_jid=5831873004
+[2026-04-20T17:12:52.087Z] LOG   [scraper] https://boards.greenhouse.io/intrinsicrobotics/jobs/5742524004?gh_jid=5742524004
+[2026-04-20T17:12:52.868Z] LOG   [scraper] https://boards.greenhouse.io/intrinsicrobotics/jobs/5842159004?gh_jid=5842159004
+[2026-04-20T17:12:52.971Z] LOG   [scraper] https://boards.greenhouse.io/intrinsicrobotics/jobs/5791412004?gh_jid=5791412004
+[2026-04-20T17:12:53.019Z] LOG   [scraper] https://boards.greenhouse.io/intrinsicrobotics/jobs/5831895004?gh_jid=5831895004
+[2026-04-20T17:12:53.044Z] LOG   [scraper] https://boards.greenhouse.io/intrinsicrobotics/jobs/5856874004?gh_jid=5856874004
+[2026-04-20T17:12:53.176Z] LOG   [scraper] https://boards.greenhouse.io/intrinsicrobotics/jobs/5840918004?gh_jid=5840918004
+[2026-04-20T17:12:53.924Z] LOG   [scraper] https://boards.greenhouse.io/intrinsicrobotics/jobs/5828503004?gh_jid=5828503004
+[2026-04-20T17:12:53.928Z] LOG   [scraper] https://boards.greenhouse.io/intrinsicrobotics/jobs/4215463004?gh_jid=4215463004
+[2026-04-20T17:12:54.040Z] LOG   [scraper] https://boards.greenhouse.io/intrinsicrobotics/jobs/5841400004?gh_jid=5841400004
+[2026-04-20T17:12:54.215Z] LOG   [scraper] https://boards.greenhouse.io/intrinsicrobotics/jobs/5810890004?gh_jid=5810890004
+[2026-04-20T17:12:54.217Z] LOG   [scraper] https://boards.greenhouse.io/intrinsicrobotics/jobs/5802578004?gh_jid=5802578004
+[2026-04-20T17:12:55.029Z] LOG   [scraper] https://boards.greenhouse.io/intrinsicrobotics/jobs/5696017004?gh_jid=5696017004
+[2026-04-20T17:12:55.120Z] LOG   [scraper] https://boards.greenhouse.io/intrinsicrobotics/jobs/5725827004?gh_jid=5725827004
+[2026-04-20T17:12:55.142Z] LOG   [scraper] https://boards.greenhouse.io/intrinsicrobotics/jobs/5725826004?gh_jid=5725826004
+[2026-04-20T17:12:55.259Z] LOG   [scraper] https://boards.greenhouse.io/intrinsicrobotics/jobs/5742875004?gh_jid=5742875004
+[2026-04-20T17:12:55.321Z] LOG   [scraper] https://boards.greenhouse.io/intrinsicrobotics/jobs/5828376004?gh_jid=5828376004
+[2026-04-20T17:12:56.133Z] LOG   [scraper] https://boards.greenhouse.io/intrinsicrobotics/jobs/4215461004?gh_jid=4215461004
+[2026-04-20T17:12:56.179Z] LOG   [scraper] https://boards.greenhouse.io/intrinsicrobotics/jobs/5821189004?gh_jid=5821189004
+[2026-04-20T17:12:56.223Z] LOG   [scraper] https://boards.greenhouse.io/intrinsicrobotics/jobs/5742522004?gh_jid=5742522004
+[2026-04-20T17:12:56.283Z] LOG   [scraper] https://boards.greenhouse.io/intrinsicrobotics/jobs/5741158004?gh_jid=5741158004
+[2026-04-20T17:12:56.349Z] LOG   [scraper] https://boards.greenhouse.io/intrinsicrobotics/jobs/5811908004?gh_jid=5811908004
+[2026-04-20T17:12:57.289Z] LOG   [scraper] https://boards.greenhouse.io/intrinsicrobotics/jobs/5836296004?gh_jid=5836296004
+[2026-04-20T17:12:57.356Z] LOG   [scraper] https://boards.greenhouse.io/intrinsicrobotics/jobs/5972997004?gh_jid=5972997004
+[2026-04-20T17:12:57.398Z] LOG   [scraper] https://boards.greenhouse.io/intrinsicrobotics/jobs/5830981004?gh_jid=5830981004
+[2026-04-20T17:12:57.449Z] LOG   [scraper] https://boards.greenhouse.io/intrinsicrobotics/jobs/5810877004?gh_jid=5810877004
+[2026-04-20T17:12:57.462Z] LOG   [scraper] https://boards.greenhouse.io/intrinsicrobotics/jobs/5784950004?gh_jid=5784950004
+[2026-04-20T17:12:58.269Z] LOG   [scraper] https://boards.greenhouse.io/morsecorp/jobs/7619954003?gh_jid=7619954003
+[2026-04-20T17:12:58.354Z] LOG   [scraper] https://boards.greenhouse.io/morsecorp/jobs/7619951003?gh_jid=7619951003
+[2026-04-20T17:12:58.362Z] LOG   [scraper] https://boards.greenhouse.io/morsecorp/jobs/6227098003?gh_jid=6227098003
+[2026-04-20T17:12:58.398Z] LOG   [scraper] https://boards.greenhouse.io/morsecorp/jobs/6510212003?gh_jid=6510212003
+[2026-04-20T17:12:58.620Z] LOG   [scraper] https://boards.greenhouse.io/morsecorp/jobs/6227094003?gh_jid=6227094003
+[2026-04-20T17:12:59.384Z] LOG   [scraper] https://boards.greenhouse.io/morsecorp/jobs/6549487003?gh_jid=6549487003
+[2026-04-20T17:12:59.434Z] LOG   [scraper] https://boards.greenhouse.io/morsecorp/jobs/7589946003?gh_jid=7589946003
+[2026-04-20T17:12:59.475Z] LOG   [scraper] https://boards.greenhouse.io/morsecorp/jobs/6042651003?gh_jid=6042651003
+[2026-04-20T17:12:59.476Z] LOG   [scraper] https://boards.greenhouse.io/morsecorp/jobs/5845023003?gh_jid=5845023003
+[2026-04-20T17:12:59.529Z] LOG   [scraper] https://boards.greenhouse.io/morsecorp/jobs/7660567003?gh_jid=7660567003
+[2026-04-20T17:13:00.390Z] LOG   [scraper] https://boards.greenhouse.io/morsecorp/jobs/6562943003?gh_jid=6562943003
+[2026-04-20T17:13:00.424Z] LOG   [scraper] https://boards.greenhouse.io/morsecorp/jobs/7687137003?gh_jid=7687137003
+[2026-04-20T17:13:00.434Z] LOG   [scraper] https://boards.greenhouse.io/morsecorp/jobs/6563026003?gh_jid=6563026003
+[2026-04-20T17:13:00.459Z] LOG   [scraper] https://boards.greenhouse.io/morsecorp/jobs/7511486003?gh_jid=7511486003
+[2026-04-20T17:13:00.578Z] LOG   [scraper] https://boards.greenhouse.io/morsecorp/jobs/6549489003?gh_jid=6549489003
+[2026-04-20T17:13:01.332Z] LOG   [scraper] https://boards.greenhouse.io/morsecorp/jobs/7570573003?gh_jid=7570573003
+[2026-04-20T17:13:01.365Z] LOG   [scraper] https://boards.greenhouse.io/morsecorp/jobs/7453242003?gh_jid=7453242003
+[2026-04-20T17:13:01.380Z] LOG   [scraper] https://boards.greenhouse.io/morsecorp/jobs/7619938003?gh_jid=7619938003
+[2026-04-20T17:13:01.431Z] LOG   [scraper] https://boards.greenhouse.io/morsecorp/jobs/7546461003?gh_jid=7546461003
+[2026-04-20T17:13:01.528Z] LOG   [scraper] https://boards.greenhouse.io/morsecorp/jobs/7619939003?gh_jid=7619939003
+[2026-04-20T17:13:02.331Z] LOG   [scraper] https://boards.greenhouse.io/morsecorp/jobs/7660569003?gh_jid=7660569003
+[2026-04-20T17:13:02.337Z] LOG   [scraper] https://boards.greenhouse.io/morsecorp/jobs/7511488003?gh_jid=7511488003
+[2026-04-20T17:13:02.338Z] LOG   [scraper] https://boards.greenhouse.io/morsecorp/jobs/6620672003?gh_jid=6620672003
+[2026-04-20T17:13:03.063Z] LOG   [scraper] https://boards.greenhouse.io/morsecorp/jobs/7511487003?gh_jid=7511487003
+[2026-04-20T17:13:03.195Z] LOG   [scraper] https://boards.greenhouse.io/morsecorp/jobs/6546584003?gh_jid=6546584003
+[2026-04-20T17:13:03.907Z] LOG   [scraper] https://boards.greenhouse.io/morsecorp/jobs/7660561003?gh_jid=7660561003
+[2026-04-20T17:13:03.910Z] LOG   [scraper] https://boards.greenhouse.io/morsecorp/jobs/7619052003?gh_jid=7619052003
+[2026-04-20T17:13:03.920Z] LOG   [scraper] https://boards.greenhouse.io/morsecorp/jobs/7111976003?gh_jid=7111976003
+[2026-04-20T17:13:04.022Z] LOG   [scraper] https://boards.greenhouse.io/morsecorp/jobs/7619047003?gh_jid=7619047003
+[2026-04-20T17:13:04.059Z] LOG   [scraper] https://boards.greenhouse.io/morsecorp/jobs/7619041003?gh_jid=7619041003
+[2026-04-20T17:13:04.845Z] LOG   [scraper] https://boards.greenhouse.io/morsecorp/jobs/7703199003?gh_jid=7703199003
+[2026-04-20T17:13:04.889Z] LOG   [scraper] https://boards.greenhouse.io/aottechnologies/jobs/4796828008?gh_jid=4796828008
+[2026-04-20T17:13:04.890Z] LOG   [scraper] https://boards.greenhouse.io/aottechnologies/jobs/5181767008?gh_jid=5181767008
+[2026-04-20T17:13:04.931Z] LOG   [scraper] https://boards.greenhouse.io/morsecorp/jobs/6005590003?gh_jid=6005590003
+[2026-04-20T17:13:06.281Z] LOG   [scraper] https://boards.greenhouse.io/morsecorp/jobs/7668590003?gh_jid=7668590003
+[2026-04-20T17:13:07.027Z] LOG   [scraper] https://boards.greenhouse.io/aottechnologies/jobs/5037291008?gh_jid=5037291008
+[2026-04-20T17:13:07.037Z] LOG   [scraper] https://boards.greenhouse.io/aottechnologies/jobs/5176912008?gh_jid=5176912008
+[2026-04-20T17:13:07.063Z] LOG   [scraper] https://boards.greenhouse.io/aottechnologies/jobs/5157068008?gh_jid=5157068008
+[2026-04-20T17:13:07.130Z] LOG   [scraper] https://boards.greenhouse.io/aottechnologies/jobs/5184636008?gh_jid=5184636008
+[2026-04-20T17:13:07.936Z] LOG   [scraper] http://www.hioscar.com/careers/7561005?gh_jid=7561005
+[2026-04-20T17:13:09.884Z] LOG   [scraper] http://www.hioscar.com/careers/7560955?gh_jid=7560955
+[2026-04-20T17:13:09.911Z] LOG   [scraper] http://www.hioscar.com/careers/7559119?gh_jid=7559119
+[2026-04-20T17:13:09.972Z] LOG   [scraper] http://www.hioscar.com/careers/7560995?gh_jid=7560995
+[2026-04-20T17:13:10.007Z] LOG   [scraper] http://www.hioscar.com/careers/7560992?gh_jid=7560992
+[2026-04-20T17:13:10.012Z] LOG   [scraper] http://www.hioscar.com/careers/7525125?gh_jid=7525125
+[2026-04-20T17:13:12.004Z] LOG   [scraper] http://www.hioscar.com/careers/7507027?gh_jid=7507027
+[2026-04-20T17:13:12.007Z] LOG   [scraper] http://www.hioscar.com/careers/7813060?gh_jid=7813060
+[2026-04-20T17:13:12.075Z] LOG   [scraper] http://www.hioscar.com/careers/7813046?gh_jid=7813046
+[2026-04-20T17:13:12.098Z] LOG   [scraper] http://www.hioscar.com/careers/7813059?gh_jid=7813059
+[2026-04-20T17:13:12.145Z] LOG   [scraper] http://www.hioscar.com/careers/7809167?gh_jid=7809167
+[2026-04-20T17:13:14.169Z] LOG   [scraper] http://www.hioscar.com/careers/7507023?gh_jid=7507023
+[2026-04-20T17:13:14.249Z] LOG   [scraper] http://www.hioscar.com/careers/7825290?gh_jid=7825290
+[2026-04-20T17:13:14.266Z] LOG   [scraper] http://www.hioscar.com/careers/7450345?gh_jid=7450345
+[2026-04-20T17:13:14.272Z] LOG   [scraper] http://www.hioscar.com/careers/7825287?gh_jid=7825287
+[2026-04-20T17:13:14.480Z] LOG   [scraper] http://www.hioscar.com/careers/7507028?gh_jid=7507028
+[2026-04-20T17:13:16.946Z] LOG   [scraper] http://www.hioscar.com/careers/7609224?gh_jid=7609224
+[2026-04-20T17:13:16.984Z] LOG   [scraper] http://www.hioscar.com/careers/7688263?gh_jid=7688263
+[2026-04-20T17:13:16.984Z] LOG   [scraper] http://www.hioscar.com/careers/7746930?gh_jid=7746930
+[2026-04-20T17:13:17.026Z] LOG   [scraper] http://www.hioscar.com/careers/7609231?gh_jid=7609231
+[2026-04-20T17:13:17.083Z] LOG   [scraper] http://www.hioscar.com/careers/7825277?gh_jid=7825277
+[2026-04-20T17:13:19.387Z] LOG   [scraper] http://www.hioscar.com/careers/7609226?gh_jid=7609226
+[2026-04-20T17:13:19.429Z] LOG   [scraper] http://www.hioscar.com/careers/7600186?gh_jid=7600186
+[2026-04-20T17:13:19.441Z] LOG   [scraper] http://www.hioscar.com/careers/7743155?gh_jid=7743155
+[2026-04-20T17:13:19.467Z] LOG   [scraper] http://www.hioscar.com/careers/7678488?gh_jid=7678488
+[2026-04-20T17:13:19.569Z] LOG   [scraper] http://www.hioscar.com/careers/7680615?gh_jid=7680615
+[2026-04-20T17:13:21.787Z] LOG   [scraper] http://www.hioscar.com/careers/7383900?gh_jid=7383900
+[2026-04-20T17:13:21.800Z] LOG   [scraper] http://www.hioscar.com/careers/7362772?gh_jid=7362772
+[2026-04-20T17:13:21.865Z] LOG   [scraper] http://www.hioscar.com/careers/7365459?gh_jid=7365459
+[2026-04-20T17:13:21.889Z] LOG   [scraper] http://www.hioscar.com/careers/7383899?gh_jid=7383899
+[2026-04-20T17:13:22.053Z] LOG   [scraper] http://www.hioscar.com/careers/7678496?gh_jid=7678496
+[2026-04-20T17:13:24.111Z] LOG   [scraper] http://www.hioscar.com/careers/7685129?gh_jid=7685129
+[2026-04-20T17:13:24.130Z] LOG   [scraper] http://www.hioscar.com/careers/7531205?gh_jid=7531205
+[2026-04-20T17:13:24.149Z] LOG   [scraper] http://www.hioscar.com/careers/7685130?gh_jid=7685130
+[2026-04-20T17:13:24.179Z] LOG   [scraper] http://www.hioscar.com/careers/7685135?gh_jid=7685135
+[2026-04-20T17:13:24.188Z] LOG   [scraper] http://www.hioscar.com/careers/7685131?gh_jid=7685131
+[2026-04-20T17:13:26.299Z] LOG   [scraper] http://www.hioscar.com/careers/7383970?gh_jid=7383970
+[2026-04-20T17:13:26.304Z] LOG   [scraper] http://www.hioscar.com/careers/7284284?gh_jid=7284284
+[2026-04-20T17:13:26.373Z] LOG   [scraper] http://www.hioscar.com/careers/7295448?gh_jid=7295448
+[2026-04-20T17:13:26.382Z] LOG   [scraper] http://www.hioscar.com/careers/7406394?gh_jid=7406394
+[2026-04-20T17:13:26.408Z] LOG   [scraper] http://www.hioscar.com/careers/7383977?gh_jid=7383977
+[2026-04-20T17:13:28.198Z] LOG   [scraper] http://www.hioscar.com/careers/7555586?gh_jid=7555586
+[2026-04-20T17:13:28.219Z] LOG   [scraper] http://www.hioscar.com/careers/7638965?gh_jid=7638965
+[2026-04-20T17:13:28.231Z] LOG   [scraper] http://www.hioscar.com/careers/7555585?gh_jid=7555585
+[2026-04-20T17:13:28.260Z] LOG   [scraper] http://www.hioscar.com/careers/7555587?gh_jid=7555587
+[2026-04-20T17:13:28.318Z] LOG   [scraper] http://www.hioscar.com/careers/7543619?gh_jid=7543619
+[2026-04-20T17:13:29.136Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/veeamsoftware/jobs/4744120101
+[2026-04-20T17:13:30.199Z] LOG   [scraper] http://www.hioscar.com/careers/7744187?gh_jid=7744187
+[2026-04-20T17:13:30.254Z] LOG   [scraper] http://www.hioscar.com/careers/7736936?gh_jid=7736936
+[2026-04-20T17:13:30.265Z] LOG   [scraper] http://www.hioscar.com/careers/7744186?gh_jid=7744186
+[2026-04-20T17:13:30.282Z] LOG   [scraper] http://www.hioscar.com/careers/7495269?gh_jid=7495269
+[2026-04-20T17:13:31.183Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/veeamsoftware/jobs/4823680101
+[2026-04-20T17:13:31.202Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/veeamsoftware/jobs/4789737101
+[2026-04-20T17:13:31.204Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/veeamsoftware/jobs/4754327101
+[2026-04-20T17:13:31.212Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/veeamsoftware/jobs/4833438101
+[2026-04-20T17:13:31.228Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/veeamsoftware/jobs/4816861101
+[2026-04-20T17:13:32.135Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/veeamsoftware/jobs/4832924101
+[2026-04-20T17:13:32.135Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/veeamsoftware/jobs/4829467101
+[2026-04-20T17:13:32.140Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/veeamsoftware/jobs/4743906101
+[2026-04-20T17:13:32.223Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/veeamsoftware/jobs/4744457101
+[2026-04-20T17:13:32.356Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/veeamsoftware/jobs/4345872101
+[2026-04-20T17:13:33.114Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/veeamsoftware/jobs/4812727101
+[2026-04-20T17:13:33.117Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/veeamsoftware/jobs/4819922101
+[2026-04-20T17:13:33.146Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/veeamsoftware/jobs/4827690101
+[2026-04-20T17:13:33.217Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/veeamsoftware/jobs/4824955101
+[2026-04-20T17:13:33.253Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/veeamsoftware/jobs/4831519101
+[2026-04-20T17:13:34.072Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/veeamsoftware/jobs/4806151101
+[2026-04-20T17:13:34.083Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/veeamsoftware/jobs/4744388101
+[2026-04-20T17:13:34.174Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/veeamsoftware/jobs/4604328101
+[2026-04-20T17:13:34.178Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/veeamsoftware/jobs/4831909101
+[2026-04-20T17:13:34.187Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/veeamsoftware/jobs/4835381101
+[2026-04-20T17:13:35.019Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/veeamsoftware/jobs/4727072101
+[2026-04-20T17:13:35.022Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/veeamsoftware/jobs/4727587101
+[2026-04-20T17:13:35.111Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/veeamsoftware/jobs/4763606101
+[2026-04-20T17:13:35.124Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/veeamsoftware/jobs/4581497101
+[2026-04-20T17:13:35.144Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/veeamsoftware/jobs/4805597101
+[2026-04-20T17:13:35.957Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/veeamsoftware/jobs/4747051101
+[2026-04-20T17:13:36.012Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/veeamsoftware/jobs/4780995101
+[2026-04-20T17:13:36.016Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/veeamsoftware/jobs/4827885101
+[2026-04-20T17:13:36.100Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/veeamsoftware/jobs/4811896101
+[2026-04-20T17:13:36.219Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/veeamsoftware/jobs/4763587101
+[2026-04-20T17:13:36.940Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/veeamsoftware/jobs/4744194101
+[2026-04-20T17:13:36.949Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/veeamsoftware/jobs/4829788101
+[2026-04-20T17:13:37.030Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/veeamsoftware/jobs/4744134101
+[2026-04-20T17:13:37.054Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/veeamsoftware/jobs/4839237101
+[2026-04-20T17:13:37.074Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/veeamsoftware/jobs/4792493101
+[2026-04-20T17:13:37.798Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/veeamsoftware/jobs/4838274101
+[2026-04-20T17:13:37.868Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/veeamsoftware/jobs/4762855101
+[2026-04-20T17:13:37.868Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/veeamsoftware/jobs/4744192101
+[2026-04-20T17:13:37.872Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/veeamsoftware/jobs/4744228101
+[2026-04-20T17:13:38.017Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/veeamsoftware/jobs/4761471101
+[2026-04-20T17:13:38.762Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/veeamsoftware/jobs/4743651101
+[2026-04-20T17:13:38.834Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/veeamsoftware/jobs/4743794101
+[2026-04-20T17:13:38.851Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/veeamsoftware/jobs/4743641101
+[2026-04-20T17:13:38.858Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/veeamsoftware/jobs/4743848101
+[2026-04-20T17:13:38.862Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/veeamsoftware/jobs/4838267101
+[2026-04-20T17:13:39.553Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/veeamsoftware/jobs/4763640101
+[2026-04-20T17:13:39.622Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/veeamsoftware/jobs/4794498101
+[2026-04-20T17:13:39.721Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/veeamsoftware/jobs/4744334101
+[2026-04-20T17:13:39.738Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/veeamsoftware/jobs/4778059101
+[2026-04-20T17:13:39.742Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/xdesign/jobs/4845611101
+[2026-04-20T17:13:40.521Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/xdesign/jobs/4812148101
+[2026-04-20T17:13:40.538Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/xdesign/jobs/4812038101
+[2026-04-20T17:13:40.616Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/xdesign/jobs/4778594101
+[2026-04-20T17:13:40.624Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/xdesign/jobs/4776807101
+[2026-04-20T17:13:40.637Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/xdesign/jobs/4812149101
+[2026-04-20T17:13:41.477Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/xdesign/jobs/4807151101
+[2026-04-20T17:13:41.514Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/xdesign/jobs/4703245101
+[2026-04-20T17:13:41.516Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/xdesign/jobs/4840561101
+[2026-04-20T17:13:41.546Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/xdesign/jobs/4785043101
+[2026-04-20T17:13:41.549Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/xdesign/jobs/4761993101
+[2026-04-20T17:13:42.236Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/xdesign/jobs/4824045101
+[2026-04-20T17:13:42.316Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/xdesign/jobs/4774728101
+[2026-04-20T17:13:42.354Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/xdesign/jobs/4824047101
+[2026-04-20T17:13:42.392Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/xdesign/jobs/4823888101
+[2026-04-20T17:13:42.461Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/xdesign/jobs/4835220101
+[2026-04-20T17:13:43.153Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/xdesign/jobs/4822451101
+[2026-04-20T17:13:43.162Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/xdesign/jobs/4812055101
+[2026-04-20T17:13:43.175Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/xdesign/jobs/4784648101
+[2026-04-20T17:13:43.240Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/xdesign/jobs/4761945101
+[2026-04-20T17:13:43.343Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/xdesign/jobs/4823482101
+[2026-04-20T17:13:44.785Z] LOG   [scraper] https://careers.encora.com/application?5086439007&gh_jid=5086439007
+[2026-04-20T17:13:44.874Z] LOG   [scraper] https://careers.encora.com/application?5104262007&gh_jid=5104262007
+[2026-04-20T17:13:44.908Z] LOG   [scraper] https://careers.encora.com/application?5105764007&gh_jid=5105764007
+[2026-04-20T17:13:44.980Z] LOG   [scraper] https://careers.encora.com/application?5080306007&gh_jid=5080306007
+[2026-04-20T17:13:45.006Z] LOG   [scraper] https://careers.encora.com/application?5033725007&gh_jid=5033725007
+[2026-04-20T17:13:46.056Z] LOG   [scraper] https://careers.encora.com/application?5062667007&gh_jid=5062667007
+[2026-04-20T17:13:46.259Z] LOG   [scraper] https://careers.encora.com/application?5085260007&gh_jid=5085260007
+[2026-04-20T17:13:46.361Z] LOG   [scraper] https://careers.encora.com/application?5085048007&gh_jid=5085048007
+[2026-04-20T17:13:46.408Z] LOG   [scraper] https://careers.encora.com/application?5104527007&gh_jid=5104527007
+[2026-04-20T17:13:46.414Z] LOG   [scraper] https://careers.encora.com/application?5077042007&gh_jid=5077042007
+[2026-04-20T17:13:47.572Z] LOG   [scraper] https://careers.encora.com/application?5085264007&gh_jid=5085264007
+[2026-04-20T17:13:47.619Z] LOG   [scraper] https://careers.encora.com/application?5004230007&gh_jid=5004230007
+[2026-04-20T17:13:47.630Z] LOG   [scraper] https://careers.encora.com/application?5103544007&gh_jid=5103544007
+[2026-04-20T17:13:47.639Z] LOG   [scraper] https://careers.encora.com/application?5062656007&gh_jid=5062656007
+[2026-04-20T17:13:47.670Z] LOG   [scraper] https://careers.encora.com/application?5102252007&gh_jid=5102252007
+[2026-04-20T17:13:48.889Z] LOG   [scraper] https://careers.encora.com/application?5104523007&gh_jid=5104523007
+[2026-04-20T17:13:48.912Z] LOG   [scraper] https://careers.encora.com/application?5083900007&gh_jid=5083900007
+[2026-04-20T17:13:48.954Z] LOG   [scraper] https://careers.encora.com/application?5112104007&gh_jid=5112104007
+[2026-04-20T17:13:48.954Z] LOG   [scraper] https://careers.encora.com/application?5112157007&gh_jid=5112157007
+[2026-04-20T17:13:48.965Z] LOG   [scraper] https://careers.encora.com/application?5112108007&gh_jid=5112108007
+[2026-04-20T17:13:50.348Z] LOG   [scraper] https://careers.encora.com/application?5112107007&gh_jid=5112107007
+[2026-04-20T17:13:50.545Z] LOG   [scraper] https://careers.encora.com/application?5112225007&gh_jid=5112225007
+[2026-04-20T17:13:50.574Z] LOG   [scraper] https://careers.encora.com/application?5085313007&gh_jid=5085313007
+[2026-04-20T17:13:50.577Z] LOG   [scraper] https://careers.encora.com/application?5112161007&gh_jid=5112161007
+[2026-04-20T17:13:50.597Z] LOG   [scraper] https://careers.encora.com/application?5091775007&gh_jid=5091775007
+[2026-04-20T17:13:51.650Z] LOG   [scraper] https://careers.encora.com/application?5112113007&gh_jid=5112113007
+[2026-04-20T17:13:51.740Z] LOG   [scraper] https://careers.encora.com/application?5113826007&gh_jid=5113826007
+[2026-04-20T17:13:51.767Z] LOG   [scraper] https://careers.encora.com/application?4764630007&gh_jid=4764630007
+[2026-04-20T17:13:51.807Z] LOG   [scraper] https://careers.encora.com/application?5104581007&gh_jid=5104581007
+[2026-04-20T17:13:51.853Z] LOG   [scraper] https://careers.encora.com/application?5091328007&gh_jid=5091328007
+[2026-04-20T17:13:52.972Z] LOG   [scraper] https://careers.encora.com/application?5059728007&gh_jid=5059728007
+[2026-04-20T17:13:53.018Z] LOG   [scraper] https://careers.encora.com/application?5085047007&gh_jid=5085047007
+[2026-04-20T17:13:53.172Z] LOG   [scraper] https://careers.encora.com/application?5077046007&gh_jid=5077046007
+[2026-04-20T17:13:53.257Z] LOG   [scraper] https://careers.encora.com/application?4999879007&gh_jid=4999879007
+[2026-04-20T17:13:53.345Z] LOG   [scraper] https://careers.encora.com/application?5112222007&gh_jid=5112222007
+[2026-04-20T17:13:54.485Z] LOG   [scraper] https://careers.encora.com/application?5090329007&gh_jid=5090329007
+[2026-04-20T17:13:54.566Z] LOG   [scraper] https://careers.encora.com/application?4593454007&gh_jid=4593454007
+[2026-04-20T17:13:54.572Z] LOG   [scraper] https://careers.encora.com/application?4779792007&gh_jid=4779792007
+[2026-04-20T17:13:54.587Z] LOG   [scraper] https://careers.encora.com/application?5112162007&gh_jid=5112162007
+[2026-04-20T17:13:54.594Z] LOG   [scraper] https://careers.encora.com/application?5050389007&gh_jid=5050389007
+[2026-04-20T17:13:55.786Z] LOG   [scraper] https://careers.encora.com/application?5085275007&gh_jid=5085275007
+[2026-04-20T17:13:55.907Z] LOG   [scraper] https://careers.encora.com/application?5100023007&gh_jid=5100023007
+[2026-04-20T17:13:56.045Z] LOG   [scraper] https://careers.encora.com/application?5112142007&gh_jid=5112142007
+[2026-04-20T17:13:56.119Z] LOG   [scraper] https://careers.encora.com/application?5112144007&gh_jid=5112144007
+[2026-04-20T17:13:56.167Z] LOG   [scraper] https://careers.encora.com/application?5105020007&gh_jid=5105020007
+[2026-04-20T17:13:57.218Z] LOG   [scraper] https://careers.encora.com/application?5098031007&gh_jid=5098031007
+[2026-04-20T17:13:57.533Z] LOG   [scraper] https://careers.encora.com/application?5078399007&gh_jid=5078399007
+[2026-04-20T17:13:57.550Z] LOG   [scraper] https://careers.encora.com/application?5073212007&gh_jid=5073212007
+[2026-04-20T17:13:57.634Z] LOG   [scraper] https://careers.encora.com/application?5107739007&gh_jid=5107739007
+[2026-04-20T17:13:57.695Z] LOG   [scraper] https://careers.encora.com/application?5084582007&gh_jid=5084582007
+[2026-04-20T17:13:58.567Z] LOG   [scraper] https://job-boards.greenhouse.io/lemurianlabs/jobs/4118628009
+[2026-04-20T17:13:58.597Z] LOG   [scraper] https://job-boards.greenhouse.io/lemurianlabs/jobs/4115953009
+[2026-04-20T17:13:58.687Z] LOG   [scraper] https://job-boards.greenhouse.io/lemurianlabs/jobs/4130990009
+[2026-04-20T17:13:58.700Z] LOG   [scraper] https://job-boards.greenhouse.io/lemurianlabs/jobs/4116502009
+[2026-04-20T17:13:58.732Z] LOG   [scraper] https://job-boards.greenhouse.io/lemurianlabs/jobs/4118625009
+[2026-04-20T17:13:59.476Z] LOG   [scraper] https://job-boards.greenhouse.io/lemurianlabs/jobs/4118706009
+[2026-04-20T17:13:59.523Z] LOG   [scraper] https://job-boards.greenhouse.io/lemurianlabs/jobs/4200595009
+[2026-04-20T17:13:59.561Z] LOG   [scraper] https://job-boards.greenhouse.io/lemurianlabs/jobs/4116510009
+[2026-04-20T17:13:59.580Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/remotepeople/jobs/4803615101
+[2026-04-20T17:13:59.609Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/remotepeople/jobs/4843110101
+[2026-04-20T17:14:00.304Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/remotepeople/jobs/4826189101
+[2026-04-20T17:14:00.392Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/remotepeople/jobs/4825359101
+[2026-04-20T17:14:00.399Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/remotepeople/jobs/4665017101
+[2026-04-20T17:14:00.471Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/remotepeople/jobs/4825932101
+[2026-04-20T17:14:00.484Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/remotepeople/jobs/4823184101
+[2026-04-20T17:14:01.196Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/remotepeople/jobs/4819366101
+[2026-04-20T17:14:01.368Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/remotepeople/jobs/4801950101
+[2026-04-20T17:14:01.379Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/remotepeople/jobs/4821564101
+[2026-04-20T17:14:01.392Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/remotepeople/jobs/4796152101
+[2026-04-20T17:14:01.416Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/remotepeople/jobs/4825369101
+[2026-04-20T17:14:02.178Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/remotepeople/jobs/4805016101
+[2026-04-20T17:14:02.208Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/remotepeople/jobs/4764527101
+[2026-04-20T17:14:02.209Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/remotepeople/jobs/4721961101
+[2026-04-20T17:14:02.239Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/remotepeople/jobs/4827341101
+[2026-04-20T17:14:02.275Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/remotepeople/jobs/4669741101
+[2026-04-20T17:14:02.996Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/remotepeople/jobs/4790904101
+[2026-04-20T17:14:03.032Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/remotepeople/jobs/4796153101
+[2026-04-20T17:14:03.086Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/remotepeople/jobs/4811247101
+[2026-04-20T17:14:03.095Z] LOG   [scraper] https://job-boards.eu.greenhouse.io/remotepeople/jobs/4788619101
+[2026-04-20T17:14:03.196Z] LOG   [scraper] https://boards.greenhouse.io/appliedintuition/jobs/4060957005?gh_jid=4060957005
+[2026-04-20T17:14:04.178Z] LOG   [scraper] https://boards.greenhouse.io/appliedintuition/jobs/4479440005?gh_jid=4479440005
+[2026-04-20T17:14:04.331Z] LOG   [scraper] https://boards.greenhouse.io/appliedintuition/jobs/4582602005?gh_jid=4582602005
+[2026-04-20T17:14:04.349Z] LOG   [scraper] https://boards.greenhouse.io/appliedintuition/jobs/4226814005?gh_jid=4226814005
+[2026-04-20T17:14:04.431Z] LOG   [scraper] https://boards.greenhouse.io/appliedintuition/jobs/4500501005?gh_jid=4500501005
+[2026-04-20T17:14:04.435Z] LOG   [scraper] https://boards.greenhouse.io/appliedintuition/jobs/4666194005?gh_jid=4666194005
+[2026-04-20T17:14:05.410Z] LOG   [scraper] https://boards.greenhouse.io/appliedintuition/jobs/4671846005?gh_jid=4671846005
+[2026-04-20T17:14:05.438Z] LOG   [scraper] https://boards.greenhouse.io/appliedintuition/jobs/4612153005?gh_jid=4612153005
+[2026-04-20T17:14:05.538Z] LOG   [scraper] https://boards.greenhouse.io/appliedintuition/jobs/4045084005?gh_jid=4045084005
+[2026-04-20T17:14:05.543Z] LOG   [scraper] https://boards.greenhouse.io/appliedintuition/jobs/4045013005?gh_jid=4045013005
+[2026-04-20T17:14:15.638Z] LOG   [scraper] https://boards.greenhouse.io/appliedintuition/jobs/4466953005?gh_jid=4466953005
+[2026-04-20T17:14:16.357Z] LOG   [scraper] https://boards.greenhouse.io/appliedintuition/jobs/4641879005?gh_jid=4641879005
+[2026-04-20T17:14:16.411Z] LOG   [scraper] https://boards.greenhouse.io/appliedintuition/jobs/4653458005?gh_jid=4653458005
+[2026-04-20T17:14:16.424Z] LOG   [scraper] https://boards.greenhouse.io/appliedintuition/jobs/4686353005?gh_jid=4686353005
+[2026-04-20T17:14:16.475Z] LOG   [scraper] https://boards.greenhouse.io/appliedintuition/jobs/4638719005?gh_jid=4638719005
+[2026-04-20T17:14:16.846Z] LOG   [scraper] https://boards.greenhouse.io/appliedintuition/jobs/4655270005?gh_jid=4655270005
+[2026-04-20T17:14:17.672Z] LOG   [scraper] https://boards.greenhouse.io/appliedintuition/jobs/4666072005?gh_jid=4666072005
+[2026-04-20T17:14:17.715Z] LOG   [scraper] https://boards.greenhouse.io/appliedintuition/jobs/4672845005?gh_jid=4672845005
+[2026-04-20T17:14:17.725Z] LOG   [scraper] https://boards.greenhouse.io/appliedintuition/jobs/4681450005?gh_jid=4681450005
+[2026-04-20T17:14:17.765Z] LOG   [scraper] https://boards.greenhouse.io/appliedintuition/jobs/4654936005?gh_jid=4654936005
+[2026-04-20T17:14:17.788Z] LOG   [scraper] https://boards.greenhouse.io/appliedintuition/jobs/4576149005?gh_jid=4576149005
+[2026-04-20T17:14:18.935Z] LOG   [scraper] https://boards.greenhouse.io/appliedintuition/jobs/4621970005?gh_jid=4621970005
+[2026-04-20T17:14:18.990Z] LOG   [scraper] https://boards.greenhouse.io/appliedintuition/jobs/4659522005?gh_jid=4659522005
+[2026-04-20T17:14:19.019Z] LOG   [scraper] https://boards.greenhouse.io/appliedintuition/jobs/4672822005?gh_jid=4672822005
+[2026-04-20T17:14:19.056Z] LOG   [scraper] https://boards.greenhouse.io/appliedintuition/jobs/4671849005?gh_jid=4671849005
+[2026-04-20T17:14:19.135Z] LOG   [scraper] https://boards.greenhouse.io/appliedintuition/jobs/4681880005?gh_jid=4681880005
+[2026-04-20T17:14:19.988Z] LOG   [scraper] https://boards.greenhouse.io/appliedintuition/jobs/4434973005?gh_jid=4434973005
+[2026-04-20T17:14:20.030Z] LOG   [scraper] https://boards.greenhouse.io/appliedintuition/jobs/4683341005?gh_jid=4683341005
+[2026-04-20T17:14:20.053Z] LOG   [scraper] https://boards.greenhouse.io/appliedintuition/jobs/4620624005?gh_jid=4620624005
+[2026-04-20T17:14:20.056Z] LOG   [scraper] https://boards.greenhouse.io/appliedintuition/jobs/4676438005?gh_jid=4676438005
+[2026-04-20T17:14:20.548Z] LOG   [scraper] https://boards.greenhouse.io/appliedintuition/jobs/4151747005?gh_jid=4151747005
+[2026-04-20T17:14:21.356Z] LOG   [scraper] https://boards.greenhouse.io/appliedintuition/jobs/4085478005?gh_jid=4085478005
+[2026-04-20T17:14:21.386Z] LOG   [scraper] https://boards.greenhouse.io/appliedintuition/jobs/4430714005?gh_jid=4430714005
+[2026-04-20T17:14:21.400Z] LOG   [scraper] https://boards.greenhouse.io/appliedintuition/jobs/4632273005?gh_jid=4632273005
+[2026-04-20T17:14:21.406Z] LOG   [scraper] https://boards.greenhouse.io/appliedintuition/jobs/4670754005?gh_jid=4670754005
+[2026-04-20T17:14:21.537Z] LOG   [scraper] https://boards.greenhouse.io/appliedintuition/jobs/4611968005?gh_jid=4611968005
+[2026-04-20T17:14:22.325Z] LOG   [scraper] https://boards.greenhouse.io/appliedintuition/jobs/4663863005?gh_jid=4663863005
+[2026-04-20T17:14:22.331Z] LOG   [scraper] https://boards.greenhouse.io/appliedintuition/jobs/4675838005?gh_jid=4675838005
+[2026-04-20T17:14:22.341Z] LOG   [scraper] https://boards.greenhouse.io/appliedintuition/jobs/4405829005?gh_jid=4405829005
+[2026-04-20T17:14:22.431Z] LOG   [scraper] https://boards.greenhouse.io/appliedintuition/jobs/4595623005?gh_jid=4595623005
+[2026-04-20T17:14:22.509Z] LOG   [scraper] https://boards.greenhouse.io/appliedintuition/jobs/4284736005?gh_jid=4284736005
+[2026-04-20T17:14:23.372Z] LOG   [scraper] https://boards.greenhouse.io/appliedintuition/jobs/4539385005?gh_jid=4539385005
+[2026-04-20T17:14:23.414Z] LOG   [scraper] https://boards.greenhouse.io/appliedintuition/jobs/4679394005?gh_jid=4679394005
+[2026-04-20T17:14:23.464Z] LOG   [scraper] https://boards.greenhouse.io/appliedintuition/jobs/4671386005?gh_jid=4671386005
+[2026-04-20T17:14:23.639Z] LOG   [scraper] https://boards.greenhouse.io/appliedintuition/jobs/4631222005?gh_jid=4631222005
+[2026-04-20T17:14:23.643Z] LOG   [scraper] https://boards.greenhouse.io/appliedintuition/jobs/4238438005?gh_jid=4238438005
+[2026-04-20T17:14:24.508Z] LOG   [scraper] https://boards.greenhouse.io/appliedintuition/jobs/4684714005?gh_jid=4684714005
+[2026-04-20T17:14:24.545Z] LOG   [scraper] https://boards.greenhouse.io/appliedintuition/jobs/4659067005?gh_jid=4659067005
+[2026-04-20T17:14:24.577Z] LOG   [scraper] https://boards.greenhouse.io/appliedintuition/jobs/4676285005?gh_jid=4676285005
+[2026-04-20T17:14:24.621Z] LOG   [scraper] https://boards.greenhouse.io/appliedintuition/jobs/4590784005?gh_jid=4590784005
+[2026-04-20T17:14:24.641Z] LOG   [scraper] https://boards.greenhouse.io/wargamingen/jobs/7325715?gh_jid=7325715
+[2026-04-20T17:14:25.500Z] LOG   [scraper] https://boards.greenhouse.io/wargamingen/jobs/7270505?gh_jid=7270505
+[2026-04-20T17:14:25.508Z] LOG   [scraper] https://boards.greenhouse.io/wargamingen/jobs/7817405?gh_jid=7817405
+[2026-04-20T17:14:25.649Z] LOG   [scraper] https://boards.greenhouse.io/wargamingen/jobs/7588290?gh_jid=7588290
+[2026-04-20T17:14:25.649Z] LOG   [scraper] https://boards.greenhouse.io/wargamingen/jobs/7768181?gh_jid=7768181
+[2026-04-20T17:14:25.679Z] LOG   [scraper] https://boards.greenhouse.io/wargamingen/jobs/7588296?gh_jid=7588296
+[2026-04-20T17:14:26.716Z] LOG   [scraper] https://boards.greenhouse.io/wargamingen/jobs/7588796?gh_jid=7588796
+[2026-04-20T17:14:26.743Z] LOG   [scraper] https://boards.greenhouse.io/wargamingen/jobs/7601807?gh_jid=7601807
+[2026-04-20T17:14:26.773Z] LOG   [scraper] https://boards.greenhouse.io/wargamingen/jobs/7375108?gh_jid=7375108
+[2026-04-20T17:14:26.797Z] LOG   [scraper] https://boards.greenhouse.io/wargamingen/jobs/7294576?gh_jid=7294576
+[2026-04-20T17:14:27.301Z] LOG   [scraper] https://boards.greenhouse.io/wargamingen/jobs/7563007?gh_jid=7563007
+[2026-04-20T17:14:27.987Z] LOG   [scraper] https://boards.greenhouse.io/wargamingen/jobs/7790132?gh_jid=7790132
+[2026-04-20T17:14:28.085Z] LOG   [scraper] https://boards.greenhouse.io/wargamingen/jobs/7790127?gh_jid=7790127
+[2026-04-20T17:14:28.108Z] LOG   [scraper] https://boards.greenhouse.io/wargamingen/jobs/7790138?gh_jid=7790138
+[2026-04-20T17:14:28.125Z] LOG   [scraper] https://boards.greenhouse.io/wargamingen/jobs/7790137?gh_jid=7790137
+[2026-04-20T17:14:28.163Z] LOG   [scraper] https://boards.greenhouse.io/wargamingen/jobs/7790124?gh_jid=7790124
+[2026-04-20T17:14:29.032Z] LOG   [scraper] https://boards.greenhouse.io/wargamingen/jobs/7662402?gh_jid=7662402
+[2026-04-20T17:14:29.051Z] LOG   [scraper] https://boards.greenhouse.io/wargamingen/jobs/7510694?gh_jid=7510694
+[2026-04-20T17:14:29.081Z] LOG   [scraper] https://boards.greenhouse.io/wargamingen/jobs/7510700?gh_jid=7510700
+[2026-04-20T17:14:29.119Z] LOG   [scraper] https://boards.greenhouse.io/wargamingen/jobs/7510689?gh_jid=7510689
+[2026-04-20T17:14:29.155Z] LOG   [scraper] https://boards.greenhouse.io/wargamingen/jobs/7510699?gh_jid=7510699
+[2026-04-20T17:14:30.017Z] LOG   [scraper] https://boards.greenhouse.io/wargamingen/jobs/7661895?gh_jid=7661895
+[2026-04-20T17:14:30.047Z] LOG   [scraper] https://boards.greenhouse.io/wargamingen/jobs/7661905?gh_jid=7661905
+[2026-04-20T17:14:30.064Z] LOG   [scraper] https://boards.greenhouse.io/wargamingen/jobs/7661906?gh_jid=7661906
+[2026-04-20T17:14:30.092Z] LOG   [scraper] https://boards.greenhouse.io/wargamingen/jobs/7661900?gh_jid=7661900
+[2026-04-20T17:14:30.120Z] LOG   [scraper] https://boards.greenhouse.io/wargamingen/jobs/7548193?gh_jid=7548193
+[2026-04-20T17:14:30.837Z] LOG   [scraper] https://boards.greenhouse.io/wargamingen/jobs/7393457?gh_jid=7393457
+[2026-04-20T17:14:30.857Z] LOG   [scraper] https://boards.greenhouse.io/wargamingen/jobs/7757035?gh_jid=7757035
+[2026-04-20T17:14:30.958Z] LOG   [scraper] https://boards.greenhouse.io/wargamingen/jobs/7393452?gh_jid=7393452
+[2026-04-20T17:14:30.964Z] LOG   [scraper] https://boards.greenhouse.io/wargamingen/jobs/7757045?gh_jid=7757045
+[2026-04-20T17:14:31.012Z] LOG   [scraper] https://boards.greenhouse.io/wargamingen/jobs/7393462?gh_jid=7393462
+[2026-04-20T17:14:31.805Z] LOG   [scraper] https://boards.greenhouse.io/wargamingen/jobs/7765433?gh_jid=7765433
+[2026-04-20T17:14:31.883Z] LOG   [scraper] https://boards.greenhouse.io/wargamingen/jobs/7757040?gh_jid=7757040
+[2026-04-20T17:14:31.934Z] LOG   [scraper] https://boards.greenhouse.io/wargamingen/jobs/7393304?gh_jid=7393304
+[2026-04-20T17:14:31.954Z] LOG   [scraper] https://boards.greenhouse.io/wargamingen/jobs/7393309?gh_jid=7393309
+[2026-04-20T17:14:32.000Z] LOG   [scraper] https://boards.greenhouse.io/wargamingen/jobs/7372624?gh_jid=7372624
+[2026-04-20T17:14:32.911Z] LOG   [scraper] https://boards.greenhouse.io/wargamingen/jobs/7653433?gh_jid=7653433
+[2026-04-20T17:14:32.930Z] LOG   [scraper] https://boards.greenhouse.io/wargamingen/jobs/7765438?gh_jid=7765438
+[2026-04-20T17:14:32.937Z] LOG   [scraper] https://boards.greenhouse.io/wargamingen/jobs/7653438?gh_jid=7653438
+[2026-04-20T17:14:33.019Z] LOG   [scraper] https://boards.greenhouse.io/wargamingen/jobs/7573713?gh_jid=7573713
+[2026-04-20T17:14:33.242Z] LOG   [scraper] https://boards.greenhouse.io/wargamingen/jobs/7573718?gh_jid=7573718
+[2026-04-20T17:14:34.334Z] LOG   [scraper] https://boards.greenhouse.io/wargamingen/jobs/7610877?gh_jid=7610877
+[2026-04-20T17:14:34.363Z] LOG   [scraper] https://boards.greenhouse.io/wargamingen/jobs/7610871?gh_jid=7610871
+[2026-04-20T17:14:34.376Z] LOG   [scraper] https://boards.greenhouse.io/wargamingen/jobs/7610876?gh_jid=7610876
+[2026-04-20T17:14:34.438Z] LOG   [scraper] https://boards.greenhouse.io/wargamingen/jobs/7610863?gh_jid=7610863
+[2026-04-20T17:14:34.541Z] LOG   [scraper] https://boards.greenhouse.io/wargamingen/jobs/7716269?gh_jid=7716269
+[2026-04-20T17:14:35.232Z] LOG   [scraper] https://job-boards.greenhouse.io/goodsservices/jobs/7685737003
+[2026-04-20T17:14:35.610Z] LOG   [scraper] https://boards.greenhouse.io/wargamingen/jobs/7742655?gh_jid=7742655
+[2026-04-20T17:14:35.641Z] LOG   [scraper] https://boards.greenhouse.io/wargamingen/jobs/7716275?gh_jid=7716275
+[2026-04-20T17:14:35.682Z] LOG   [scraper] https://boards.greenhouse.io/wargamingen/jobs/7687386?gh_jid=7687386
+[2026-04-20T17:14:35.694Z] LOG   [scraper] https://boards.greenhouse.io/wargamingen/jobs/7742650?gh_jid=7742650
+[2026-04-20T17:14:36.482Z] LOG   [scraper] https://job-boards.greenhouse.io/goodsservices/jobs/7702534003
+[2026-04-20T17:14:36.522Z] LOG   [scraper] https://job-boards.greenhouse.io/goodsservices/jobs/7701242003
+[2026-04-20T17:14:36.547Z] LOG   [scraper] https://job-boards.greenhouse.io/goodsservices/jobs/7699065003
+[2026-04-20T17:14:36.604Z] LOG   [scraper] https://job-boards.greenhouse.io/goodsservices/jobs/7702329003
+[2026-04-20T17:14:36.660Z] LOG   [scraper] https://job-boards.greenhouse.io/goodsservices/jobs/7666025003
+[2026-04-20T17:14:37.231Z] LOG   [scraper] https://job-boards.greenhouse.io/goodsservices/jobs/7494618003
+[2026-04-20T17:14:38.893Z] LOG   [scraper] https://veracyte.com/job-detail?gh_jid=5096206007
+[2026-04-20T17:14:39.324Z] LOG   [scraper] https://veracyte.com/job-detail?gh_jid=5045696007
+[2026-04-20T17:14:39.360Z] LOG   [scraper] https://veracyte.com/job-detail?gh_jid=5082925007
+[2026-04-20T17:14:39.512Z] LOG   [scraper] https://veracyte.com/job-detail?gh_jid=5101421007
+[2026-04-20T17:14:42.420Z] LOG   [scraper] https://veracyte.com/job-detail?gh_jid=5069106007
+[2026-04-20T17:14:42.488Z] LOG   [scraper] https://veracyte.com/job-detail?gh_jid=5083989007
+[2026-04-20T17:14:42.536Z] LOG   [scraper] https://veracyte.com/job-detail?gh_jid=5089787007
+[2026-04-20T17:14:42.536Z] LOG   [scraper] https://veracyte.com/job-detail?gh_jid=5088217007
+[2026-04-20T17:14:42.546Z] LOG   [scraper] https://veracyte.com/job-detail?gh_jid=5083538007
+[2026-04-20T17:14:45.612Z] LOG   [scraper] https://veracyte.com/job-detail?gh_jid=5070450007
+[2026-04-20T17:14:45.986Z] LOG   [scraper] https://veracyte.com/job-detail?gh_jid=5109482007
+[2026-04-20T17:14:46.028Z] LOG   [scraper] https://veracyte.com/job-detail?gh_jid=5073317007
+[2026-04-20T17:14:46.206Z] LOG   [scraper] https://veracyte.com/job-detail?gh_jid=5075568007
+[2026-04-20T17:14:46.248Z] LOG   [scraper] https://veracyte.com/job-detail?gh_jid=5049148007
+[2026-04-20T17:14:49.119Z] LOG   [scraper] https://veracyte.com/job-detail?gh_jid=5061270007
+[2026-04-20T17:14:49.239Z] LOG   [scraper] https://veracyte.com/job-detail?gh_jid=5072698007
+[2026-04-20T17:14:49.360Z] LOG   [scraper] https://veracyte.com/job-detail?gh_jid=5033382007
+[2026-04-20T17:14:49.361Z] LOG   [scraper] https://veracyte.com/job-detail?gh_jid=5048286007
+[2026-04-20T17:14:49.700Z] LOG   [scraper] https://veracyte.com/job-detail?gh_jid=5068903007
+[2026-04-20T17:14:52.630Z] LOG   [scraper] https://veracyte.com/job-detail?gh_jid=5077489007
+[2026-04-20T17:14:52.657Z] LOG   [scraper] https://veracyte.com/job-detail?gh_jid=5050305007
+[2026-04-20T17:14:52.870Z] LOG   [scraper] https://veracyte.com/job-detail?gh_jid=5092031007
+[2026-04-20T17:14:53.778Z] LOG   [scraper] https://veracyte.com/job-detail?gh_jid=5068958007
+[2026-04-20T17:14:55.249Z] LOG   [scraper] https://veracyte.com/job-detail?gh_jid=5083711007
+[2026-04-20T17:14:58.268Z] LOG   [scraper] https://veracyte.com/job-detail?gh_jid=5102174007
+[2026-04-20T17:14:58.282Z] LOG   [scraper] https://veracyte.com/job-detail?gh_jid=5080839007
+[2026-04-20T17:14:58.342Z] LOG   [scraper] https://veracyte.com/job-detail?gh_jid=5082916007
+[2026-04-20T17:14:58.401Z] LOG   [scraper] https://veracyte.com/job-detail?gh_jid=5045280007
+[2026-04-20T17:14:58.657Z] LOG   [scraper] https://veracyte.com/job-detail?gh_jid=5108750007
+[2026-04-20T17:15:01.252Z] LOG   [scraper] https://veracyte.com/job-detail?gh_jid=5090925007
+[2026-04-20T17:15:01.635Z] LOG   [scraper] https://veracyte.com/job-detail?gh_jid=5080737007
+[2026-04-20T17:15:01.765Z] LOG   [scraper] https://veracyte.com/job-detail?gh_jid=5047449007
+[2026-04-20T17:15:01.785Z] LOG   [scraper] https://veracyte.com/job-detail?gh_jid=5078560007
+[2026-04-20T17:15:02.899Z] LOG   [scraper] https://veracyte.com/job-detail?gh_jid=4997951007
+[2026-04-20T17:15:06.286Z] LOG   [scraper] https://veracyte.com/job-detail?gh_jid=5073249007
+[2026-04-20T17:15:06.381Z] LOG   [scraper] https://veracyte.com/job-detail?gh_jid=5067637007
+[2026-04-20T17:15:06.585Z] LOG   [scraper] https://veracyte.com/job-detail?gh_jid=5045610007
+[2026-04-20T17:15:06.752Z] LOG   [scraper] https://veracyte.com/job-detail?gh_jid=5074924007
+[2026-04-20T17:15:07.071Z] LOG   [scraper] https://veracyte.com/job-detail?gh_jid=5090869007
+[2026-04-20T17:15:09.864Z] LOG   [scraper] https://veracyte.com/job-detail?gh_jid=5096180007
+[2026-04-20T17:15:10.820Z] LOG   [scraper] https://veracyte.com/job-detail?gh_jid=5040186007
+[2026-04-20T17:15:10.871Z] LOG   [scraper] https://veracyte.com/job-detail?gh_jid=5089369007
+[2026-04-20T17:15:11.287Z] LOG   [scraper] https://veracyte.com/job-detail?gh_jid=5055532007
+[2026-04-20T17:15:13.101Z] LOG   [scraper] https://veracyte.com/job-detail?gh_jid=5101241007
+[2026-04-20T17:15:15.224Z] LOG   [scraper] https://veracyte.com/job-detail?gh_jid=5017198007
+[2026-04-20T17:15:15.989Z] LOG   [scraper] https://veracyte.com/job-detail?gh_jid=5103641007
+[2026-04-20T17:15:16.472Z] LOG   [scraper] https://veracyte.com/job-detail?gh_jid=5091671007
+[2026-04-20T17:15:16.694Z] LOG   [scraper] https://veracyte.com/job-detail?gh_jid=5063148007
+[2026-04-20T17:15:17.051Z] LOG   [scraper] https://veracyte.com/job-detail?gh_jid=5084751007
+[2026-04-20T17:15:17.693Z] LOG   [scraper] https://boards.greenhouse.io/oakhurst/jobs/8483007002?gh_jid=8483007002
+[2026-04-20T17:15:17.697Z] LOG   [scraper] https://boards.greenhouse.io/oakhurst/jobs/4450514002?gh_jid=4450514002
+[2026-04-20T17:15:17.699Z] LOG   [scraper] https://boards.greenhouse.io/oakhurst/jobs/8207207002?gh_jid=8207207002
+[2026-04-20T17:15:18.468Z] LOG   [scraper] https://veracyte.com/job-detail?gh_jid=5058188007
+[2026-04-20T17:15:20.843Z] LOG   [db] scraped: 999 inserted, 0 modified.
+[2026-04-20T17:15:20.843Z] LOG   Filtering jobs (stack)...
+
+[2026-04-20T17:15:21.409Z] LOG   [filter] pre-filter: 811/999 jobs have usable descriptions
+[2026-04-20T17:15:21.409Z] LOG   [filter] stack [1/163]
+[2026-04-20T17:15:35.074Z] LOG   [filter] stack [2/163]
+[2026-04-20T17:15:49.595Z] LOG   [filter] stack [3/163]
+[2026-04-20T17:16:04.283Z] LOG   [filter] stack [4/163]
+[2026-04-20T17:16:18.100Z] LOG   [filter] stack [5/163]
+[2026-04-20T17:16:31.580Z] LOG   [filter] stack [6/163]
+[2026-04-20T17:16:44.840Z] LOG   [filter] stack [7/163]
+[2026-04-20T17:16:58.611Z] LOG   [filter] stack [8/163]
+[2026-04-20T17:17:12.694Z] LOG   [filter] stack [9/163]
+[2026-04-20T17:17:27.095Z] LOG   [filter] stack [10/163]
+[2026-04-20T17:17:40.952Z] LOG   [db] tech stack progress: 0 inserted, 50 modified.
+[2026-04-20T17:17:40.952Z] LOG   [filter] stack [11/163]
+[2026-04-20T17:17:54.567Z] LOG   [filter] stack [12/163]
+[2026-04-20T17:18:08.330Z] LOG   [filter] stack [13/163]
+[2026-04-20T17:18:21.265Z] LOG   [filter] stack [14/163]
+[2026-04-20T17:18:34.998Z] LOG   [filter] stack [15/163]
+[2026-04-20T17:18:48.131Z] LOG   [filter] stack [16/163]
+[2026-04-20T17:19:01.675Z] LOG   [filter] stack [17/163]
+[2026-04-20T17:19:14.777Z] LOG   [filter] stack [18/163]
+[2026-04-20T17:19:27.890Z] LOG   [filter] stack [19/163]
+[2026-04-20T17:19:41.419Z] LOG   [filter] stack [20/163]
+[2026-04-20T17:19:54.657Z] LOG   [db] tech stack progress: 0 inserted, 50 modified.
+[2026-04-20T17:19:54.658Z] LOG   [filter] stack [21/163]
+[2026-04-20T17:20:08.064Z] LOG   [filter] stack [22/163]
+[2026-04-20T17:20:21.005Z] LOG   [filter] stack [23/163]
+[2026-04-20T17:20:34.145Z] LOG   [filter] stack [24/163]
+[2026-04-20T17:20:48.818Z] LOG   [filter] stack [25/163]
+[2026-04-20T17:21:02.076Z] LOG   [filter] stack [26/163]
+[2026-04-20T17:21:14.979Z] LOG   [filter] stack [27/163]
+[2026-04-20T17:21:28.310Z] LOG   [filter] stack [28/163]
+[2026-04-20T17:21:41.532Z] LOG   [filter] stack [29/163]
+[2026-04-20T17:21:54.627Z] LOG   [filter] stack [30/163]
+[2026-04-20T17:22:07.926Z] LOG   [db] tech stack progress: 0 inserted, 50 modified.
+[2026-04-20T17:22:07.926Z] LOG   [filter] stack [31/163]
+[2026-04-20T17:22:20.667Z] LOG   [filter] stack [32/163]
+[2026-04-20T17:22:33.920Z] LOG   [filter] stack [33/163]
+[2026-04-20T17:22:47.437Z] LOG   [filter] stack [34/163]
+[2026-04-20T17:23:00.348Z] LOG   [filter] stack [35/163]
+[2026-04-20T17:23:14.526Z] LOG   [filter] stack [36/163]
+[2026-04-20T17:23:28.511Z] LOG   [filter] stack [37/163]
+[2026-04-20T17:23:42.237Z] LOG   [filter] stack [38/163]
+[2026-04-20T17:23:56.554Z] LOG   [filter] stack [39/163]
+[2026-04-20T17:24:09.501Z] LOG   [filter] stack [40/163]
+[2026-04-20T17:24:22.566Z] LOG   [db] tech stack progress: 0 inserted, 50 modified.
+[2026-04-20T17:24:22.566Z] LOG   [filter] stack [41/163]
+[2026-04-20T17:24:36.719Z] LOG   [filter] stack [42/163]
+[2026-04-20T17:24:49.679Z] LOG   [filter] stack [43/163]
+[2026-04-20T17:25:02.937Z] LOG   [filter] stack [44/163]
+[2026-04-20T17:25:17.127Z] LOG   [filter] stack [45/163]
+[2026-04-20T17:25:30.469Z] LOG   [filter] stack [46/163]
+[2026-04-20T17:25:44.212Z] LOG   [filter] stack [47/163]
+[2026-04-20T17:25:57.552Z] LOG   [filter] stack [48/163]
+[2026-04-20T17:26:11.998Z] LOG   [filter] stack [49/163]
+[2026-04-20T17:26:25.581Z] LOG   [filter] stack [50/163]
+[2026-04-20T17:26:38.903Z] LOG   [db] tech stack progress: 0 inserted, 50 modified.
+[2026-04-20T17:26:38.903Z] LOG   [filter] stack [51/163]
+[2026-04-20T17:26:52.185Z] LOG   [filter] stack [52/163]
+[2026-04-20T17:27:05.600Z] LOG   [filter] stack [53/163]
+[2026-04-20T17:27:18.878Z] LOG   [filter] stack [54/163]
+[2026-04-20T17:27:32.308Z] LOG   [filter] stack [55/163]
+[2026-04-20T17:27:45.680Z] LOG   [filter] stack [56/163]
+[2026-04-20T17:27:58.806Z] LOG   [filter] stack [57/163]
+[2026-04-20T17:28:13.015Z] LOG   [filter] stack [58/163]
+[2026-04-20T17:28:26.256Z] LOG   [filter] stack [59/163]
+[2026-04-20T17:28:39.363Z] LOG   [filter] stack [60/163]
+[2026-04-20T17:28:53.862Z] LOG   [db] tech stack progress: 0 inserted, 50 modified.
+[2026-04-20T17:28:53.863Z] LOG   [filter] stack [61/163]
+[2026-04-20T17:29:07.100Z] LOG   [filter] stack [62/163]
+[2026-04-20T17:29:19.956Z] LOG   [filter] stack [63/163]
+[2026-04-20T17:29:33.297Z] LOG   [filter] stack [64/163]
+[2026-04-20T17:29:46.535Z] LOG   [filter] stack [65/163]
+[2026-04-20T17:29:59.772Z] LOG   [filter] stack [66/163]
+[2026-04-20T17:30:12.630Z] LOG   [filter] stack [67/163]
+[2026-04-20T17:30:25.842Z] LOG   [filter] stack [68/163]
+[2026-04-20T17:30:39.373Z] LOG   [filter] stack [69/163]
+[2026-04-20T17:30:52.422Z] LOG   [filter] stack [70/163]
+[2026-04-20T17:31:05.477Z] LOG   [db] tech stack progress: 0 inserted, 50 modified.
+[2026-04-20T17:31:05.477Z] LOG   [filter] stack [71/163]
+[2026-04-20T17:31:18.611Z] LOG   [filter] stack [72/163]
+[2026-04-20T17:31:31.477Z] LOG   [filter] stack [73/163]
+[2026-04-20T17:31:44.867Z] LOG   [filter] stack [74/163]
+[2026-04-20T17:31:58.293Z] LOG   [filter] stack [75/163]
+[2026-04-20T17:32:12.415Z] LOG   [filter] stack [76/163]
+[2026-04-20T17:32:25.699Z] LOG   [filter] stack [77/163]
+[2026-04-20T17:32:38.785Z] LOG   [filter] stack [78/163]
+[2026-04-20T17:32:52.831Z] LOG   [filter] stack [79/163]
+[2026-04-20T17:33:06.049Z] LOG   [filter] stack [80/163]
+[2026-04-20T17:33:19.406Z] LOG   [db] tech stack progress: 0 inserted, 50 modified.
+[2026-04-20T17:33:19.406Z] LOG   [filter] stack [81/163]
+[2026-04-20T17:33:32.400Z] LOG   [filter] stack [82/163]
+[2026-04-20T17:33:46.225Z] LOG   [filter] stack [83/163]
+[2026-04-20T17:33:59.191Z] LOG   [filter] stack [84/163]
+[2026-04-20T17:34:12.835Z] LOG   [filter] stack [85/163]
+[2026-04-20T17:34:26.201Z] LOG   [filter] stack [86/163]
+[2026-04-20T17:34:39.477Z] LOG   [filter] stack [87/163]
+[2026-04-20T17:34:52.782Z] LOG   [filter] stack [88/163]
+[2026-04-20T17:35:06.599Z] LOG   [filter] stack [89/163]
+[2026-04-20T17:35:21.129Z] LOG   [filter] stack [90/163]
+[2026-04-20T17:35:34.155Z] LOG   [db] tech stack progress: 0 inserted, 50 modified.
+[2026-04-20T17:35:34.155Z] LOG   [filter] stack [91/163]
+[2026-04-20T17:35:47.242Z] LOG   [filter] stack [92/163]
+[2026-04-20T17:36:00.103Z] LOG   [filter] stack [93/163]
+[2026-04-20T17:36:14.764Z] LOG   [filter] stack [94/163]
+[2026-04-20T17:36:28.324Z] LOG   [filter] stack [95/163]
+[2026-04-20T17:36:41.604Z] LOG   [filter] stack [96/163]
+[2026-04-20T17:36:54.878Z] LOG   [filter] stack [97/163]
+[2026-04-20T17:37:07.980Z] LOG   [filter] stack [98/163]
+[2026-04-20T17:37:22.340Z] LOG   [filter] stack [99/163]
+[2026-04-20T17:37:35.357Z] LOG   [filter] stack [100/163]
+[2026-04-20T17:37:49.055Z] LOG   [db] tech stack progress: 0 inserted, 50 modified.
+[2026-04-20T17:37:49.055Z] LOG   [filter] stack [101/163]
+[2026-04-20T17:38:01.950Z] LOG   [filter] stack [102/163]
+[2026-04-20T17:38:15.106Z] LOG   [filter] stack [103/163]
+[2026-04-20T17:38:28.039Z] LOG   [filter] stack [104/163]
+[2026-04-20T17:38:41.401Z] LOG   [filter] stack [105/163]
+[2026-04-20T17:38:55.595Z] LOG   [filter] stack [106/163]
+[2026-04-20T17:39:08.752Z] LOG   [filter] stack [107/163]
+[2026-04-20T17:39:22.047Z] LOG   [filter] stack [108/163]
+[2026-04-20T17:39:35.357Z] LOG   [filter] stack [109/163]
+[2026-04-20T17:39:50.010Z] LOG   [filter] stack [110/163]
+[2026-04-20T17:40:03.620Z] LOG   [db] tech stack progress: 0 inserted, 50 modified.
+[2026-04-20T17:40:03.621Z] LOG   [filter] stack [111/163]
+[2026-04-20T17:40:17.257Z] LOG   [filter] stack [112/163]
+[2026-04-20T17:40:30.376Z] LOG   [filter] stack [113/163]
+[2026-04-20T17:40:43.475Z] LOG   [filter] stack [114/163]
+[2026-04-20T17:40:56.370Z] LOG   [filter] stack [115/163]
+[2026-04-20T17:41:09.571Z] LOG   [filter] stack [116/163]
+[2026-04-20T17:41:23.563Z] LOG   [filter] stack [117/163]
+[2026-04-20T17:41:36.568Z] LOG   [filter] stack [118/163]
+[2026-04-20T17:41:49.536Z] LOG   [filter] stack [119/163]
+[2026-04-20T17:42:03.137Z] LOG   [filter] stack [120/163]
+[2026-04-20T17:42:16.605Z] LOG   [db] tech stack progress: 0 inserted, 50 modified.
+[2026-04-20T17:42:16.605Z] LOG   [filter] stack [121/163]
+[2026-04-20T17:42:30.333Z] LOG   [filter] stack [122/163]
+[2026-04-20T17:42:43.539Z] LOG   [filter] stack [123/163]
+[2026-04-20T17:42:58.003Z] LOG   [filter] stack [124/163]
+[2026-04-20T17:43:11.536Z] LOG   [filter] stack [125/163]
+[2026-04-20T17:43:24.945Z] LOG   [filter] stack [126/163]
+[2026-04-20T17:43:38.523Z] LOG   [filter] stack [127/163]
+[2026-04-20T17:43:51.692Z] LOG   [filter] stack [128/163]
+[2026-04-20T17:44:07.061Z] LOG   [filter] stack [129/163]
+[2026-04-20T17:44:20.016Z] LOG   [filter] stack [130/163]
+[2026-04-20T17:44:33.361Z] LOG   [db] tech stack progress: 0 inserted, 50 modified.
+[2026-04-20T17:44:33.361Z] LOG   [filter] stack [131/163]
+[2026-04-20T17:44:46.557Z] LOG   [filter] stack [132/163]
+[2026-04-20T17:45:01.807Z] LOG   [filter] stack [133/163]
+[2026-04-20T17:45:15.248Z] LOG   [filter] stack [134/163]
+[2026-04-20T17:45:28.961Z] LOG   [filter] stack [135/163]
+[2026-04-20T17:45:42.438Z] LOG   [filter] stack [136/163]
+[2026-04-20T17:45:56.436Z] LOG   [filter] stack [137/163]
+[2026-04-20T17:46:09.437Z] LOG   [filter] stack [138/163]
+[2026-04-20T17:46:22.741Z] LOG   [filter] stack [139/163]
+[2026-04-20T17:46:36.478Z] LOG   [filter] stack [140/163]
+[2026-04-20T17:46:50.283Z] LOG   [db] tech stack progress: 0 inserted, 50 modified.
+[2026-04-20T17:46:50.284Z] LOG   [filter] stack [141/163]
+[2026-04-20T17:47:03.740Z] LOG   [filter] stack [142/163]
+[2026-04-20T17:47:17.398Z] LOG   [filter] stack [143/163]
+[2026-04-20T17:47:30.941Z] LOG   [filter] stack [144/163]
+[2026-04-20T17:47:45.233Z] LOG   [filter] stack [145/163]
+[2026-04-20T17:47:58.667Z] LOG   [filter] stack [146/163]
+[2026-04-20T17:48:12.020Z] LOG   [filter] stack [147/163]
+[2026-04-20T17:48:26.050Z] LOG   [filter] stack [148/163]
+[2026-04-20T17:48:40.117Z] LOG   [filter] stack [149/163]
+[2026-04-20T17:48:53.522Z] LOG   [filter] stack [150/163]
+[2026-04-20T17:49:09.320Z] LOG   [db] tech stack progress: 0 inserted, 50 modified.
+[2026-04-20T17:49:09.320Z] LOG   [filter] stack [151/163]
+[2026-04-20T17:49:22.232Z] LOG   [filter] stack [152/163]
+[2026-04-20T17:49:36.054Z] LOG   [filter] stack [153/163]
+[2026-04-20T17:49:49.068Z] LOG   [filter] stack [154/163]
+[2026-04-20T17:50:02.479Z] LOG   [filter] stack [155/163]
+[2026-04-20T17:50:15.613Z] LOG   [filter] stack [156/163]
+[2026-04-20T17:50:29.256Z] LOG   [filter] stack [157/163]
+[2026-04-20T17:50:42.818Z] LOG   [filter] stack [158/163]
+[2026-04-20T17:50:56.336Z] LOG   [filter] stack [159/163]
+[2026-04-20T17:51:09.259Z] LOG   [filter] stack [160/163]
+[2026-04-20T17:51:22.259Z] LOG   [db] tech stack progress: 0 inserted, 50 modified.
+[2026-04-20T17:51:22.259Z] LOG   [filter] stack [161/163]
+[2026-04-20T17:51:35.237Z] LOG   [filter] stack [162/163]
+[2026-04-20T17:51:48.911Z] LOG   [filter] stack [163/163]
+[2026-04-20T17:51:49.860Z] LOG   [db] tech stack progress: 0 inserted, 11 modified.
+[2026-04-20T17:51:49.865Z] LOG   [filter] stack: 109/811 passed
+[2026-04-20T17:51:49.982Z] LOG   [db] pre-filtered: 0 inserted, 188 modified.
+[2026-04-20T17:51:50.084Z] LOG   [db] stack-passed: 0 inserted, 109 modified.
+[2026-04-20T17:51:50.084Z] LOG   Fetching job info...
+
+[2026-04-20T17:51:50.085Z] LOG   [info] [1/22]
+[2026-04-20T17:51:51.436Z] LOG   [info] [2/22]
+[2026-04-20T17:52:17.663Z] LOG   [info] [3/22]
+[2026-04-20T17:52:44.111Z] LOG   [info] [4/22]
+[2026-04-20T17:53:10.561Z] LOG   [info] [5/22]
+[2026-04-20T17:53:36.883Z] LOG   [info] [6/22]
+[2026-04-20T17:54:03.605Z] LOG   [info] [7/22]
+[2026-04-20T17:54:30.239Z] LOG   [info] [8/22]
+[2026-04-20T17:54:56.898Z] LOG   [info] [9/22]
+[2026-04-20T17:55:23.626Z] LOG   [info] [10/22]
+[2026-04-20T17:55:50.290Z] LOG   [info] [11/22]
+[2026-04-20T17:56:17.182Z] LOG   [info] [12/22]
+[2026-04-20T17:56:43.845Z] LOG   [info] [13/22]
+[2026-04-20T17:57:09.879Z] LOG   [info] [14/22]
+[2026-04-20T17:57:38.556Z] LOG   [info] [15/22]
+[2026-04-20T17:58:05.187Z] LOG   [info] [16/22]
+[2026-04-20T17:58:31.360Z] LOG   [info] [17/22]
+[2026-04-20T17:58:57.561Z] LOG   [info] [18/22]
+[2026-04-20T17:59:23.895Z] LOG   [info] [19/22]
+[2026-04-20T17:59:50.173Z] LOG   [info] [20/22]
+[2026-04-20T18:00:16.710Z] LOG   [info] [21/22]
+[2026-04-20T18:00:43.076Z] LOG   [info] [22/22]
+[2026-04-20T18:01:09.307Z] LOG   [info] 109 jobs processed.
+[2026-04-20T18:01:09.440Z] LOG   [db] info: 0 inserted, 109 modified.
+[2026-04-20T18:01:09.456Z] LOG   Pipeline completed successfully!
