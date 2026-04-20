@@ -3,14 +3,19 @@
 import { useState, useRef, useEffect } from "react"
 import { useRouter } from "next/navigation"
 
-export default function RunPanel() {
+type Props = {
+    running: boolean
+    setRunning: (v: boolean) => void
+    onChunk: (text: string) => void
+}
+
+export default function RunPanel({ running, setRunning, onChunk }: Props) {
     const router = useRouter()
     const [scrapeEnabled, setScrapeEnabled] = useState(false)
     const [filterEnabled, setFilterEnabled] = useState(false)
     const [scrapeLimit, setScrapeLimit] = useState("")
     const [filterLimit, setFilterLimit] = useState("")
     const [clearJobs, setClearJobs] = useState(false)
-    const [running, setRunning] = useState(false)
     const [log, setLog] = useState("")
     const [exitState, setExitState] = useState<"success" | "error" | "killed" | null>(null)
     const [elapsed, setElapsed] = useState(0)
@@ -81,6 +86,7 @@ export default function RunPanel() {
                 break
             }
 
+            onChunk(text)
             setLog(prev => prev + text)
         }
 
@@ -142,7 +148,7 @@ export default function RunPanel() {
                             onClick={() => fetch("/api/pipeline/run", { method: "DELETE" })}
                             className="px-4 py-2 text-sm font-medium text-red-600 border border-red-300 hover:bg-red-50 transition-colors"
                         >
-                            Stop
+                            Halt
                         </button>
                         <span className="text-sm text-gray-400 font-mono">
                             {String(Math.floor(elapsed / 60)).padStart(2, "0")}:{String(elapsed % 60).padStart(2, "0")}
