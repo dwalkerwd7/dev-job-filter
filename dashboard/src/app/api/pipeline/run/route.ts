@@ -26,7 +26,8 @@ export async function POST(req: Request) {
         start(controller) {
             isRunning = true
             const proc = spawn("npm", ["run", "pipeline", "--", ...flags], {
-                cwd: projectRoot
+                cwd: projectRoot,
+                detached: true
             })
             activeProc = proc
 
@@ -57,6 +58,6 @@ export async function DELETE() {
     if (!activeProc) {
         return new Response("No pipeline running", { status: 404 })
     }
-    activeProc.kill("SIGTERM")
+    process.kill(-activeProc.pid!, "SIGTERM")
     return new Response("OK", { status: 200 })
 }
