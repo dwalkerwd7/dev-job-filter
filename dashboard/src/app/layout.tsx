@@ -31,6 +31,15 @@ export default function RootLayout({
             <body className="min-h-screen flex flex-col flex-1">
                 <TabNav />
                 {children}
+                <footer className="bg-white text-center text-sm text-gray-400 m-w-screen border-t border-gray-100">
+                    &copy; 2026 <a
+                        href="https://derekwalker.tech"
+                        target="_blank"
+                        className="underline text-green-500 hover:text-green-700"
+                    >
+                        DTS
+                    </a>. MIT License
+                </footer>
             </body>
         </html>
     );
