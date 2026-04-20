@@ -19,7 +19,7 @@ export default function AboutPage() {
     ]
 
     const stack = [
-        ["Scraper", "Playwright + Node.js"],
+        ["Scraper", "Playwright + Serper"],
         ["AI Extraction", "Claude Haiku (Anthropic)"],
         ["Database", "MongoDB Atlas"],
         ["Dashboard", "Next.js + Tailwind"],
@@ -31,7 +31,7 @@ export default function AboutPage() {
             <div className="max-w-2xl mx-auto px-6 py-12">
                 <h1 className="text-2xl font-semibold text-gray-900 mb-2">About</h1>
                 <p className="text-gray-500 text-sm mb-10">
-                    A personal job search tool that automates discovery, filtering, and tracking of software engineering roles at SMBs and startups.
+                    A job search and filter tool for software developers that automates discovery, filtering, and tracking of roles at companies on Greenhouse.
                 </p>
 
                 <section className="mb-10">
