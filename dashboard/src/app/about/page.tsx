@@ -26,6 +26,10 @@ export default function AboutPage() {
         ["Job Source", "Greenhouse ATS (public API)"],
     ]
 
+    const links = [
+        { label: "GitHub", href: "https://github.com/dwalkerwd7/dev-job-filter" }
+    ]
+
     return (
         <div className="flex-1 bg-gray-50">
             <div className="max-w-2xl mx-auto px-6 py-12">
@@ -52,7 +56,7 @@ export default function AboutPage() {
                     </div>
                 </section>
 
-                <section>
+                <section className="mb-10">
                     <h2 className="text-xs font-medium uppercase tracking-wide text-gray-400 mb-4">Stack</h2>
                     <div className="bg-white border border-gray-200">
                         {stack.map(([label, value], i) => (
@@ -60,6 +64,21 @@ export default function AboutPage() {
                                 <span className="text-gray-400 w-36">{label}</span>
                                 <span className="text-gray-900">{value}</span>
                             </div>
+                        ))}
+                    </div>
+                </section>
+
+                <section>
+                    <h2 className="text-xs font-medium uppercase tracking-wide text-gray-400 mb-4">Links</h2>
+                    <div className="flex flex-col gap-2 bg-white border border-gray-200 p-5">
+                        {links.map(link => (
+                            <a
+                                key={link.href}
+                                href={link.href}
+                                className="w-fit text-lg text-gray-300 font-semibold hover:text-gray-800 hover:cursor-pointer"
+                            >
+                                {link.label}
+                            </a>
                         ))}
                     </div>
                 </section>
