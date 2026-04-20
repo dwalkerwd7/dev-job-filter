@@ -7,7 +7,7 @@ export default async function Home({ searchParams }: { searchParams: Promise<{ [
     const params = await searchParams;
 
     return (
-        <div className="min-h-full bg-gray-50">
+        <div className="flex-1 bg-gray-50">
             <div className="max-w-6xl mx-auto px-6 py-8">
                 <div className="mb-6">
                     <h1 className="text-xl font-semibold text-gray-900">Find a dev job!</h1>
