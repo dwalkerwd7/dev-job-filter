@@ -31,7 +31,7 @@ export async function POST(req: Request) {
             activeProc = proc
 
             const send = (line: string) =>
-                controller.enqueue(new TextEncoder().encode(line + "\n"))
+                controller.enqueue(new TextEncoder().encode(line.trimEnd() + "\n"))
 
             proc.stdout.on("data", chunk => send(chunk.toString()))
             proc.stderr.on("data", chunk => send(chunk.toString()))
