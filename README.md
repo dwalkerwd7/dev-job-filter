@@ -2,7 +2,7 @@
 
 A self-hosted job search tool for software developers. Scrapes Greenhouse-hosted job boards, uses Claude to filter by tech stack and extract structured metadata, and surfaces results in a Next.js dashboard.
 
-> Pipeline cost: ~$0.33 in Claude API tokens and ~20 minutes to process 800 jobs end-to-end.
+> Pipeline cost: ~$1.00 in Claude API tokens and ~45 minutes to process 1000 jobs end-to-end.
 
 ---
 
@@ -55,7 +55,7 @@ cd pipeline
 npm install
 ```
 
-Create a `.env` file in `pipeline/` (managed by varlock):
+Create a `.env.local` file in `pipeline/` (managed by varlock):
 
 ```
 MONGODB_URI=your_mongodb_connection_string
