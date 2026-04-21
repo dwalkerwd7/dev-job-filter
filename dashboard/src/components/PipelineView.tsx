@@ -29,8 +29,6 @@ export default function PipelineView({ initial, lastRun }: { initial: Stats, las
     const [stats, setStats] = useState(initial)
     const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null)
 
-    const isDemo = process.env.NEXT_PUBLIC_DEMO_MODE === "true"
-
     const fetchStats = useCallback(() => {
         if (debounceRef.current) clearTimeout(debounceRef.current)
         debounceRef.current = setTimeout(async () => {
