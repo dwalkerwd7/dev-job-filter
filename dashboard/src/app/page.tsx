@@ -3,6 +3,8 @@ import StatsBar, { StatsBarSkeleton } from "@/components/StatsBar";
 import JobList, { JobListSkeleton } from "@/components/JobList";
 import FilterBar from "@/components/FilterBar";
 
+export const dynamic = "force-dynamic";
+
 export default async function Home({ searchParams }: { searchParams: Promise<{ [key: string]: string | undefined }> }) {
     const params = await searchParams;
 
