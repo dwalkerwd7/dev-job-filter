@@ -2,6 +2,8 @@ import { connectDB } from "@/lib/mongodb"
 import Job from "@/models/Job"
 import PipelineView from "@/components/PipelineView"
 
+export const dynamic = "force-dynamic"
+
 async function getFunnelStats() {
     await connectDB()
     const [totalScraped, filterRan, filterPassed, lastJob] = await Promise.all([
