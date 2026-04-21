@@ -1,8 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+    output: "standalone",
     basePath: process.env.BASE_PATH || "",
-    output: "standalone"
+    assetPrefix: (process.env.BASE_PATH || "") + "/dashboard"
 };
 
 export default nextConfig;
