@@ -1,12 +1,13 @@
 "use client"
 
 import { useRouter, useSearchParams, usePathname } from "next/navigation";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 export default function FilterBar() {
     const router = useRouter();
     const pathname = usePathname();
     const searchParams = useSearchParams();
+    const isFirstRender = useRef(true);
 
     function updateFilter(key: string, value: string) {
         const params = new URLSearchParams(searchParams.toString());
@@ -22,6 +23,11 @@ export default function FilterBar() {
     const [searchInput, setSearchInput] = useState(searchParams.get("search") ?? "");
 
     useEffect(() => {
+        // skips first render to prevent infinite loop of this effect firing
+        if (isFirstRender.current) {
+            isFirstRender.current = false;
+            return;
+        }
         const timeout = setTimeout(() => {
             updateFilter("search", searchInput)
         }, 300);
