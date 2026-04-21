@@ -29,6 +29,8 @@ export default function PipelineView({ initial, lastRun }: { initial: Stats, las
     const [stats, setStats] = useState(initial)
     const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null)
 
+    const isDemo = process.env.NEXT_PUBLIC_DEMO_MODE === "true"
+
     const fetchStats = useCallback(() => {
         if (debounceRef.current) clearTimeout(debounceRef.current)
         debounceRef.current = setTimeout(async () => {
@@ -49,7 +51,15 @@ export default function PipelineView({ initial, lastRun }: { initial: Stats, las
     const cards = [
         { step: "scrape", label: "Scraping", value: stats.totalScraped, sub: null },
         { step: "filter", label: "Filtering", value: stats.filterRan, sub: `${pct(stats.filterRan, stats.totalScraped)} of scraped` },
-        { step: "info", label: "Gathering Info", value: '...', sub: null },
+        {
+            step: "info", label: "Gathering Info", value: (
+                <span className="inline-flex gap-0.5">
+                    <span className="animate-bounce [animation-delay:0ms]">.</span>
+                    <span className="animate-bounce [animation-delay:150ms]">.</span>
+                    <span className="animate-bounce [animation-delay:300ms]">.</span>
+                </span>
+            ), sub: null
+        },
         { step: "complete", label: "Passed Filter", value: stats.filterPassed, sub: `${pct(stats.filterPassed, stats.totalScraped)} of scraped` },
     ]
 
@@ -72,8 +82,15 @@ export default function PipelineView({ initial, lastRun }: { initial: Stats, las
                                         ${isMuted ? "opacity-50" : ""}`}
                                 >
                                     <p className="text-xs font-medium uppercase tracking-wide text-gray-500">{card.label}</p>
-                                    <p className="mt-1 text-2xl font-semibold text-gray-900">{card.value}</p>
-                                    {card.sub && <p className="mt-1 text-xs text-gray-400">{card.sub}</p>}
+                                    <p className="mt-1 text-2xl font-semibold text-gray-900">
+                                        {(isActive && card.step === "info")
+                                            ? card.value
+                                            : card.step === "info"
+                                                ? (<span>...</span>)
+                                                : (<span>{card.value}</span>
+                                                )}
+                                        {card.sub && <p className="mt-1 text-xs text-gray-400">{card.sub}</p>}
+                                    </p>
                                 </div>
                                 {i < cards.length - 1 && (
                                     <div className="flex items-center px-3 text-gray-700 text-xl">→</div>

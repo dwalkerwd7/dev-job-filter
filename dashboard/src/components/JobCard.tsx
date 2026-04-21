@@ -112,7 +112,7 @@ export default function JobCard({ job, filters }: { job: JobData, filters: Recor
                         </button>
                     ) : (
                         <button onClick={e => handleDismissRenew(e, false)}
-                            className="text-blue-500 hover: text-blue-700, transition-colors ml-1"
+                            className="text-blue-500 hover:text-green-500 transition-colors ml-1"
                             aria-label="Renew"
                         >
                             +
