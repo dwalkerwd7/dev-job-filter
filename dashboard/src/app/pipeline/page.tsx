@@ -15,20 +15,8 @@ async function getFunnelStats() {
     return { totalScraped, filterRan, filterPassed, lastRun: (lastJob as { scrapedAt?: Date } | null)?.scrapedAt ?? null }
 }
 
-function pct(n: number, of: number) {
-    if (!of) return "—"
-    return `${Math.round((n / of) * 100)}%`
-}
-
 export default async function PipelinePage() {
     const { totalScraped, filterRan, filterPassed, lastRun } = await getFunnelStats()
-
-    const cards = [
-        { label: "Total Scraped", value: totalScraped, sub: null },
-        { label: "Filter Ran", value: filterRan, sub: `${pct(filterRan, totalScraped)} of scraped` },
-        { label: "Filter Passed", value: filterPassed, sub: `${pct(filterPassed, filterRan)} of filter ran` },
-    ]
-
     return (
         <div className="flex-1 bg-gray-50">
             <div className="max-w-6xl mx-auto px-6 py-8 flex flex-col gap-6">
