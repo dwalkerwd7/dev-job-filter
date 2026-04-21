@@ -16,7 +16,9 @@ export default async function Home({ searchParams }: { searchParams: Promise<{ [
                     <StatsBar />
                 </Suspense>
                 <div className="mt-6 flex flex-col gap-4">
-                    <FilterBar />
+                    <Suspense fallback={null}>
+                        <FilterBar />
+                    </Suspense>
                     <Suspense key={
                         `${params.view ?? "passed"}
                             -${params.search ?? ""}
