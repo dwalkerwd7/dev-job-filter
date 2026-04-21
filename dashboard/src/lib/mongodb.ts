@@ -1,11 +1,6 @@
 import mongoose from "mongoose";
 
 
-const MONGODB_URI = process.env.MONGODB_URI as string;
-if (!MONGODB_URI) {
-    throw new Error("Please define the MONGODB_URI environment variable in .env.local");
-}
-
 // Cache the connection across hot reloads in development
 const cached = global as typeof global & {
     mongoose?: { conn: typeof mongoose | null; promise: Promise<typeof mongoose> | null };
@@ -17,6 +12,11 @@ if (!cached.mongoose) {
 
 export async function connectDB() {
     if (cached.mongoose!.conn) return cached.mongoose!.conn;
+
+    const MONGODB_URI = process.env.MONGODB_URI as string;
+    if (!MONGODB_URI) {
+        throw new Error("Please define the MONGODB_URI environment variable in .env.local");
+    }
 
     if (!cached.mongoose!.promise) {
         cached.mongoose!.promise = mongoose.connect(MONGODB_URI).then((m) => m);
