@@ -1,8 +1,8 @@
 import { connectDB } from "@/lib/mongodb"
 import Job from "@/models/Job"
-import RunPanel from "@/components/RunPanel"
 import PipelineView from "@/components/PipelineView"
-import { Fragment } from "react"
+
+export const dynamic = "force-dynamic"
 
 async function getFunnelStats() {
     await connectDB()
