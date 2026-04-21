@@ -1,7 +1,7 @@
 const fs = require("fs")
 const path = require("path")
 
-const DEMO_SPEED = 10;
+const DEMO_SPEED = process.env.DEMO_SPEED || 30;
 const DEMO_LOG_PATH = path.join(__dirname, "..", "logs", "demo.log")
 const LINE_RE = /^\[(.+?)\] LOG\s+(.+)$/
 

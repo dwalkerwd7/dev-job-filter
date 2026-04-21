@@ -11,6 +11,7 @@
     "filter": "varlock run -- node pipeline.js --no-scraping --no-info",
     "info": "varlock run -- node pipeline.js --no-scraping --no-filtering",
     "pipeline": "varlock run -- node pipeline.js",
+    "pipeline-demo": "varlock run -- node pipeline-demo.js",
     "migrate": "varlock run -- node migrate.js"
   },
   "dependencies": {
