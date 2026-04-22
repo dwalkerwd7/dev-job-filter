@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from "react"
 import { useRouter } from "next/navigation"
+import API from "@/lib/api"
 
 type Props = {
     running: boolean
@@ -49,8 +50,7 @@ export default function RunPanel({ running, setRunning, onChunk, onStop }: Props
         setLog("")
         setExitState(null)
 
-        // template literal, so must prefix with basePath ourselves
-        const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_PATH}/api/pipeline/${isDemo ? "demo" : "run"}`, {
+        const res = await fetch(API(`pipeline/${isDemo ? "demo" : "run"}`), {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
