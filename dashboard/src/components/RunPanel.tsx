@@ -76,8 +76,8 @@ export default function RunPanel({ running, setRunning, onChunk, onStop }: Props
             const text = raw
                 .split("\n\n")
                 .filter(Boolean)
-                .map(s => s.replace(/^data: ?/, ""))
-                .join("\n")
+                .map(s => s.replace(/^data: ?/, "") + "\n")
+                .join("")
 
             if (text.includes("[exit:0]")) {
                 setExitState("success")
