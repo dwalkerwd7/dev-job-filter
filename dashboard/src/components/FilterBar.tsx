@@ -40,7 +40,7 @@ export default function FilterBar() {
     return (
         <div className="flex items-end gap-3 flex-wrap">
             <div className="flex flex-col gap-2 items-center justify-center">
-                <label aria-label="Sort By" className="text-xs text-gray-350">Sort by</label>
+                <label aria-label="Sort By" className="text-xs text-gray-400">Sort by</label>
                 <select
                     value={sort}
                     onChange={e => updateFilter("sort", e.target.value)}
@@ -53,7 +53,7 @@ export default function FilterBar() {
                 </select>
             </div>
             <div className="flex flex-col gap-2 items-center justify-center">
-                <label aria-label="Arrangements" className="text-xs text-gray-350">Arrangement</label>
+                <label aria-label="Arrangements" className="text-xs text-gray-400">Arrangement</label>
                 <select
                     value={arrangement}
                     onChange={e => updateFilter("arrangement", e.target.value)}
