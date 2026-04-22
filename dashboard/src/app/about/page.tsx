@@ -75,7 +75,7 @@ export default function AboutPage() {
                             <a
                                 key={link.href}
                                 href={link.href}
-                                className="w-fit text-lg text-gray-300 font-semibold hover:text-gray-800 hover:cursor-pointer"
+                                className="w-fit text-lg text-gray-400 font-semibold hover:text-gray-800 hover:cursor-pointer"
                             >
                                 {link.label}
                             </a>
