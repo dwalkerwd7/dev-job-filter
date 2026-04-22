@@ -41,7 +41,7 @@ export default function JobCard({ job, filters }: { job: JobData, filters: Recor
         e.stopPropagation(); // so that it doesn't trigger the container div onClick
         setDismissed(dismiss);
         try {
-            const res = await fetch(`${process.env.BASE_PATH}/api/jobs/${job._id}`, {
+            const res = await fetch(`/api/jobs/${job._id}`, {
                 method: "PATCH",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ dismissed: dismiss })
@@ -58,7 +58,7 @@ export default function JobCard({ job, filters }: { job: JobData, filters: Recor
         e.stopPropagation();
         setIsApplied(!isApplied);
         try {
-            const res = await fetch(`${process.env.BASE_PATH}/api/jobs/${job._id}`, {
+            const res = await fetch(`api/jobs/${job._id}`, {
                 method: "PATCH",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ applied: !isApplied }),
