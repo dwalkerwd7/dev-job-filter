@@ -31,8 +31,10 @@ export async function POST(req: Request) {
             })
             activeProc = proc
 
-            const send = (line: string) =>
-                controller.enqueue(new TextEncoder().encode(line.trimEnd() + "\n"))
+            const send = (chunk: string) => {
+                for (const line of chunk.split("\n").filter(l => l.trim()))
+                    controller.enqueue(new TextEncoder().encode(`data: ${line.trimEnd()}\n\n`))
+            }
 
             proc.stdout.on("data", chunk => send(chunk.toString()))
             proc.stderr.on("data", chunk => send(chunk.toString()))
@@ -48,8 +50,9 @@ export async function POST(req: Request) {
 
     return new Response(stream, {
         headers: {
-            "Content-Type": "text/plain; charset=utf-8",
+            "Content-Type": "text/event-stream",
             "Cache-Control": "no-cache",
+            "Connection": "keep-alive",
             "X-Accel-Buffering": "no"
         }
     })

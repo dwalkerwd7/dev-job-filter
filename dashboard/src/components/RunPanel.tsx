@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useRef, useEffect, Fragment } from "react"
+import { useState, useRef, useEffect } from "react"
 import { useRouter } from "next/navigation"
 
 type Props = {
@@ -72,7 +72,12 @@ export default function RunPanel({ running, setRunning, onChunk, onStop }: Props
         while (true) {
             const { done, value } = await reader.read()
             if (done) break
-            const text = decoder.decode(value)
+            const raw = decoder.decode(value)
+            const text = raw
+                .split("\n\n")
+                .filter(Boolean)
+                .map(s => s.replace(/^data: ?/, ""))
+                .join("\n")
 
             if (text.includes("[exit:0]")) {
                 setExitState("success")
