@@ -80,7 +80,7 @@ export default function PipelineView({ initial, lastRun }: { initial: Stats, las
                                         ${isMuted ? "opacity-50" : ""}`}
                                 >
                                     <p className="text-xs font-medium uppercase tracking-wide text-gray-500">{card.label}</p>
-                                    <p className="mt-1 text-2xl font-semibold text-gray-900">
+                                    <div className="mt-1 text-2xl font-semibold text-gray-900">
                                         {(isActive && card.step === "info")
                                             ? card.value
                                             : card.step === "info"
@@ -88,7 +88,7 @@ export default function PipelineView({ initial, lastRun }: { initial: Stats, las
                                                 : (<span>{card.value}</span>
                                                 )}
                                         {card.sub && <p className="mt-1 text-xs text-gray-400">{card.sub}</p>}
-                                    </p>
+                                    </div>
                                 </div>
                                 {i < cards.length - 1 && (
                                     <div className="flex items-center px-3 text-gray-700 text-xl">→</div>
