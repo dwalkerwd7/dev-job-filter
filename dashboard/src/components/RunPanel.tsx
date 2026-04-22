@@ -49,7 +49,7 @@ export default function RunPanel({ running, setRunning, onChunk, onStop }: Props
         setLog("")
         setExitState(null)
 
-        const res = await fetch(`/api/pipeline/${isDemo ? "demo" : "run"}`, {
+        const res = await fetch(`${process.env.BASE_PATH}/api/pipeline/${isDemo ? "demo" : "run"}`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
