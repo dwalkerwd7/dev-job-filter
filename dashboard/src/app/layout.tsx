@@ -29,6 +29,7 @@ export default function RootLayout({
             className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
             <body className="min-h-screen flex flex-col flex-1">
+                <div id="external-inject-target"></div>
                 <TabNav />
                 {children}
                 <footer className="bg-white text-center text-sm text-gray-400 m-w-screen border-t border-gray-100">
