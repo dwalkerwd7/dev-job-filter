@@ -152,7 +152,7 @@ export default function RunPanel({ running, setRunning, onChunk, onStop }: Props
                     <button
                         onClick={async () => {
                             if (!window.confirm("Halt the running pipeline?")) return
-                            await fetch(`/api/pipeline/${isDemo ? "demo" : "run"}`, { method: "DELETE" })
+                            await fetch(`${process.env.NEXT_PUBLIC_BASE_PATH}/api/pipeline/${isDemo ? "demo" : "run"}`, { method: "DELETE" })
                             setRunning(false)
                             onStop()
                         }}
