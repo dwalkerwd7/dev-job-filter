@@ -68,38 +68,53 @@ export default function RunPanel({ running, setRunning, onChunk, onStop }: Props
 
         const reader = res.body.getReader()
         const decoder = new TextDecoder()
+        let buffer = ""
 
         while (true) {
             const { done, value } = await reader.read()
+
             if (done) break
-            const raw = decoder.decode(value)
-            const text = raw
-                .split("\n\n")
-                .filter(Boolean)
-                .map(s => s.replace(/^data: ?/, "") + "\n")
-                .join("")
 
-            if (text.includes("[exit:0]")) {
-                setExitState("success")
-                setLog(prev => prev + text.replace(/\[exit:0\]\n?/, ""))
-                router.refresh()
-                break
-            }
-            if (text.includes("[exit:1]")) {
-                setExitState("error")
-                setLog(prev => prev + text.replace(/\[exit:1\]\n?/, ""))
-                break
-            }
-            if (text.includes("[exit:killed]")) {
-                setExitState("killed")
-                setLog(prev => prev + text.replace(/\[exit:killed\]\n?/, ""))
-                break
-            }
+            buffer += decoder.decode(value, { stream: true }) // stream:true handles split multibyte chars
 
-            onChunk(text)
-            setLog(prev => prev + text)
+            // Split on SSE event boundary
+            const events = buffer.split('\n\n')
+
+            // Last element is either empty or an incomplete event — keep it in the buffer
+            buffer = events.pop() ?? ''
+
+            for (const event of events) {
+                if (!event.trim()) continue
+
+                const text = event
+                    .split('\n')
+                    .filter(line => line.startsWith('data:'))
+                    .map(line => line.replace(/^data: ?/, ''))
+                    .join('\n') + '\n'
+
+                if (text.includes('[exit:0]')) {
+                    setExitState('success')
+                    setLog(prev => prev + text.replace(/\[exit:0\]\n?/, ''))
+                    router.refresh()
+                    return // exit the whole function, not just the loop
+                }
+
+                if (text.includes('[exit:1]')) {
+                    setExitState('error')
+                    setLog(prev => prev + text.replace(/\[exit:1\]\n?/, ''))
+                    return
+                }
+
+                if (text.includes('[exit:killed]')) {
+                    setExitState('killed')
+                    setLog(prev => prev + text.replace(/\[exit:killed\]\n?/, ''))
+                    return
+                }
+
+                onChunk(text)
+                setLog(prev => prev + text)
+            }
         }
-
         setRunning(false)
     }
 
