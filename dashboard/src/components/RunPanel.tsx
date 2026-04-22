@@ -49,6 +49,7 @@ export default function RunPanel({ running, setRunning, onChunk, onStop }: Props
         setLog("")
         setExitState(null)
 
+        // template literal, so must prefix with basePath ourselves
         const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_PATH}/api/pipeline/${isDemo ? "demo" : "run"}`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
