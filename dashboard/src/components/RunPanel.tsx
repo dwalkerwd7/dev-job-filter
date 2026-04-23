@@ -96,25 +96,26 @@ export default function RunPanel({ running, setRunning, onChunk, onStop }: Props
                     setExitState('success')
                     setLog(prev => prev + text.replace(/\[exit:0\]\n?/, ''))
                     router.refresh()
-                    return // exit the whole function, not just the loop
+                    break
                 }
 
                 if (text.includes('[exit:1]')) {
                     setExitState('error')
                     setLog(prev => prev + text.replace(/\[exit:1\]\n?/, ''))
-                    return
+                    break
                 }
 
                 if (text.includes('[exit:killed]')) {
                     setExitState('killed')
                     setLog(prev => prev + text.replace(/\[exit:killed\]\n?/, ''))
-                    return
+                    break
                 }
 
                 onChunk(text)
                 setLog(prev => prev + text)
             }
         }
+
         setRunning(false)
     }
 
