@@ -17,6 +17,7 @@ export async function POST() {
             const proc = spawn("npm", ["run", "pipeline-demo"], {
                 cwd: projectRoot,
                 detached: true,
+                shell: true
             })
             activeProc = proc
 
