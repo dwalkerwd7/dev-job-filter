@@ -34,7 +34,7 @@ export default function Pagination({ currentPage, totalPages, pageSize, showing 
     if (totalPages <= 1) return null;
 
     return (
-        <div className="flex items-center justify-between gap-10 mt-4">
+        <div className="flex flex-col sm:flex-row items-left justify-between gap-3 mt-4">
             <div className="flex items-start gap-3">
                 <button
                     onClick={() => goToPage(1)}
@@ -74,7 +74,7 @@ export default function Pagination({ currentPage, totalPages, pageSize, showing 
                     Next
                 </button>
             </div>
-            <div className="flex justify-between gap-3">
+            <div className="flex gap-3 sm:justify-between">
                 <div className="flex flex-row items-center">
                     <label className="text-xs text-gray-500">Go to</label>
                     <input

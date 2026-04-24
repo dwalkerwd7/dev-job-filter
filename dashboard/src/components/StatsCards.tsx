@@ -37,18 +37,18 @@ export default function StatsCards({ total, passed, applied, dismissed }: Props)
     ];
 
     return (
-        <div className="grid grid-cols-4 gap-2">
+        <div className="flex flex-row flex-wrap gap-8 min-w-30">
             {stats.map(({ label, value, view }) => (
                 <button
                     key={label}
                     onClick={() => setView(view)}
-                    className={`text-left bg-white border rounded-md px-3 py-4 transition-colors 
+                    className={`text-center bg-white border rounded-md p-5 transition-colors w-50 h-50 aspect-square flex flex-col justify-center
                         ${activeView === view
                             ? "border-blue-500 ring-1 ring-blue-500"
                             : "border-gray-200 hover:border-gray-400"
                         }`}
                 >
-                    <p className="text-xs font-medium uppercase tracking-wide text-gray-500">
+                    <p className="text-md font-medium uppercase tracking-wide text-gray-500">
                         {label}
                     </p>
                     <p className="mt-1 text-2xl font-semibold text-gray-900">{value}</p>
