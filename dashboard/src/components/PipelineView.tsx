@@ -97,7 +97,7 @@ export default function PipelineView({ initial, lastRun }: { initial: Stats, las
                         )
                     })}
                 </div>
-                <div className="flex flex-col sm:flex-row gap-3 items-start">
+                <div className="flex flex-col lg:flex-row gap-3 items-start sm:items-center">
                     {cards.slice(2).map((card, i) => {
                         const isActive = activeStep === card.step
                         const isMuted = running && !isActive
