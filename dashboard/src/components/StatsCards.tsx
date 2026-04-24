@@ -1,7 +1,7 @@
 "use client"
 
 import { useRouter, useSearchParams, usePathname } from "next/navigation";
-import { useTransition, useState } from "react";
+import { useTransition, useState, useEffect } from "react";
 
 type Props = {
     total: number;
@@ -19,6 +19,12 @@ export default function StatsCards({ total, passed, applied, dismissed }: Props)
     const [pendingView, setPendingView] = useState<string | null>(null);
 
     const activeView = pendingView ?? searchParams.get("view") ?? "passed";
+
+    useEffect(() => {
+        if (!isPending) {
+            document.getElementById("jobslist")?.scrollIntoView({ behavior: "smooth" });
+        }
+    });
 
     function setView(view: string) {
         setPendingView(view);
