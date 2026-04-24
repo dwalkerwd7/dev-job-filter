@@ -22,7 +22,9 @@ export default function StatsCards({ total, passed, applied, dismissed }: Props)
 
     useEffect(() => {
         if (!isPending) {
-            document.getElementById("jobslist")?.scrollIntoView({ behavior: "smooth" });
+            if (window.matchMedia("(max-width: 768px)").matches) {
+                document.getElementById("jobslist")?.scrollIntoView({ behavior: "smooth" });
+            }
         }
     });
 
