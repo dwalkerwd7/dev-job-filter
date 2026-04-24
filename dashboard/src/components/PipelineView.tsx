@@ -63,19 +63,19 @@ export default function PipelineView({ initial, lastRun }: { initial: Stats, las
 
     return (
         <div className="flex flex-col gap-6">
-            <div>
-                <div className="flex items-center justify-between mb-2">
-                    <h1 className="text-xl font-semibold text-gray-900">Pipeline</h1>
-                    {lastRun && <p className="text-xs text-gray-400">Last
-                        run: {new Date(lastRun).toLocaleString()}</p>}
-                </div>
-                <div className="flex items-stretch">
-                    {cards.map((card, i) => {
+            <div className="flex flex-col sm:flex-row items-center justify-between mb-2">
+                <h1 className="text-xl font-semibold text-gray-900">Pipeline</h1>
+                {lastRun && <p className="text-xs text-gray-400">Last
+                    run: {new Date(lastRun).toLocaleString()}</p>}
+            </div>
+            <div className="flex flex-col gap-3 lg:flex-row items-center sm:items-start">
+                <div className="flex flex-col gap-3 sm:flex-row">
+                    {cards.slice(0, 2).map((card, i) => {
                         const isActive = activeStep === card.step
                         const isMuted = running && !isActive
                         return (
                             <Fragment key={card.label}>
-                                <div className={`bg-white border px-5 py-4 flex-1 transition-all duration-700 
+                                <div className={`bg-white border px-5 py-4 w-50 h-35 transition-all duration-700 
                                         ${isActive ? "border-green-500 ring-2 ring-green-500" : "border-gray-200"} 
                                         ${isMuted ? "opacity-50" : ""}`}
                                 >
@@ -90,8 +90,36 @@ export default function PipelineView({ initial, lastRun }: { initial: Stats, las
                                         {card.sub && <p className="mt-1 text-xs text-gray-400">{card.sub}</p>}
                                     </div>
                                 </div>
-                                {i < cards.length - 1 && (
-                                    <div className="flex items-center px-3 text-gray-700 text-xl">→</div>
+                                {i < 2 && (
+                                    <div className="hidden sm:flex items-center px-3 text-gray-700 text-xl">→</div>
+                                )}
+                            </Fragment>
+                        )
+                    })}
+                </div>
+                <div className="flex flex-col sm:flex-row gap-3 items-start">
+                    {cards.slice(2).map((card, i) => {
+                        const isActive = activeStep === card.step
+                        const isMuted = running && !isActive
+                        return (
+                            <Fragment key={card.label}>
+                                <div className={`bg-white border px-5 py-4 w-50 h-35 transition-all duration-700 
+                                        ${isActive ? "border-green-500 ring-2 ring-green-500" : "border-gray-200"} 
+                                        ${isMuted ? "opacity-50" : ""}`}
+                                >
+                                    <p className="text-xs font-medium uppercase tracking-wide text-gray-500">{card.label}</p>
+                                    <div className="mt-1 text-2xl font-semibold text-gray-900">
+                                        {(isActive && card.step === "info")
+                                            ? card.value
+                                            : card.step === "info"
+                                                ? (<span>...</span>)
+                                                : (<span>{card.value}</span>
+                                                )}
+                                        {card.sub && <p className="mt-1 text-xs text-gray-400">{card.sub}</p>}
+                                    </div>
+                                </div>
+                                {i < 1 && (
+                                    <div className="hidden sm:flex items-center px-3 text-gray-700 text-xl">→</div>
                                 )}
                             </Fragment>
                         )
