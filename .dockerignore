@@ -1,0 +1,9 @@
+**/node_modules
+**/.next
+.git
+.claude
+logs
+*.log
+pipeline/.env
+pipeline/.env.local
+dashboard/.env.local
