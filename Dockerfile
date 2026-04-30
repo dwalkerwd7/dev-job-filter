@@ -22,7 +22,7 @@ COPY --chown=node:node pipeline/ ./pipeline/
 # Copy Next.js standalone build
 COPY --chown=node:node --from=dashboard-builder /build/.next/standalone ./dashboard/
 COPY --chown=node:node --from=dashboard-builder /build/.next/static ./dashboard/.next/static
-COPY --chown=node:node --from=dashboard-builder /build/public ./dashboard/public
+#COPY --chown=node:node --from=dashboard-builder /build/public ./dashboard/public
 
 ENV NODE_ENV=production
 EXPOSE 5002
