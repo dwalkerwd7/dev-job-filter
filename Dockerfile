@@ -22,6 +22,7 @@ RUN cd pipeline && npx playwright install --with-deps chromium
 
 # Copy pipeline source
 COPY --chown=node:node pipeline/ ./pipeline/
+COPY --chown=node:node logs/demo.log ./logs/demo.log
 
 # Copy Next.js standalone build
 COPY --chown=node:node --from=dashboard-builder /build/.next/standalone ./dashboard/
