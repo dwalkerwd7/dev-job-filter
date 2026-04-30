@@ -26,7 +26,7 @@ COPY --chown=node:node --from=dashboard-builder /build/.next/standalone ./dashbo
 COPY --chown=node:node --from=dashboard-builder /build/.next/static ./dashboard/.next/static
 #COPY --chown=node:node --from=dashboard-builder /build/public ./dashboard/public
 
-EXPOSE 5002
+EXPOSE ${PORT}
 
 USER node
 ENTRYPOINT ["node", "dashboard/server.js"]
