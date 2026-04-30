@@ -5,12 +5,13 @@ COPY dashboard/package*.json .
 RUN npm ci
 COPY dashboard/ .
 ENV NEXT_PUBLIC_BASE_PATH=/dev-job-filter
-ENV PORT=5002
 RUN npm run build
 
 # Stage 2: Runtime — Node + Playwright Chromium
 FROM node:20
 WORKDIR /app
+
+ENV PORT=5002
 
 # Install pipeline deps + Playwright browser + system deps
 COPY pipeline/package*.json ./pipeline/
