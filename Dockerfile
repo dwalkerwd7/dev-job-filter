@@ -12,6 +12,7 @@ FROM node:20
 WORKDIR /app
 
 ENV PORT=5002
+ENV HOSTNAME=0.0.0.0
 
 # Install pipeline deps + Playwright browser + system deps
 COPY pipeline/package*.json ./pipeline/
