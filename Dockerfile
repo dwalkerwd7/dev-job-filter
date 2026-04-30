@@ -5,6 +5,7 @@ COPY dashboard/package*.json .
 RUN npm ci
 COPY dashboard/ .
 ENV NEXT_PUBLIC_BASE_PATH=/dev-job-filter
+ENV NEXT_PUBLIC_DEMO_MODE=true
 RUN npm run build
 
 # Stage 2: Runtime — Node + Playwright Chromium
