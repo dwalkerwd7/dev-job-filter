@@ -2,8 +2,7 @@
 **/.next
 .git
 .claude
-logs
-*.log
+pipeline-*.log
 pipeline/.env
 pipeline/.env.local
 dashboard/.env.local
