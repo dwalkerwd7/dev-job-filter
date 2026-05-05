@@ -1,5 +1,5 @@
 # Stage 1: Build Next.js dashboard (standalone output)
-FROM node:20-slim AS dashboard-builder
+FROM node:24-slim AS dashboard-builder
 WORKDIR /build
 COPY dashboard/package*.json .
 RUN npm ci
@@ -9,7 +9,7 @@ ENV NEXT_PUBLIC_DEMO_MODE=true
 RUN npm run build
 
 # Stage 2: Runtime — Node + Playwright Chromium
-FROM node:20
+FROM node:24
 WORKDIR /app
 
 ENV PORT=5002
