@@ -14,11 +14,11 @@ WORKDIR /app
 
 ENV PORT=5002
 ENV HOSTNAME=0.0.0.0
+ENV DEBIAN_FRONTEND=false
 
 # Install pipeline deps + Playwright browser + system deps
 COPY pipeline/package*.json ./pipeline/
-RUN cd pipeline && npm ci
-RUN cd pipeline && npx playwright install --with-deps chromium
+RUN cd pipeline && npm ci && npx playwright install --with-deps chromium
 
 # Copy pipeline source
 COPY --chown=node:node pipeline/ ./pipeline/
